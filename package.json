@@ -1,0 +1,6 @@
+{
+  "name": "measuring_polyphony_jekyll",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
