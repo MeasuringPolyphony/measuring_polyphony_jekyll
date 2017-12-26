@@ -68,14 +68,13 @@
   <h1 class="page-heading">Transcripts</h1>
 
   <div id="output" style="width:10px; height:10px;"></div>
-
+<table style="width:100%; border: 1px solid black;">
   {% for xml in site.static_files %}
       {% if xml.path contains 'assets/mei' %}
-
-          <a class="page-link" href="{{ base }}/display.html?{{ xml.path }}">{{ xml.name }}</a>
+      <tr style="border: 1px solid black;width:100%;">   <td style="border: 1px solid black; width:100%;"> <a class="page-link" href="{{ base }}/display.html?{{ xml.path }}">{{ xml.name }}</a> </td><td style="border: 1px solid black; width:100%;"><a class="page-link" href="{{ base }}/fullscreen.html?{{ xml.path }}">Fullscreen</a></td> </tr>
       {% endif %}
   {% endfor %}
-
+</table>
 </div>
 
       </div>

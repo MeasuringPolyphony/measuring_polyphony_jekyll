@@ -17,33 +17,6 @@
         <link rel="stylesheet" href="css/midiplayer.css" />
 
     </head>
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-
-
-    <a class="site-title" href="/">Measuring Polyphony </a>
-    <br>
-    Title: <div id="title"> </div>
-    <br>
-    Composer: <div id="composer"> </div>
-    <div id="player"> </div>
-    <script type="text/javascript">
-var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
-        /* Load the file using HTTP GET */
-        $.get( qs, function( dataType ) {
-        //  alert( "Data Loaded: " + dataType );
-          xmlDoc = $.parseXML( dataType ),
-          $xml = $( xmlDoc ),
-          $title = $xml.find( "title" );
-            $composer = $xml.find( "composer" );
-            $("#title").html($title.text());
-              $("#composer").html($composer.text());
-        }, 'text');
-    </script>
-
-  </div>
-</header>
     <body style="margin: 0px;">
 
         <!-- A help overlay -->
@@ -78,12 +51,11 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             function setOptions() {
                 pageHeight = $(document).height() * 100 / zoom ;
                 pageWidth = $(document).width() * 100 / zoom ;
-                border = 200;
+                border = 50;
                 options = {
                             inputFormat: 'mei',
                             pageHeight: pageHeight,
                             pageWidth: pageWidth,
-
                             border: border,
                             scale: zoom,
                             adjustPageHeight: 1,
@@ -116,8 +88,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             };
 
             function loadFile() {
-              //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
-                file = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);;
+                file = "mei/Chopin_Etude_op.10_no.9.mei";
                 $.ajax({
                     url: file
                     , dataType: "text"

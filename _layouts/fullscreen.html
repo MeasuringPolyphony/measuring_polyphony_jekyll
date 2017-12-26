@@ -65,9 +65,10 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
         <script type="text/javascript">
             var vrvToolkit = new verovio.toolkit();
             var page = 1;
-            var zoom = 60;
-            var pageHeight = 2970;
-            var pageWidth = 2100;
+            var zoom = 30;
+            var pageHeight = 2900;
+            var pageWidth = 2000;
+
 
             ////////////////////////////////////////////////
             /* A variable for storing the highlighted ids */
@@ -78,7 +79,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             function setOptions() {
                 pageHeight = $(document).height() * 100 / zoom ;
                 pageWidth = $(document).width() * 100 / zoom ;
-                border = 200;
+                border = 50;
                 options = {
                             inputFormat: 'mei',
                             pageHeight: pageHeight,
