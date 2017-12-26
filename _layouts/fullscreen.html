@@ -146,7 +146,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             //////////////////////////////////////////////////////
             var midiUpdate = function(time) {
                 // bug! time needs to be * 2 (- 800 for adjustment)
-                var vrvTime = Math.max(0, 2 * time - 800);
+                var vrvTime = Math.max(0, time - 200);
                 var elementsattime = vrvToolkit.getElementsAtTime(vrvTime);
                 if (elementsattime.page > 0) {
                     if (elementsattime.page != page) {
