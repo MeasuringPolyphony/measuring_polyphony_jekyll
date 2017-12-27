@@ -36,7 +36,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Measuring Polyphony</a>
+        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">Measuring Polyphony</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -47,7 +47,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}transcriptions.html">Transcriptions</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Transcriptions</a>
             </li>
           </ul>
         </div>
@@ -57,37 +57,40 @@
     <!-- Intro Header -->
     <header class="masthead">
       <div class="intro-body">
-        <div class="container">
+        <div class="container" style="background-color:black;">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">Measuring Polyphony</h1>
-              <p class="intro-text">Encoding and analyzing late medieval polyphony</p>
-              <a href="#about" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
-              </a>
+              <h1 class="brand-heading">Transcriptions</h1>
+              <p class="intro-text"><div class="col-lg-8 mx-auto" style="height:500px;overflow-y:auto; ">
+
+                <table id="output" style="" ><tbody style=""><tr><th>Title</th> <th> Composer</th></tbody></table>
+                {% for xml in site.static_files %}
+                    {% if xml.path contains 'assets/mei' %}
+                    <script type="text/javascript">
+                        var qs = "/measuring_polyphony_jekyll{{xml.path}}"
+                        var d1 = document.getElementById('output');
+
+                              /* Load the file using HTTP GET */
+                              $.get( qs, function( dataType ) {
+                              //  alert( "Data Loaded: " + dataType );
+                                xmlDoc = $.parseXML( dataType ),
+                                $xml = $( xmlDoc ),
+                                $title = $xml.find( "title" );
+                                $composer = $xml.find( "composer" );
+                                d1.insertAdjacentHTML('beforeend', '<trstyle="border: 1px white; ><td style="border: 1px white;"><a class="" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $title.text() + '</a></td><td>'+ $composer.text() + '</td></tr>');
+
+
+                              }, 'text');
+                          </script>
+
+                    {% endif %}
+                {% endfor %}
+              </div></p>
             </div>
           </div>
         </div>
       </div>
     </header>
-
-    <!-- About Section -->
-    <section id="about" class="content-section text-center">
-
-        <div class="row">
-              <div class="col-lg-8 mx-auto">
-          <h1>A cool project! Click transcriptions to find out more.</h1>
-          <table id="top" style="border: 1px white;" ></table>
-        </div>
-        </div>
-        <div class="row">
-
-          <div class="col-lg-8 mx-auto" style="height:500px;overflow-y:auto;">
-
-          </div>
-
-      </div>
-    </section>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
