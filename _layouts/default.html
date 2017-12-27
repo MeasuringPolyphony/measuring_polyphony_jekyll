@@ -67,14 +67,28 @@
 
   <h1 class="page-heading">Transcripts</h1>
 
-  <div id="output" style="width:10px; height:10px;"></div>
-<table style="width:100%; border: 1px solid black;">
+  <table id="output" ><tr><th>Title</th> <th> Composer</th></table>
   {% for xml in site.static_files %}
       {% if xml.path contains 'assets/mei' %}
-      <tr style="border: 1px solid black;width:100%;">   <td style="border: 1px solid black; width:100%;"> <a class="page-link" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">{{ xml.name }}</a> </td><td style="border: 1px solid black; width:100%;"><a class="page-link" href="{{ site.baseurl }}fullscreen.html?{{ site.baseu }}{{ xml.path }}">Fullscreen</a></td> </tr>
+      <script type="text/javascript">
+          var qs = "/measuring_polyphony_jekyll{{xml.path}}"
+          var d1 = document.getElementById('output');
+
+                /* Load the file using HTTP GET */
+                $.get( qs, function( dataType ) {
+                //  alert( "Data Loaded: " + dataType );
+                  xmlDoc = $.parseXML( dataType ),
+                  $xml = $( xmlDoc ),
+                  $title = $xml.find( "title" );
+                  d1.insertAdjacentHTML('beforeend', '<tr><td><a class="page-link" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $title.text() + '</a></td><td><a class="page-link" href="{{ site.baseurl }}fullscreen.html?{{ site.baseu }}{{ xml.path }}">Fullscreen</a></td></tr>');
+
+
+                }, 'text');
+            </script>
+
       {% endif %}
   {% endfor %}
-</table>
+
 </div>
 
       </div>

@@ -1,6 +1,6 @@
 ---
 layout: fullscreen
-title: About
+title: Measuring Polyphony
 permalink: fullscreen.html
 ---
 

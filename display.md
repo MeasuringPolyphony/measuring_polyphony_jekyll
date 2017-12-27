@@ -1,6 +1,6 @@
 ---
 layout: display
-title: About
+title: Measuring Polyphony
 permalink: display.html
 ---
 
