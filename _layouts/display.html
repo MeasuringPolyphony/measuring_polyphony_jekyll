@@ -1,5 +1,6 @@
 <html>
     <head>
+
         <title>Measuring Polyphony</title>
         <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
         <!-- We also use jQuery -->
@@ -7,67 +8,105 @@
         <!-- Basic events from example 02 -->
         <script src="{{ site.baseurl }}javascript/basic-events.js" type="text/javascript" ></script>
         <!-- A stylesheet for the help overlay -->
-        <link rel="stylesheet" href="{{ site.baseurl }}css/tutorial.css" />
 
         <!--/////////////-->
         <!-- MIDI Player -->
         <!--/////////////-->
         <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/wildwebmidi.js"></script>
         <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/midiplayer.js"></script>
-        <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
+
+        <!-- Bootstrap core CSS -->
+
+        <!-- Custom fonts for this template -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+        <!-- Custom styles for this template -->
+          <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}css/grayscale.css" />
+    <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     </head>
-    <header class="site-header" role="banner">
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">Measuring Polyphony</a>
 
-  <div class="wrapper">
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="masthead">
 
 
-    <a class="site-title" href="{{ site.baseurl }}">Measuring Polyphony </a>
-    <br>
-    Title: <div id="title"> </div>
-    <br>
-    Composer: <div id="composer"> </div>
-    **ALLOW SCRIPTS TO VIEW TRANSCRIPTION**
+
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h1  id="title"></h1>
+              <p class="intro-text" id="composer"></p>
+
+
+<div id="player" class="col" style="padding-left:140px;"> </div>
+              </div>
+            </div>
+
+
+</div>
+<div class="col-fluid">
+
+    <!-- A help overlay -->
+
+
+    <!--//////////////////////////////////////////////////////-->
+    <!-- The div where we are going to insert the MIDI Player -->
+    <!--//////////////////////////////////////////////////////-->
+
+<div id="svg_output" style="background-color:white; margin:40px;"/>
+    <!-- The div where we are going to insert the SVG -->
     <a class="page-link" href="{{ site.baseurl }}fullscreen.html?{{ site.baseu }}{{ xml.path }}">Fullscreen</a>
-    <div id="player"> </div>
-    <script type="text/javascript">
-var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
-        /* Load the file using HTTP GET */
-        $.get( qs, function( dataType ) {
-        //  alert( "Data Loaded: " + dataType );
-          xmlDoc = $.parseXML( dataType ),
-          $xml = $( xmlDoc ),
-          $title = $xml.find( "title" );
-            $composer = $xml.find( "composer" );
-            $("#title").html($title.text());
-              $("#composer").html($composer.text());
-        }, 'text');
-    </script>
+</a>
+</div>
+
+
+<div id="help_overlay">
+    <p>Press <b>p</b> to start playing</p>
+    <p>Click in the player progress bar to jump in the piece</p>
+</div>
+</div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
 
   </div>
-</header>
-    <body style="margin: 0px;">
 
-        <!-- A help overlay -->
-        <div id="help_overlay">
-            <p>Press <b>p</b> to start playing</p>
-            <p>Click on any note or in the player progress bar to jump in the piece</p>
-        </div>
-
-        <!--//////////////////////////////////////////////////////-->
-        <!-- The div where we are going to insert the MIDI Player -->
-        <!--//////////////////////////////////////////////////////-->
-        <div style="height: 30px;">
-            <div id="player" style="z-index: 20; position: absolute; display: none;"></div>
-        </div>
-
-        <!-- The div where we are going to insert the SVG -->
-        <div id="svg_output"/>
-
+  <script type="text/javascript">
+var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
+      /* Load the file using HTTP GET */
+      $.get( qs, function( dataType ) {
+      //  alert( "Data Loaded: " + dataType );
+        xmlDoc = $.parseXML( dataType ),
+        $xml = $( xmlDoc ),
+        $title = $xml.find( "title" );
+          $composer = $xml.find( "composer" );
+          $("#title").html($title.text());
+            $("#composer").html($composer.text());
+      }, 'text');
+  </script>
         <script type="text/javascript">
             var vrvToolkit = new verovio.toolkit();
             var page = 1;
-            var zoom = 60;
+            var zoom = 40;
             var pageHeight = 2970;
             var pageWidth = 2100;
 
@@ -78,9 +117,9 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             var isPlaying = false;
 
             function setOptions() {
-                pageHeight = $(document).height() * 100 / zoom ;
-                pageWidth = $(document).width() * 100 / zoom ;
-                border = 200;
+                pageHeight = $(document).height() * 30 / zoom ;
+                pageWidth = $(document).width() * 80 / zoom ;
+                border = 20;
                 options = {
                             inputFormat: 'mei',
                             pageHeight: pageHeight,
@@ -88,7 +127,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
 
                             border: border,
                             scale: zoom,
-                            adjustPageHeight: 1,
+
                             ignoreLayout: 1
                         };
                 vrvToolkit.setOptions(options);
@@ -203,5 +242,5 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
                 loadFile();
             });
         </script>
-    </body>
+
 </html>
