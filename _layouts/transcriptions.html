@@ -75,7 +75,7 @@
                               //  alert( "Data Loaded: " + dataType );
                                 xmlDoc = $.parseXML( dataType ),
                                 $xml = $( xmlDoc ),
-                                $title = $xml.find( "title" );
+                                $title = $xml.find( "title" ).first();
                                 $composer = $xml.find( "composer" );
                                 d1.insertAdjacentHTML('beforeend', '<trstyle="border: 1px white; ><td style="border: 1px white;"><a class="" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $title.text() + '</a></td><td>'+ $composer.text() + '</td></tr>');
 
