@@ -63,9 +63,9 @@
               <h1 class="brand-heading">Transcriptions</h1>
               <p class="intro-text"><div class="col-lg-8 mx-auto" style="height:500px;overflow-y:auto; ">
 
-                <table id="output" style="" ><tbody style=""><tr><th>Title</th> <th> Composer</th></tbody></table>
+                <table id="output" style="" ><tbody style=""><tr><th>Triplum</th><th>Motetus</th><th>Tenor</th> <th> Composer</th></tbody></table>
                 {% for xml in site.static_files %}
-                    {% if xml.path contains 'assets/mei' %}
+                    {% if xml.path contains 'assets/mensural' %}
                     <script type="text/javascript">
                         var qs = "/measuring_polyphony_jekyll{{xml.path}}"
                         var d1 = document.getElementById('output');
@@ -75,9 +75,9 @@
                               //  alert( "Data Loaded: " + dataType );
                                 xmlDoc = $.parseXML( dataType ),
                                 $xml = $( xmlDoc ),
-                                $title = $xml.find( "title" ).first();
+                                $title = $xml.find( "incipText");
                                 $composer = $xml.find( "composer" );
-                                d1.insertAdjacentHTML('beforeend', '<trstyle="border: 1px white; ><td style="border: 1px white;"><a class="" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $title.text() + '</a></td><td>'+ $composer.text() + '</td></tr>');
+                                d1.insertAdjacentHTML('beforeend', '<trstyle="border: 1px white; ><td style="border: 1px white;"><a class="" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $title[0].textContent + '</a></td><td>'+$title[1].textContent+'</td><td>'+$title[2].textContent+'</td><td>'+ $composer.text() + '</td></tr>');
 
 
                               }, 'text');
