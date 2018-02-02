@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Amor potest conqueri</incipText>
+							<incipText title="triplum">Amor potest conqueri</incipText>
 						</incip>
 						<incip>
-							<incipText>Ad amorem sequitur</incipText>
+							<incipText title="motetus">Ad amorem sequitur</incipText>
 						</incip>
 						<incip>
-							<incipText>TENOR</incipText>
+							<incipText title="tenor">TENOR</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c3 f3</otherChar>
 						<classification>

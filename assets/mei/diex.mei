@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Se päour d'umble astinence</incipText>
+							<incipText title="triplum">Se päour d'umble astinence</incipText>
 						</incip>
 						<incip>
-							<incipText>Diex, tan desir</incipText>
+							<incipText title="motetus">Diex, tan desir</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

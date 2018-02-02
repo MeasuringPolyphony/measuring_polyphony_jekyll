@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Quasi non ministerium</incipText>
+							<incipText title="quadruplum">Quasi non ministerium</incipText>
 						</incip>
 						<incip>
-							<incipText>Trahunt in praecipia qui nos</incipText>
+							<incipText title="triplum">Trahunt in praecipia qui nos</incipText>
 						</incip>
 						<incip>
-							<incipText>Ve qui gregi deficiunt</incipText>
+							<incipText title="motetus">Ve qui gregi deficiunt</incipText>
 						</incip>
 						<incip>
-							<incipText>DISPLICEBAT EI</incipText>
+							<incipText title="tenor">DISPLICEBAT EI</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c2 c5</otherChar>
 						<classification>

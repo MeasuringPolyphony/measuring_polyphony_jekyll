@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Mater formosa tu nobilis</incipText>
+							<incipText title="triplum">Mater formosa tu nobilis</incipText>
 						</incip>
 						<incip>
-							<incipText>Gaude virgo mater</incipText>
+							<incipText title="motetus">Gaude virgo mater</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 f2c4</otherChar>
 						<classification>

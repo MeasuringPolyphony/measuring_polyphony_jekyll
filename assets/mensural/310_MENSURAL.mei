@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>In sompnis, mira Dei nuncia monuerunt</incipText>
+							<incipText title="triplum">In sompnis, mira Dei nuncia monuerunt</incipText>
 						</incip>
 						<incip>
-							<incipText>Amours me commande et prie</incipText>
+							<incipText title="motetus">Amours me commande et prie</incipText>
 						</incip>
 						<incip>
-							<incipText>IN SOMPNIS</incipText>
+							<incipText title="tenor">IN SOMPNIS</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

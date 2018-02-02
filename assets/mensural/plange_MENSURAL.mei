@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Nulla pestis est gravior</incipText>
+							<incipText title="triplum">Nulla pestis est gravior</incipText>
 						</incip>
 						<incip>
-							<incipText>Plange, nostra regio</incipText>
+							<incipText title="motetus">Plange, nostra regio</incipText>
 						</incip>
 						<incip>
-							<incipText>VERGENTE EX IMPERFECTIS</incipText>
+							<incipText title="tenor">VERGENTE EX IMPERFECTIS</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c5 f4</otherChar>
 						<classification>

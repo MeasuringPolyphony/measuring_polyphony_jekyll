@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Super cathedram Moisi latitat</incipText>
+							<incipText title="triplum">Super cathedram Moisi latitat</incipText>
 						</incip>
 						<incip>
-							<incipText>Praesidentes in tronis saeculi</incipText>
+							<incipText title="motetus">Praesidentes in tronis saeculi</incipText>
 						</incip>
 						<incip>
-							<incipText>RUINA</incipText>
+							<incipText title="tenor">RUINA</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

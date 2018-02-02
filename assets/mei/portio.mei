@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Ida ca illorum</incipText>
+							<incipText title="triplum">Ida ca illorum</incipText>
 						</incip>
 						<incip>
-							<incipText>Portio nature precellentis geniture</incipText>
+							<incipText title="motetus">Portio nature precellentis geniture</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

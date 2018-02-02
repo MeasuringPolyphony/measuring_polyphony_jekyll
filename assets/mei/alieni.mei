@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Facilius a nobis vitatur</incipText>
+							<incipText title="triplum">Facilius a nobis vitatur</incipText>
 						</incip>
 						<incip>
-							<incipText>Alieni boni invidia</incipText>
+							<incipText title="motetus">Alieni boni invidia</incipText>
 						</incip>
 						<incip>
-							<incipText>IMPERFECTE CANITE</incipText>
+							<incipText title="tenor">IMPERFECTE CANITE</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c5</otherChar>
 						<classification>

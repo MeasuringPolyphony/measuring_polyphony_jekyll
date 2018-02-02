@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Vos quid admiramini</incipText>
+							<incipText title="triplum">Vos quid admiramini</incipText>
 						</incip>
 						<incip>
-							<incipText>Gratissima virginis species</incipText>
+							<incipText title="motetus">Gratissima virginis species</incipText>
 						</incip>
 						<incip>
-							<incipText>GAUDE GLORIOSA</incipText>
+							<incipText title="tenor">GAUDE GLORIOSA</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

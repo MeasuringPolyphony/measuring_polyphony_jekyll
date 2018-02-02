@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Amer amours est la choison</incipText>
+							<incipText title="triplum">Amer amours est la choison</incipText>
 						</incip>
 						<incip>
-							<incipText>Durement au cuer blece</incipText>
+							<incipText title="motetus">Durement au cuer blece</incipText>
 						</incip>
 						<incip>
-							<incipText>DOLOR MEUS</incipText>
+							<incipText title="tenor">DOLOR MEUS</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

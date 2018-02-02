@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Mon chant en plaint</incipText>
+							<incipText title="triplum">Mon chant en plaint</incipText>
 						</incip>
 						<incip>
-							<incipText>Qui doloreus onques n'a cogneü</incipText>
+							<incipText title="motetus">Qui doloreus onques n'a cogneü</incipText>
 						</incip>
 						<incip>
-							<incipText>TRISTIS EST ANIMA MEA</incipText>
+							<incipText title="tenor">TRISTIS EST ANIMA MEA</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

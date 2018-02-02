@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Li enseignment de chaton</incipText>
+							<incipText title="triplum">Li enseignment de chaton</incipText>
 						</incip>
 						<incip>
-							<incipText>De touz les biens</incipText>
+							<incipText title="motetus">De touz les biens</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

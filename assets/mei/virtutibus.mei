@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Impudenter circumivi solum quod mare terminat</incipText>
+							<incipText title="triplum">Impudenter circumivi solum quod mare terminat</incipText>
 						</incip>
 						<incip>
-							<incipText>Virtutibus laudabilis</incipText>
+							<incipText title="motetus">Virtutibus laudabilis</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

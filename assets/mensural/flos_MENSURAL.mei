@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Apta caro plumis, ingenii</incipText>
+							<incipText title="triplum">Apta caro plumis, ingenii</incipText>
 						</incip>
 						<incip>
-							<incipText>Flos virginum, decus et species</incipText>
+							<incipText title="motetus">Flos virginum, decus et species</incipText>
 						</incip>
 						<incip>
-							<incipText>ALMA REDEMPTORIS MATER</incipText>
+							<incipText title="tenor">ALMA REDEMPTORIS MATER</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

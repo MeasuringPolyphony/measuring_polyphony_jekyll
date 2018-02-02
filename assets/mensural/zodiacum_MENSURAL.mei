@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Apollinis eclipsatur</incipText>
+							<incipText title="triplum">Apollinis eclipsatur</incipText>
 						</incip>
 						<incip>
-							<incipText>Zodiacum signis lustrantibus</incipText>
+							<incipText title="motetus">Zodiacum signis lustrantibus</incipText>
 						</incip>
 						<incip>
-							<incipText>IN OMNEM TERRAM</incipText>
+							<incipText title="tenor">IN OMNEM TERRAM</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

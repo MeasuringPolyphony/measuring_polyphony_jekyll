@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Virginale decus et presidium</incipText>
+							<incipText title="triplum">Virginale decus et presidium</incipText>
 						</incip>
 						<incip>
-							<incipText>Descendi in [h]ortum meum</incipText>
+							<incipText title="motetus">Descendi in [h]ortum meum</incipText>
 						</incip>
 						<incip>
-							<incipText>ALMA [REDEMPTORIS MATER]</incipText>
+							<incipText title="tenor">ALMA [REDEMPTORIS MATER]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c3</otherChar>
 						<classification>

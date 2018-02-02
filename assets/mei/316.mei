@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Se je sui liés et chantans</incipText>
+							<incipText title="triplum">Se je sui liés et chantans</incipText>
 						</incip>
 						<incip>
-							<incipText>Jolietement</incipText>
+							<incipText title="motetus">Jolietement</incipText>
 						</incip>
 						<incip>
-							<incipText>OMNES</incipText>
+							<incipText title="tenor">OMNES</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 f3</otherChar>
 						<classification>

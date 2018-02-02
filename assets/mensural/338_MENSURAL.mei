@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Amours, qui si me maistrie</incipText>
+							<incipText title="triplum">Amours, qui si me maistrie</incipText>
 						</incip>
 						<incip>
-							<incipText>Solem iusticie, letiticie</incipText>
+							<incipText title="motetus">Solem iusticie, letiticie</incipText>
 						</incip>
 						<incip>
-							<incipText>SOLEM</incipText>
+							<incipText title="tenor">SOLEM</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

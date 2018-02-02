@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Cum statua Nabucodonasor</incipText>
+							<incipText title="triplum">Cum statua Nabucodonasor</incipText>
 						</incip>
 						<incip>
-							<incipText>Hugo, Hugo, princeps invidie</incipText>
+							<incipText title="motetus">Hugo, Hugo, princeps invidie</incipText>
 						</incip>
 						<incip>
-							<incipText>TENOR CUM STATUA</incipText>
+							<incipText title="tenor">TENOR CUM STATUA</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Fortune, mere à dolour</incipText>
+							<incipText title="triplum">Fortune, mere à dolour</incipText>
 						</incip>
 						<incip>
-							<incipText>Ma dolour ne cesse pas</incipText>
+							<incipText title="motetus">Ma dolour ne cesse pas</incipText>
 						</incip>
 						<incip>
-							<incipText>DOLOUR MEUS</incipText>
+							<incipText title="tenor">DOLOUR MEUS</incipText>
 						</incip>
 						<otherChar>Original clefs c1 c2 c4</otherChar>
 						<classification>

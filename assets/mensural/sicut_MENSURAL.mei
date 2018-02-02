@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Inflammatis invidia</incipText>
+							<incipText title="triplum">Inflammatis invidia</incipText>
 						</incip>
 						<incip>
-							<incipText>Sicut de ligno parvulus generatur</incipText>
+							<incipText title="motetus">Sicut de ligno parvulus generatur</incipText>
 						</incip>
 						<incip>
-							<incipText>[VICTIMAE PASCHALI LAUDES]</incipText>
+							<incipText title="tenor">[VICTIMAE PASCHALI LAUDES]</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c4 c5</otherChar>
 						<classification>

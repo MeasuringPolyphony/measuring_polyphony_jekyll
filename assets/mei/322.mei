@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Marie assumptio</incipText>
+							<incipText title="triplum">Marie assumptio</incipText>
 						</incip>
 						<incip>
-							<incipText>Huius chori suscipe cantica</incipText>
+							<incipText title="motetus">Huius chori suscipe cantica</incipText>
 						</incip>
 						<incip>
-							<incipText>TENOR</incipText>
+							<incipText title="tenor">TENOR</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

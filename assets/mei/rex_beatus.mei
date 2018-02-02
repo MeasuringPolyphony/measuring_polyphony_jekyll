@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Se coeurs joians, jonnes, jolis</incipText>
+							<incipText title="triplum">Se coeurs joians, jonnes, jolis</incipText>
 						</incip>
 						<incip>
-							<incipText>Rex beatus, confessor Domini</incipText>
+							<incipText title="motetus">Rex beatus, confessor Domini</incipText>
 						</incip>
 						<incip>
-							<incipText>AVE</incipText>
+							<incipText title="tenor">AVE</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c3 c5</otherChar>
 						<classification>

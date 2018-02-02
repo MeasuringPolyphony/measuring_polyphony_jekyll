@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Je cuidoie bien metre</incipText>
+							<incipText title="triplum">Je cuidoie bien metre</incipText>
 						</incip>
 						<incip>
-							<incipText>Se j’ai folement amé</incipText>
+							<incipText title="motetus">Se j’ai folement amé</incipText>
 						</incip>
 						<incip>
-							<incipText>SOLEM</incipText>
+							<incipText title="tenor">SOLEM</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

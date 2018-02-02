@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Cis a petit de bien en li</incipText>
+							<incipText title="triplum">Cis a petit de bien en li</incipText>
 						</incip>
 						<incip>
-							<incipText>Pluseur dient, que j'aim entrer</incipText>
+							<incipText title="motetus">Pluseur dient, que j'aim entrer</incipText>
 						</incip>
 						<incip>
-							<incipText>PORTARE</incipText>
+							<incipText title="tenor">PORTARE</incipText>
 						</incip>
 						<otherChar>Original clefs c1 c2 c4</otherChar>
 						<classification>

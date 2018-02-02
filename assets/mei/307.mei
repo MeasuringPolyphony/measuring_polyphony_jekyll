@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Dieus, comment porrai laissier</incipText>
+							<incipText title="triplum">Dieus, comment porrai laissier</incipText>
 						</incip>
 						<incip>
-							<incipText>O regina glorie</incipText>
+							<incipText title="motetus">O regina glorie</incipText>
 						</incip>
 						<incip>
-							<incipText>NOBIS CONCEDAS [VENIAM PER SECULA] O BENIGNA</incipText>
+							<incipText title="tenor">NOBIS CONCEDAS [VENIAM PER SECULA] O BENIGNA</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c4</otherChar>
 						<classification>

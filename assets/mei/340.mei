@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Balam inquit vaticinans</incipText>
+							<incipText title="triplum">Balam inquit vaticinans</incipText>
 						</incip>
 						<incip>
-							<incipText>Balam inquit vaticinans</incipText>
+							<incipText title="motetus">Balam inquit vaticinans</incipText>
 						</incip>
 						<incip>
-							<incipText>BALLAAM</incipText>
+							<incipText title="tenor">BALLAAM</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

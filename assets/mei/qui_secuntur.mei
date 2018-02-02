@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Detractor est nequissima vulpis</incipText>
+							<incipText title="triplum">Detractor est nequissima vulpis</incipText>
 						</incip>
 						<incip>
-							<incipText>Qui secuntur castra sunt</incipText>
+							<incipText title="motetus">Qui secuntur castra sunt</incipText>
 						</incip>
 						<incip>
-							<incipText>VERBUM INIQUUM ET DOLOSUM ABHOMINABITUR DOMINUS</incipText>
+							<incipText title="tenor">VERBUM INIQUUM ET DOLOSUM ABHOMINABITUR DOMINUS</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c4</otherChar>
 						<classification>

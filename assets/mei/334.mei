@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>A maistre Jehan lardier</incipText>
+							<incipText title="triplum">A maistre Jehan lardier</incipText>
 						</incip>
 						<incip>
-							<incipText>Pour la plus jolie</incipText>
+							<incipText title="motetus">Pour la plus jolie</incipText>
 						</incip>
 						<incip>
-							<incipText>ALLELUYA</incipText>
+							<incipText title="tenor">ALLELUYA</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

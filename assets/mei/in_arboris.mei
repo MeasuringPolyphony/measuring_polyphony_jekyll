@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Tuba sacre fidei</incipText>
+							<incipText title="triplum">Tuba sacre fidei</incipText>
 						</incip>
 						<incip>
-							<incipText>In arboris empiro</incipText>
+							<incipText title="motetus">In arboris empiro</incipText>
 						</incip>
 						<incip>
-							<incipText>VIRGO SUM. TENOR.</incipText>
+							<incipText title="tenor">VIRGO SUM. TENOR.</incipText>
 						</incip>
 						<otherChar>Original clefs c1 c1 c3</otherChar>
 						<classification>

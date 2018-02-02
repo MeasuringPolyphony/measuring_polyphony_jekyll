@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Post missarum sollempnia</incipText>
+							<incipText title="triplum">Post missarum sollempnia</incipText>
 						</incip>
 						<incip>
-							<incipText>Post misse modulamina</incipText>
+							<incipText title="motetus">Post misse modulamina</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

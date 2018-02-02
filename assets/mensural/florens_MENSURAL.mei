@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Floret cum vana gloria</incipText>
+							<incipText title="triplum">Floret cum vana gloria</incipText>
 						</incip>
 						<incip>
-							<incipText>Florens vigor ulciscendo</incipText>
+							<incipText title="motetus">Florens vigor ulciscendo</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 f2c4</otherChar>
 						<classification>

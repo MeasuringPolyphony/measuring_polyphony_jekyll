@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Orbis orbatus oculis</incipText>
+							<incipText title="triplum">Orbis orbatus oculis</incipText>
 						</incip>
 						<incip>
-							<incipText>Vos pastores adulteri</incipText>
+							<incipText title="motetus">Vos pastores adulteri</incipText>
 						</incip>
 						<incip>
-							<incipText>FUR NON VENIT NISI UT FURETUR ET MACTET ET PERDAT</incipText>
+							<incipText title="tenor">FUR NON VENIT NISI UT FURETUR ET MACTET ET PERDAT</incipText>
 						</incip>
 						<otherChar>Original clefs c4 c2 c5</otherChar>
 						<classification>

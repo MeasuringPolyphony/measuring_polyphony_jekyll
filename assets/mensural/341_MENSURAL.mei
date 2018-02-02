@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Huic ut placuit, tres magi mistica</incipText>
+							<incipText title="triplum">Huic ut placuit, tres magi mistica</incipText>
 						</incip>
 						<incip>
-							<incipText>Huic ut placuit, tres magi mistica</incipText>
+							<incipText title="motetus">Huic ut placuit, tres magi mistica</incipText>
 						</incip>
 						<incip>
-							<incipText>[HUIC MAGI]</incipText>
+							<incipText title="tenor">[HUIC MAGI]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c4</otherChar>
 						<classification>

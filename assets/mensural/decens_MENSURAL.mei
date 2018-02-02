@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>In virtute nominum</incipText>
+							<incipText title="triplum">In virtute nominum</incipText>
 						</incip>
 						<incip>
-							<incipText>Decens carmen edere</incipText>
+							<incipText title="motetus">Decens carmen edere</incipText>
 						</incip>
 						<incip>
-							<incipText>CLAMOR DEUS</incipText>
+							<incipText title="tenor">CLAMOR DEUS</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

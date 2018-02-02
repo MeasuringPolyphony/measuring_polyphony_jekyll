@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Servant regem misericaordia</incipText>
+							<incipText title="triplum">Servant regem misericaordia</incipText>
 						</incip>
 						<incip>
-							<incipText>O Philippe, prelustris Francorum</incipText>
+							<incipText title="motetus">O Philippe, prelustris Francorum</incipText>
 						</incip>
 						<incip>
-							<incipText>REX REGUM ET DOMINUS DOMINANCIUM</incipText>
+							<incipText title="tenor">REX REGUM ET DOMINUS DOMINANCIUM</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>La mesnie fauveline</incipText>
+							<incipText title="triplum">La mesnie fauveline</incipText>
 						</incip>
 						<incip>
-							<incipText>J'ai fait nouvelement</incipText>
+							<incipText title="motetus">J'ai fait nouvelement</incipText>
 						</incip>
 						<incip>
-							<incipText>GRANT DESPIT AI JE</incipText>
+							<incipText title="tenor">GRANT DESPIT AI JE</incipText>
 						</incip>
 						<otherChar>Original clefs c5 c2 c3</otherChar>
 						<classification>

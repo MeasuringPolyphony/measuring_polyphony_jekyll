@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Flos ortus inter lilia</incipText>
+							<incipText title="triplum">Flos ortus inter lilia</incipText>
 						</incip>
 						<incip>
-							<incipText>Celsa cedrus ysopus effecta</incipText>
+							<incipText title="motetus">Celsa cedrus ysopus effecta</incipText>
 						</incip>
 						<incip>
-							<incipText>QUAM MAGNUS PONTIFEX</incipText>
+							<incipText title="tenor">QUAM MAGNUS PONTIFEX</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Se je chante, ce fait Amour</incipText>
+							<incipText title="triplum">Se je chante, ce fait Amour</incipText>
 						</incip>
 						<incip>
-							<incipText>Bien doi amer mon ami</incipText>
+							<incipText title="motetus">Bien doi amer mon ami</incipText>
 						</incip>
 						<incip>
-							<incipText>ET SPERABIT</incipText>
+							<incipText title="tenor">ET SPERABIT</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c3</otherChar>
 						<classification>

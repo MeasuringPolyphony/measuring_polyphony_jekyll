@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Colla iugo subdere</incipText>
+							<incipText title="triplum">Colla iugo subdere</incipText>
 						</incip>
 						<incip>
-							<incipText>Bona condit</incipText>
+							<incipText title="motetus">Bona condit</incipText>
 						</incip>
 						<incip>
-							<incipText>LIBERA ME, DOMINE</incipText>
+							<incipText title="tenor">LIBERA ME, DOMINE</incipText>
 						</incip>
 						<otherChar>Original clefs c1 c3 c4</otherChar>
 						<classification>

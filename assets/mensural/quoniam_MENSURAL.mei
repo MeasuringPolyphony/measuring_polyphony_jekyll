@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Tribum, que[m] non abhorruit</incipText>
+							<incipText title="triplum">Tribum, que[m] non abhorruit</incipText>
 						</incip>
 						<incip>
-							<incipText>Quoniam secta latronum spelunca</incipText>
+							<incipText title="motetus">Quoniam secta latronum spelunca</incipText>
 						</incip>
 						<incip>
-							<incipText>MERITO [HEC PATIMUR]</incipText>
+							<incipText title="tenor">MERITO [HEC PATIMUR]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c4 c3</otherChar>
 						<classification>

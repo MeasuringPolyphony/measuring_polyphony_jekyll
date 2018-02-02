@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Qui d’amours n'a riens gousté</incipText>
+							<incipText title="triplum">Qui d’amours n'a riens gousté</incipText>
 						</incip>
 						<incip>
-							<incipText>Tant me plaist Amour servir</incipText>
+							<incipText title="motetus">Tant me plaist Amour servir</incipText>
 						</incip>
 						<incip>
-							<incipText>VIRGA YESSE</incipText>
+							<incipText title="tenor">VIRGA YESSE</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c2 c4</otherChar>
 						<classification>

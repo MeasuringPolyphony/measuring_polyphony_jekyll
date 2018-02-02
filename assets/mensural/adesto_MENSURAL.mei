@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Firmissime fidem teneamus</incipText>
+							<incipText title="triplum">Firmissime fidem teneamus</incipText>
 						</incip>
 						<incip>
-							<incipText>Adesto, sancta Trinitas</incipText>
+							<incipText title="motetus">Adesto, sancta Trinitas</incipText>
 						</incip>
 						<incip>
-							<incipText>ALLELUYA BENEDICTUS ET CETERA</incipText>
+							<incipText title="tenor">ALLELUYA BENEDICTUS ET CETERA</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c3 c4</otherChar>
 						<classification>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Tr 63 There is small lacuna here over the triplum turn of the page. Notes inserted follow Br /
+					Tr 63 There is small lacuna here over the triplum turn of the page. Notes inserted follow Br / 
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">

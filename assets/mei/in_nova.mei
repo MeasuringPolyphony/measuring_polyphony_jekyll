@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Garrit Gallus flendo dolorose</incipText>
+							<incipText title="triplum">Garrit Gallus flendo dolorose</incipText>
 						</incip>
 						<incip>
-							<incipText>In nova fert animus mutatas dicere formas</incipText>
+							<incipText title="motetus">In nova fert animus mutatas dicere formas</incipText>
 						</incip>
 						<incip>
-							<incipText>[NEUMA]</incipText>
+							<incipText title="tenor">[NEUMA]</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c2 c4</otherChar>
 						<classification>

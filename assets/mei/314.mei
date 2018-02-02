@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Dieus, comment puet li cuers durer</incipText>
+							<incipText title="triplum">Dieus, comment puet li cuers durer</incipText>
 						</incip>
 						<incip>
-							<incipText>Vo vair oel m'ont espris</incipText>
+							<incipText title="motetus">Vo vair oel m'ont espris</incipText>
 						</incip>
 						<incip>
-							<incipText>TENOR</incipText>
+							<incipText title="tenor">TENOR</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c4 f3</otherChar>
 						<classification>

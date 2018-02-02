@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>L'amoureuse flour d'esté</incipText>
+							<incipText title="triplum">L'amoureuse flour d'esté</incipText>
 						</incip>
 						<incip>
-							<incipText>En l'estat d'amere tristour</incipText>
+							<incipText title="motetus">En l'estat d'amere tristour</incipText>
 						</incip>
 						<incip>
-							<incipText>[TENOR]</incipText>
+							<incipText title="tenor">[TENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

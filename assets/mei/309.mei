@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Par une matinee, el moys joli d'avril</incipText>
+							<incipText title="triplum">Par une matinee, el moys joli d'avril</incipText>
 						</incip>
 						<incip>
-							<incipText>O clemencie</incipText>
+							<incipText title="motetus">O clemencie</incipText>
 						</incip>
 						<incip>
-							<incipText>D'UN JOLI DART</incipText>
+							<incipText title="tenor">D'UN JOLI DART</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c4 f3</otherChar>
 						<classification>

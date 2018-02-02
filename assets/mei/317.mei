@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Aucun, qui ne sevent servir</incipText>
+							<incipText title="triplum">Aucun, qui ne sevent servir</incipText>
 						</incip>
 						<incip>
-							<incipText>Iure tuis laudibus</incipText>
+							<incipText title="motetus">Iure tuis laudibus</incipText>
 						</incip>
 						<incip>
-							<incipText>[VIRGO] MARIA</incipText>
+							<incipText title="tenor">[VIRGO] MARIA</incipText>
 						</incip>
 						<otherChar>Original clefs c3 c4 f3</otherChar>
 						<classification>

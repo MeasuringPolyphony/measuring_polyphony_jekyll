@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Aman novi probatur exitu</incipText>
+							<incipText title="triplum">Aman novi probatur exitu</incipText>
 						</incip>
 						<incip>
-							<incipText>Heu! Fortuna subdola</incipText>
+							<incipText title="motetus">Heu! Fortuna subdola</incipText>
 						</incip>
 						<incip>
-							<incipText>HEU! TRISTIS EST ANIMA MEA!</incipText>
+							<incipText title="tenor">HEU! TRISTIS EST ANIMA MEA!</incipText>
 						</incip>
 						<otherChar>Original clefs c1 c2 c4</otherChar>
 						<classification>

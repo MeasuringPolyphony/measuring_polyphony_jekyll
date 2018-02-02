@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Au tans nouvel, que naissent flours</incipText>
+							<incipText title="triplum">Au tans nouvel, que naissent flours</incipText>
 						</incip>
 						<incip>
-							<incipText>Chele m’a tollu</incipText>
+							<incipText title="motetus">Chele m’a tollu</incipText>
 						</incip>
 						<incip>
-							<incipText>J'AI FAIT TOUT NOUVELETEMENT</incipText>
+							<incipText title="tenor">J'AI FAIT TOUT NOUVELETEMENT</incipText>
 						</incip>
 						<otherChar>Original clefs c2 c4 c4</otherChar>
 						<classification>

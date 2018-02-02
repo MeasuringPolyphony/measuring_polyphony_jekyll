@@ -2,6 +2,7 @@
     <head>
 
         <title>Measuring Polyphony</title>
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
         <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
         <!-- We also use jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
@@ -120,11 +121,11 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
       }, 'text');
   </script>
         <script type="text/javascript">
-            var vrvToolkit = new verovio.toolkit();
-            var page = 1;
-            var zoom = 40;
-            var pageHeight = 2970;
-            var pageWidth = 2100;
+        var vrvToolkit = new verovio.toolkit();
+        var page = 1;
+        var zoom = 30;
+        var pageHeight = 2900;
+        var pageWidth = 2000;
 
             ////////////////////////////////////////////////
             /* A variable for storing the highlighted ids */
@@ -133,9 +134,9 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             var isPlaying = false;
 
             function setOptions() {
-                pageHeight = $(document).height() * 30 / zoom ;
-                pageWidth = $(document).width() * 80 / zoom ;
-                border = 20;
+              pageHeight = $(document).height() * 100 / zoom ;
+              pageWidth = $(document).width() * 100 / zoom ;
+              border = 50;
                 options = {
                             inputFormat: 'mei',
                             pageHeight: pageHeight,

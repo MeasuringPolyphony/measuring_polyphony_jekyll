@@ -108,13 +108,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>O presul eximie</incipText>
+							<incipText title="triplum">O presul eximie</incipText>
 						</incip>
 						<incip>
-							<incipText>O virtutis speculum</incipText>
+							<incipText title="motetus">O virtutis speculum</incipText>
 						</incip>
 						<incip>
-							<incipText>SACERDOTUM</incipText>
+							<incipText title="tenor">SACERDOTUM</incipText>
 						</incip>
 						<otherChar>Original clefs c4 c4 f3</otherChar>
 						<classification>

@@ -107,13 +107,13 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>Se grace</incipText>
+							<incipText title="triplum">Se grace</incipText>
 						</incip>
 						<incip>
-							<incipText>Cum venerint</incipText>
+							<incipText title="motetus">Cum venerint</incipText>
 						</incip>
 						<incip>
-							<incipText>ITE MISSA EST</incipText>
+							<incipText title="tenor">ITE MISSA EST</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>

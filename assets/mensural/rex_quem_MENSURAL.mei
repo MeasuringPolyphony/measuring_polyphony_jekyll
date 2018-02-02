@@ -107,16 +107,16 @@
 							</respStmt>
 						</titleStmt>
 						<incip>
-							<incipText>O canenda vulgo per computa</incipText>
+							<incipText title="triplum">O canenda vulgo per computa</incipText>
 						</incip>
 						<incip>
-							<incipText>Rex quem metrorum</incipText>
+							<incipText title="motetus">Rex quem metrorum</incipText>
 						</incip>
 						<incip>
-							<incipText>REX REGUM</incipText>
+							<incipText title="tenor">REX REGUM</incipText>
 						</incip>
 						<incip>
-							<incipText>[CONTRATENOR]</incipText>
+							<incipText title="contratenor">[CONTRATENOR]</incipText>
 						</incip>
 						<otherChar>Original clefs </otherChar>
 						<classification>
