@@ -50,14 +50,24 @@
       <div class="intro-body">
         <div class="container">
           <div class="row">
+            <div id="svg_output" style="background-color:white; margin:40px;    overflow-x: auto;
+                white-space: nowrap;">
+                <!-- The div where we are going to insert the SVG -->
+                <!--<a class="page-link" href="{{ site.baseurl }}fullscreen.html?{{ site.baseu }}{{ xml.path }}">Fullscreen</a>-->
+            </a>
+            </div>
             <div class="col-lg-8 mx-auto">
               <h1  id="title"></h1>
               <p id="composer"></p>
               <p>Primary manuscript source for this transcription</p>
               <p id="primarysource"></p>
               <p id="diammlink"></p>
-              <p>Concordant Sources</p>
+
               <p id="concsources"></p>
+                <p>Downloads</p>
+                <p id="mei"></p>
+                <p id="mens"></p>
+                <p>PDF</p>
               <p>Press <b>p</b> to start playing</p>
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
@@ -79,12 +89,7 @@
     <!-- The div where we are going to insert the MIDI Player -->
     <!--//////////////////////////////////////////////////////-->
 
-<div id="svg_output" style="background-color:white; margin:40px;     overflow-x: auto;
-    white-space: nowrap;"/>
-    <!-- The div where we are going to insert the SVG -->
-    <!--<a class="page-link" href="{{ site.baseurl }}fullscreen.html?{{ site.baseu }}{{ xml.path }}">Fullscreen</a>-->
-</a>
-</div>
+
 
 
 
@@ -105,6 +110,15 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
       /* Load the file using HTTP GET */
       $.get( qs, function( dataType ) {
       //  alert( "Data Loaded: " + dataType );
+      $meiarray = qs.split("/")
+      for (i = 0; i < $meiarray.length; i++) {
+        if (i==($meiarray.length-1)){
+           $meiarray[i] = $meiarray[i].replace("_MENSURAL", "");
+        } else if ($meiarray[i]=="mensural") {
+          $meiarray[i]="mei";
+        }
+      }
+      $mei = $meiarray.join("/");
         xmlDoc = $.parseXML( dataType ),
         $xml = $( xmlDoc ),
         $title = $xml.find( "title" ).first();
@@ -112,20 +126,44 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             $primesource = $xml.find( "identifier" ).first();
             $concsources = $xml.find( "annot");
             $link = $xml.find( "item");
-          $("#title").html($title.text());
+            $parts = $xml.find( "incipText");
+            $quadruplum="";
+            $contratenor="";
+            $triplum="";
+            $motetus="";
+            $tenor="";
+            if ($parts!=null){
+
+            for (i = 0; i < $parts.length; i++) {
+              if ($parts[i].attributes[0].textContent=="triplum"){
+                  $triplum= $parts[i].textContent + "/";
+              } else if ($parts[i].attributes[0].textContent=="motetus"){
+                  $motetus= $parts[i].textContent;
+              } else if ($parts[i].attributes[0].textContent=="tenor"){
+                  $tenor= "/" + $parts[i].textContent;
+              } else if ($parts[i].attributes[0].textContent=="contratenor"){
+                  $contratenor= "/" + $parts[i].textContent;
+              }else if ($parts[i].attributes[0].textContent=="quadruplum"){
+                  $quadruplum= $parts[i].textContent + "/";
+              }
+            }
+          }
+          $("#title").html($triplum + $motetus +  $tenor + $contratenor);
             $("#composer").html($composer.text());
               $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
                 $("#diammlink").html( "<a href=\"" + $link[2].attributes[1].textContent + "\n\">Detailed information on this manuscript source</a>");
-                $("#concsources").html($concsources[2]);
+                $("#concsources").html("Concordant sources:" + $concsources[2]);
+                $("#mens").html("<a href=\"" + qs + "\" download>Mensural</a>" );
+                $("#mei").html("<a href=\"" + $mei + "\" download>Mei</a>" );
                 //$("#iiif").html($link[0].attributes[0].textContent + ": " +  $link[0].attributes[1].textContent);
       }, 'text');
   </script>
         <script type="text/javascript">
         var vrvToolkit = new verovio.toolkit();
         var page = 1;
-        var zoom = 30;
-        var pageHeight = 2900;
-        var pageWidth = 2000;
+        var zoom = 40;
+        var pageHeight = 2970;
+        var pageWidth = 2100;
 
             ////////////////////////////////////////////////
             /* A variable for storing the highlighted ids */
@@ -134,9 +172,9 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             var isPlaying = false;
 
             function setOptions() {
-              pageHeight = $(document).height() * 100 / zoom ;
-              pageWidth = $(document).width() * 100 / zoom ;
-              border = 50;
+              pageHeight = $(document).height() * 30 / zoom ;
+              pageWidth = $(document).width() * 80 / zoom ;
+              border = 20;
                 options = {
                             inputFormat: 'mei',
                             pageHeight: pageHeight,
