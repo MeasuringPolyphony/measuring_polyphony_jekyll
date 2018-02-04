@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
     <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/wildwebmidi.js"></script>
     <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/midiplayer.js"></script>
     <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
@@ -36,7 +37,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
+      <div class="container"  style="font-family: 'Arima Madurai' !important;  filter: drop-shadow(5px 5px 4px black);">
         <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">Measuring Polyphony</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -57,13 +58,13 @@
 
     <!-- Intro Header -->
     <header class="masthead" style="padding-top:150px;">
-  <h1 class="brand-heading" style="color:white;">Transcriptions</h1>
+  <h1 class="brand-heading" style="color:white;font-family: 'Arima Madurai';  filter: drop-shadow(5px 5px 4px black);">Transcriptions</h1>
         <div class="container-fluid" style="background-color:white; overflow-y:auto;">
           <div class="row">
             <div class="container-fluid" style="height:75vh; ">
 
               <p class="container-fluid"><div class="col-lg-8 mx-auto" style="">
-                <table id="output" style="color:black;" ><tbody style=""><tr><th>Triplum</th><th>Motetus</th><th>Tenor</th><th>Contratenor</th> <th> Composer</th></tbody></table>
+                <table id="output"  style="font-family: 'Arima Madurai' !important;  color:black;"><tbody style=""><tr><th>Triplum</th><th>Motetus</th><th>Tenor</th><th>Contratenor</th> <th> Composer</th></tbody></table>
                 {% for xml in site.static_files %}
                     {% if xml.path contains 'assets/mensural' %}
                     <script type="text/javascript">

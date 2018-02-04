@@ -3,6 +3,7 @@
 
         <title>Measuring Polyphony</title>
         <link href="favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
         <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
         <!-- We also use jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
@@ -45,23 +46,25 @@
     </nav>
     <header class="masthead">
       <div class="intro-body">
-        <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;">
+        <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;border: 1px solid black;">
           <div class="row">
-            <div class="col">
+            <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black);">
 
                         <h1  id="title"></h1>
                         <p id="composer"></p><br>
                       </div>
 
 </div>
-            <div class="row" style="color:white;overflow-wrap:normal; ">
+            <div class="row" style="color:black;overflow-wrap:normal;background-color:white; ">
+              <div class="col" style="text-align:right;">
               <p>Press <b>p</b> to start playing</p>
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
               <p class="intro-text" id="iiif"></p> -->
-
+</div>
             <div id="player" class="col" style="text-align:right;"> </div>
-
+</div>
+<div class="row" style="color:white;overflow-wrap:normal; background-color:white;">
                 <!-- The div where we are going to insert the SVG -->
               <div id="svg_output" style="background-color:white; margin:40px;    overflow-x: auto;
             white-space: nowrap;">
@@ -71,6 +74,7 @@
               </a>
               </div>
             </div>
+            
             <div class="row" style="color:black;overflow-wrap:normal;background-color:#ffd8ad;">
               <div class="col-lg-6 text-center" style=" border: 1px solid black;">
                 <b>Downloads</b><br>
@@ -81,7 +85,7 @@
               </ul>
 
             </div>
-<div class="col-lg-6 text-center">
+<div class="col-lg-6 text-center"  style=" border: 1px solid black;">
   <b>Primary manuscript source for this transcription</b><br>
   <p id="primarysource"></p>
   <p id="diammlink"></p>
