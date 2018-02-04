@@ -46,24 +46,17 @@
       </div>
     </nav>
     <header class="masthead">
-      <div class="intro-body">
+      <div class="intro-body" style=" padding:10px;">
         <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;border: 1px solid black;">
-          <div class="row">
-            <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black);">
 
-                        <h1  id="title"></h1>
-                        <p id="composer"></p><br>
-                      </div>
-
-</div>
             <div class="row" style="color:black;overflow-wrap:normal;background-color:white; ">
-              <div class="col" style="text-align:right;">
+              <div class="col-lg-8" style="text-align:right;">
               <p>Press <b>p</b> to start playing</p>
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
               <p class="intro-text" id="iiif"></p> -->
 </div>
-            <div id="player" class="col" style="text-align:right;"> </div>
+            <div id="player" class="col-lg-4" style="text-align:right;"> </div>
 </div>
 <div class="row" style="color:white;overflow-wrap:normal; background-color:white;">
                 <!-- The div where we are going to insert the SVG -->
@@ -75,9 +68,27 @@
               </a>
               </div>
             </div>
+<div class="row">
+  <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black); padding-top:15px;">
 
-            <div class="row" style="color:black;overflow-wrap:normal;background-color:#ffd8ad;">
-              <div class="col-lg-6 text-center" style=" border: 1px solid black;">
+              <h1  id="title"></h1>
+              <p id="composer"></p><br>
+            </div>
+
+</div>
+
+
+            <div class="row" style="color:white;overflow-wrap:normal;">
+
+<div class="col-lg-6 text-center"  >
+  <b>Primary manuscript source for this transcription</b><br>
+  <p id="primarysource"></p>
+  <p id="diammlink"></p>
+              <p id="concsources"></p><br>
+<p id="prevedition"></p><br>
+
+              </div>
+              <div class="col-lg-6 text-center" >
                 <b>Downloads</b><br>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li id="mei"></li>
@@ -86,14 +97,6 @@
               </ul>
 
             </div>
-<div class="col-lg-6 text-center"  style=" border: 1px solid black;">
-  <b>Primary manuscript source for this transcription</b><br>
-  <p id="primarysource"></p>
-  <p id="diammlink"></p>
-              <p id="concsources"></p><br>
-<p id="prevedition"></p><br>
-
-              </div>
             </div>
 </div>
 
