@@ -73,7 +73,7 @@
 <p class="intro-text" id="iiif"></p>
               <h1  id="title"></h1>
               <p id="composer"></p><br>
-              <div id="diva-wrapper" style="height:10px !important;"></div>
+
             </div>
 
 </div>
@@ -98,6 +98,9 @@
               </ul>
 
             </div>
+            </div>
+            <div class="row">
+              <div id="diva-wrapper" style="height:10px !important;"></div>
             </div>
 </div>
 
@@ -157,8 +160,10 @@ var objectURL = "";
                 $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>" );
                 $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>" );
                   $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>" );
+                  if (objectURL !== ""){
                   loadDiva(objectURL);
-                if (!$concsources[2].textContent.equals("")){
+                }
+                if ($concsources[2] !== ("")){
                 $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
               }
 
