@@ -28,7 +28,7 @@ Relevant methods:
             init: function(divaSettings, divaInstance)
             {
                 var pixelsPerScroll;
-                var disableManualScroll;
+                var disableManualScroll=true;
                 var autoScrollRefresh;
                 var defaultAutoRefresh;
                 var scrollSpeed;

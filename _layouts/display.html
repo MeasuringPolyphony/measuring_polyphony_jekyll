@@ -81,7 +81,7 @@
 
             <div class="row" style="color:white;overflow-wrap:normal;">
 
-<div class="col-lg-6 text-center"  >
+<div class="col-lg-4 text-center"  >
   <b>Primary manuscript source for this transcription</b><br>
   <p id="primarysource"></p>
   <p id="diammlink"></p>
@@ -89,7 +89,10 @@
 <p id="prevedition"></p><br>
 
               </div>
-              <div class="col-lg-6 text-center" >
+              <div class="col-lg-4 text-center"  >
+                <div id="diva-wrapper" style="height:20px !important;"></div>
+              </div>
+              <div class="col-lg-4 text-center" >
                 <b>Downloads</b><br>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li id="mei"></li>
@@ -98,9 +101,6 @@
               </ul>
 
             </div>
-            </div>
-            <div class="row">
-              <div id="diva-wrapper" style="height:10px !important;"></div>
             </div>
 </div>
 
@@ -120,7 +120,7 @@ var objectURL = "";
            $meiarray[i] = $meiarray[i].replace("_MENSURAL", "");
         } else if ($meiarray[i]=="mensural") {
           $meiarray[i]="mei";
-        }
+        }style="height:10px !important;"
       }
       $mei = $meiarray.join("/");
         xmlDoc = $.parseXML( dataType ),
@@ -173,14 +173,28 @@ var objectURL = "";
       }, 'text');
 
       function loadDiva(objectURL) {
-          $('#diva-wrapper').diva({
+        $('#diva-wrapper').diva({
               enableAutoHeight: true,
-              fixedHeightGrid: false,
+              fixedHeightGrid: true,
               iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
               objectData: objectURL,
+              height: 10,
               enableCanvas: true,
-              enableDownload: true
+              enableDownload: true,
+              goDirectlyTo: 30, //INSERT PAGE HERE
+              pagesPerRow: 1,
+              maxPagesPerRow: 1,
+              documentView: true,
+              enableToolbar: false,
+              zoomLevel: 1,
+              enableAutoTitle: false,
+              viewportMargin:0,
+              tileHeight:500
           });
+
+          var diva = $('#diva-wrapper').data('diva');
+          diva.disableScrollable();
+          diva.height=1;
       }
   </script>
         <script type="text/javascript">
