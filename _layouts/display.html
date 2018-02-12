@@ -3,32 +3,31 @@
 
         <title>Measuring Polyphony</title>
         <link href="favicon.ico" rel="icon" type="image/x-icon" />
+          <!-- Custom fonts for this template -->
         <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+        <!-- Custom styles for this template -->
+        <!-- A stylesheet for the help overlay -->
+        <!--/////////////-->
+        <!-- MIDI Player -->
+        <!--/////////////-->
+          <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
+          <link rel="stylesheet" href="{{ site.baseurl }}css/diva.min.css" />
+        <link rel="stylesheet" href="{{ site.baseurl }}css/grayscale.css" />
+          <!-- Bootstrap core CSS -->
+    <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
         <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
         <!-- We also use jQuery -->
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
         <!-- Basic events from example 02 -->
         <script src="{{ site.baseurl }}javascript/basic-events.js" type="text/javascript" ></script>
-        <!-- A stylesheet for the help overlay -->
 
-        <!--/////////////-->
-        <!-- MIDI Player -->
-        <!--/////////////-->
         <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/wildwebmidi.js"></script>
         <script type="text/javascript" language="javascript" src="{{ site.baseurl }}javascript/midi-player/midiplayer.js"></script>
-
-        <!-- Bootstrap core CSS -->
-
-        <!-- Custom fonts for this template -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-
-        <!-- Custom styles for this template -->
-          <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
-        <link rel="stylesheet" href="{{ site.baseurl }}css/grayscale.css" />
-    <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+        <script src="{{ site.baseurl }}js/diva.min.js" type="text/javascript"></script>
     </head>
   <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"  style="background-color:#5e0202; filter: drop-shadow(5px 5px 4px black);">
@@ -41,6 +40,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}transcriptions.html">Transcriptions</a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -48,7 +48,6 @@
     <header class="masthead" style=" padding-top:30px;">
       <div class="intro-body" style=" padding:10px;">
         <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;border: 1px solid black;">
-
             <div class="row" style="color:black;overflow-wrap:normal;background-color:white; ">
               <div class="col-lg-8" style="text-align:right;">
               <p>Press <b>p</b> to start playing</p>
@@ -57,6 +56,7 @@
               <p class="intro-text" id="iiif"></p> -->
 </div>
             <div id="player" class="col-lg-4" style="text-align:right;"> </div>
+
 </div>
 <div class="row" style="color:white;overflow-wrap:normal; background-color:white;">
                 <!-- The div where we are going to insert the SVG -->
@@ -70,9 +70,10 @@
             </div>
 <div class="row">
   <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black); padding-top:15px;">
-
+<p class="intro-text" id="iiif"></p>
               <h1  id="title"></h1>
               <p id="composer"></p><br>
+              <div id="diva-wrapper" style="height:10px !important;"></div>
             </div>
 
 </div>
@@ -106,6 +107,7 @@
 
   <script type="text/javascript">
 var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
+var objectURL = "";
       /* Load the file using HTTP GET */
       $.get( qs, function( dataType ) {
       //  alert( "Data Loaded: " + dataType );
@@ -131,6 +133,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
             $triplum="";
             $motetus="";
             $tenor="";
+            objectURL = $link[0].attributes[1].textContent;
             if ($parts!=null){
 
             for (i = 0; i < $parts.length; i++) {
@@ -154,12 +157,26 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
                 $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>" );
                 $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>" );
                   $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>" );
-                if ( !$concsources[2].textContent.equals("")){
+                  loadDiva(objectURL);
+                if (!$concsources[2].textContent.equals("")){
                 $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
               }
 
-                //$("#iiif").html($link[0].attributes[0].textContent + ": " +  $link[0].attributes[1].textContent);
+
+                //
+
       }, 'text');
+
+      function loadDiva(objectURL) {
+          $('#diva-wrapper').diva({
+              enableAutoHeight: true,
+              fixedHeightGrid: false,
+              iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
+              objectData: objectURL,
+              enableCanvas: true,
+              enableDownload: true
+          });
+      }
   </script>
         <script type="text/javascript">
         var vrvToolkit = new verovio.toolkit();
@@ -300,5 +317,7 @@ var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, paren
                 loadFile();
             });
         </script>
+        <script type="text/javascript">
 
+                  </script>
 </html>
