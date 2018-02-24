@@ -14,7 +14,7 @@
         <!-- MIDI Player -->
         <!--/////////////-->
           <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
-          <link rel="stylesheet" href="{{ site.baseurl }}css/diva.min.css" />
+          <!--<link rel="stylesheet" href="{{ site.baseurl }}css/diva.css" />-->
         <link rel="stylesheet" href="{{ site.baseurl }}css/grayscale.css" />
           <!-- Bootstrap core CSS -->
     <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,7 +90,9 @@
 
               </div>
               <div class="col-lg-4 text-center"  >
-                <div id="diva-wrapper" style="height:20px !important;"></div>
+                <div id="diva-wrapper" style="height:20% !important;">
+
+                </div>
               </div>
               <div class="col-lg-4 text-center" >
                 <b>Downloads</b><br>
@@ -178,23 +180,24 @@ var objectURL = "";
               fixedHeightGrid: true,
               iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
               objectData: objectURL,
-              height: 10,
               enableCanvas: true,
               enableDownload: true,
               goDirectlyTo: 30, //INSERT PAGE HERE
               pagesPerRow: 1,
               maxPagesPerRow: 1,
-              documentView: true,
+              gridView: true,
               enableToolbar: false,
-              zoomLevel: 1,
+              zoomLevel: 0,
               enableAutoTitle: false,
               viewportMargin:0,
-              tileHeight:500
+              fixedPadding: 0,
+              adaptivePadding: 0,
+              verticalMiddleOfViewport: true
           });
 
           var diva = $('#diva-wrapper').data('diva');
           diva.disableScrollable();
-          diva.height=1;
+          diva.transform
       }
   </script>
         <script type="text/javascript">

@@ -25,7 +25,7 @@ public class UpdateMei {
 		  takeInputs();
 	}
 	public static void parseData() throws FileNotFoundException {
-		File file = new File("data.tsv");
+		File file = new File("data2.tsv");
 		Scanner input = new Scanner(file);
 		int counter=0;
 		while(input.hasNext()) {
@@ -48,9 +48,9 @@ public class UpdateMei {
 	     //System.out.print("Folder?:"); 
 	    // Scanner four = new Scanner(System.in);
 	     //String folder = four.next();
-		mainLoop("temp/Fauv/"); 
-		mainLoop("temp/IvTrem/");
-	     mainLoop("temp/Montpellier/");
+		mainLoop("newmei/Fauv/"); 
+		mainLoop("newmei/IvTrem/");
+	     mainLoop("newmei/Montpellier/");
 	}
 	
 	public static void mainLoop(String folder) throws IOException {
@@ -76,6 +76,8 @@ public class UpdateMei {
 		FileReader reader = null;
 		boolean alreadyFound=false; //only inserts it in first one
 		int  j= findFile(file);
+		String name = alldata[j][13];
+		String name2 = alldata[j][14];
 		if (j!=0) {
 		try {
 		    reader = new FileReader(file.getPath());
@@ -100,11 +102,11 @@ public class UpdateMei {
 						} else if (alreadyFound && line.contains("</meiHead>")) {
 							alreadyFound=false;
 						} else if (!alreadyFound) {
-							if (line.contains("<instrDef xml")) {
-								line =  line.substring(0, 49) + "midi.bpm=\"800\" " + line.substring(49, line.length());
+							if (line.contains("<scoreDef xml") && !line.contains("midi.bpm")) {
+								line =  line.substring(0, 28) + " midi.bpm=\"800\"" + line.substring(28, line.length());
 							}
-							if (line.contains("<staffDef xml")) {
-								line =  line.substring(0, 30) + " ident= \"mensural.black\"" + line.substring(30, line.length());
+							if (line.contains("<staffDef xml") && !line.contains("notationtype") && file.getPath().contains("MENSURAL.mei")) {
+								line =  line.substring(0, 30) + " notationtype=\"mensural.black\"" + line.substring(30, line.length());
 							}
 				            writer.println(line);
 						}
@@ -130,7 +132,7 @@ public class UpdateMei {
 		String output="";
 		int counter=2;
 		for (int i=0; i<line.length(); i++) {
-			if (line.charAt(i)=='/') {
+			if (line.charAt(i)=='/' && line.charAt(i-1)=='<') {
 				counter=counter-1;
 				String[] split= line.split(" ");
 
@@ -190,64 +192,17 @@ public class UpdateMei {
 		return start && first && second && third;
 		
 	}
-	public static String findTitle(String line) {
-		String temp =""; //fix me
-		int lowbound =0;
-		int highbound=0;
-		boolean firstone=true;
-		for (int i=0; i<line.length(); i++) {
-			if (line.charAt(i)=='>' && firstone) {
-				lowbound=i+1;
-				firstone=false;
-			}
-			if (line.charAt(i)=='<') {
-				highbound = i;
-			}
-		}
-		if (lowbound<highbound) {
-			temp = line.substring(lowbound, highbound);
-		}
-		return temp;
-	}
 	
-	public static int findFile(File file) throws IOException {
-
-		// Open a temporary file to write to.
-		PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("temp.mei")));
-
-		BufferedReader br = null;
-		FileReader reader = null;
-		boolean alreadyFound=false; //only inserts it in first one
-		try {
-		    reader = new FileReader(file.getPath());
-		    br = new BufferedReader(reader);
-		    String line;
-		    String title = "";
-		    while ((line = br.readLine()) != null && !alreadyFound) {
-		    	if (line.contains("<title x")) {
-		    		title = findTitle(line);
-		    		alreadyFound=true;
-		    	}
-		    
-    
-		        
-		    }
-		    
+	
+	public static int findFile(File file) throws IOException { 
 		    
 	    	for (int j=0; j<allelements; j++) {
-	  
-	    		if (alldata[j][0].equals(title)) { //CREATE FULL
+	    		if ((file.getPath().contains(alldata[j][10]) && !alldata[j][10].equals(""))  || (file.getPath().contains(alldata[j][11]) && !alldata[j][11].equals("")) ) { //CREATE FULL
 	    			return j;
 	    	}   
 		   
 		    }
-		    writer.close();
-		} catch (FileNotFoundException e) {
-		    e.printStackTrace();
-		}finally{
-		    reader.close();
 
-		}
 		return 0;
 	}
 	
@@ -259,30 +214,35 @@ public class UpdateMei {
 				+ "<funder>\n<corpName>Brandeis University</corpName>\n</funder>\n "
 				+ "<respStmt> \n"
 				+ "<persName role=\"project director\">Karen Desmond</persName>\n"
-				+ initialsToNames(alldata[j][24],alldata[j][23],"encoder") //convert initials to names
-				+ initialsToNames(alldata[j][26],alldata[j][25],"proofreader") //for loop
+				+ initialsToNames(alldata[j][20],alldata[j][19],"encoder") //convert initials to names
+				+ initialsToNames(alldata[j][22],alldata[j][21],"proofreader") //for loop
 				+ "</respStmt>\n" + "</titleStmt>"
 				+ "\n<pubStmt xml:id=\"m-15\">\n<publisher>\n "
 				+ "<persName>Karen Desmond</persName>\n<corpName>Brandeis University</corpName>\n " + "</publisher>"
 				+ "\n<date>2018</date> \n<availability>\n<useRestrict>Available for purposes of academic research and teaching only.</useRestrict>\n</availability>"
 				+ "\n</pubStmt> \n<seriesStmt> \n<title>Measuring Polyphony</title> \n<editor> \n<persName>Karen Desmond</persName> \n"
-				+ "</editor>\n</seriesStmt>\n</fileDesc>\n<sourceDesc>\n<source>\n<notesStmt>\n<annot>Scanned from "+alldata[j][11]+"</annot>\n"
-				+ "</notesStmt>\n</source>\n<source>\n<titleStmt>\n<title>[Primary source for this encoding]\n<identifier>"+alldata[j][4]+"</identifier>\n"
+				+ "</editor>\n</seriesStmt>\n</fileDesc>\n<sourceDesc>\n<source>\n<notesStmt>\n<annot>Scanned from "+alldata[j][8]+"</annot>\n"
+				+ "</notesStmt>\n</source>\n<source>\n<titleStmt>\n<title>[Primary source for this encoding]\n<identifier>"+alldata[j][3]+"</identifier>\n"
 				+ "</title>\n<pubStmt>\n<unpub/>\n</pubStmt>\n<notesStmt>\n"
-				+ "<annot>Scan checked and corrected against this manuscript</annot>\n</notesStmt>\n</titleStmt>\n</source>\n<source>\n"
+				+ "<annot>Scan checked and corrected against this manuscript</annot>\n<itemList>\n" 
+				+ "<item title=\"IIIF\" target=\""+alldata[j][15]+"\" folio=\""+alldata[j][4]+"\"></item>\n" 
+				+ "<item title=\"other/images\" target=\""+alldata[j][28]+"\" folio=\"" + alldata[j][4]+ "\"></item>\n" 
+				+ "<item title=\"DIAMM_composition\" target=\""+alldata[j][16]+"\"></item>\n" 
+				+ "<item title=\"DIAMM_source\" target=\""+alldata[j][17]+"\"></item>\n" 
+				+ "</itemList>\n</notesStmt>\n</titleStmt>\n</source>\n<source>\n"
 				+ "<titleStmt>\n<title>[Other concordant sources]</title>\n<pubStmt>\n<unpub/>\n</pubStmt>\n<notesStmt>\n"
-				+ "<annot>" + alldata[j][8] + "</annot>\n</notesStmt>\n</titleStmt>\n</source>\n</sourceDesc>\n<encodingDesc xml:id=\"m-18\"> \n"
-				+ "<appInfo xml:id=\"m-19\">\n<application xml:id=\" + sibelius + \" isodate=\" + 2016-4-29T09:24:36Z + \" version=\"7510\">"
+				+ "<annot>" + alldata[j][7] + "</annot>\n</notesStmt>\n</titleStmt>\n</source>\n</sourceDesc>\n<encodingDesc xml:id=\"m-18\"> \n"
+				+ "<appInfo xml:id=\"m-19\">\n<application xml:id=\"sibelius\" isodate=\"2016-4-29T09:24:36Z\" version=\"7510\">"
 				+ "<name xml:id=\"m-21\" type=\"operating-system\">Mac OS X Mountain Lion</name>"
 				+ "</application>\n<application xml:id=\"sibmei\" type=\"plugin\" version=\"2.0.0b3\">\n<name xml:id=\"m-23\">Sibelius to MEI Exporter (2.0.0b3)</name>\n"
-				+ "</application> \n<application xml:id=\"meiMENS\" isodate=\" + 2016-4-29 + \">\n<name xml:id=\"m-23\">CMN-MEI to MensuralMEI Translator</name>\n"
-				+ "</application>\n</appInfo>\n<editorialDecl>\n<p>\n" + alldata[j][29] 
+				+ "</application> \n<application xml:id=\"meiMENS\" isodate=\"2016-4-29\">\n<name xml:id=\"m-23\">CMN-MEI to MensuralMEI Translator</name>\n"
+				+ "</application>\n</appInfo>\n<editorialDecl>\n<p>\n" + alldata[j][23] 
 				+ "</p>\n<p></p>\n</editorialDecl>\n<projectDesc>\n<p>Short Project Description</p>\n</projectDesc>\n</encodingDesc>\n<workDesc xml:id=\"m-5\">\n<work xml:id=\"m-6\">\n<identifier>"
-				+ "\n<identifier>"+alldata[j][12]+"</identifier>\n</identifier>\n<titleStmt xml:id=\"m-7\">\n<title xml:id=\"m-8\">" + alldata[j][0]+"</title>\n<respStmt xml:id=\"m-9\">\n"
+				+ "\n<identifier>"+alldata[j][9]+"</identifier>\n</identifier>\n<titleStmt xml:id=\"m-7\">\n<title xml:id=\"m-8\">" + alldata[j][0]+"</title>\n<respStmt xml:id=\"m-9\">\n"
 				+ "<persName xml:id=\"m-12\" role=\"composer\">" + alldata[j][1] + "</persName>\n</respStmt>\n</titleStmt>\n"
-				+ titleToParts(alldata[j][0])
-				+ "<otherChar>Original clefs " + clefFormat(alldata[j][7]) + "</otherChar>\n<classification>\n<term>" + alldata[j][3] + "</term>\n</classification>\n</work>\n</workDesc>\n<extMeta>\n"
-				+ alldata[j][31] + "\n" + "<iimsLink xmlns=\"" + alldata[j][19] + ">IIMS Link</iimsLink>\n</extMeta>\n</meiHead>";
+				+ makeParts(j)
+				+ "<otherChar>Original clefs " + clefFormat(alldata[j][6]) + "</otherChar>\n<classification>\n<term>" + alldata[j][2] + "</term>\n</classification>\n</work>\n</workDesc>\n<extMeta>\n"
+				+ alldata[j][25] + "\n</extMeta>\n</meiHead>";
 	}
 	
 	
@@ -291,30 +251,31 @@ public class UpdateMei {
 		String output="";
 		for (int i=0; i<splitInput.length; i++) {
 			if (splitInput[i].equals("KD")) {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">Karen Desmond</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">Karen Desmond</persName> \n";
 			} else if (splitInput[i].equals("EH")) {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">Emily Hopkins</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">Emily Hopkins</persName> \n";
 			} else if (splitInput[i].equals("SH")) {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">Sam Howes</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">Sam Howes</persName> \n";
 			} else if (splitInput[i].equals("SM")) {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">Sadie Menicanin</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">Sadie Menicanin</persName> \n";
 			} else if (splitInput[i].equals("DS")) {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">Daniel Shapiro</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">Daniel Shapiro</persName> \n";
 			} else {
-				output = output + "<persName role=\""+role+"\"date=\"" + dateFormat(date) + ">" + splitInput[i] + "</persName> \n";
+				output = output + "<persName role=\""+role+"\" date=\"" + dateFormat(date) + "\">" + splitInput[i] + "</persName> \n";
 			}
 			}
 		
 		return output;
 	}
 	
-	public static String titleToParts(String input) {
-
-		String output="";
-		String[] splitInput = input.split("/");
-		for (int i=0; i<splitInput.length; i++) {
-			output=output+ "<incip>\n<incipText>"+splitInput[i]+"</incipText>\n</incip>\n";
-			
+	public static String makeParts(int j) {
+		String output = "";
+		for (int i=0; i<5; i++) {
+			if(alldata[j][26+i]!=null) {
+			if ( !alldata[j][26+i].equals("")) {
+			output=output+ "<incip>\n<incipText title=\""+ alldata[0][26+i] + "\">"+alldata[j][26+i]+"</incipText>\n</incip>\n";
+			}
+			}
 		}
 		return output;
 	}
