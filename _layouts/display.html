@@ -48,6 +48,15 @@
     <header class="masthead" style=" padding-top:30px;">
       <div class="intro-body" style=" padding:10px;">
         <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;border: 1px solid black;">
+          <div class="row">
+            <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black); padding-top:15px;">
+          <p class="intro-text" id="iiif"></p>
+                        <h1  id="title"></h1>
+                        <p id="composer"></p><br>
+
+                      </div>
+
+          </div>
             <div class="row" style="color:black;overflow-wrap:normal;background-color:white; ">
               <div class="col-lg-8" style="text-align:right;">
               <p>Press <b>p</b> to start playing</p>
@@ -68,20 +77,14 @@
               </a>
               </div>
             </div>
-<div class="row">
-  <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black); padding-top:15px;">
-<p class="intro-text" id="iiif"></p>
-              <h1  id="title"></h1>
-              <p id="composer"></p><br>
 
-            </div>
-
-</div>
 
 
             <div class="row" style="color:white;overflow-wrap:normal;">
-
-<div class="col-lg-4 text-center"  >
+              <div class="col-lg-4 text-center"  >
+                <div id="diva-wrapper" style="height:20px !important;"></div>
+              </div>
+<div class="col-lg-4 text-left"  >
   <b>Primary manuscript source for this transcription</b><br>
   <p id="primarysource"></p>
   <p id="diammlink"></p>
@@ -89,10 +92,8 @@
 <p id="prevedition"></p><br>
 
               </div>
-              <div class="col-lg-4 text-center"  >
-                <div id="diva-wrapper" style="height:20px !important;"></div>
-              </div>
-              <div class="col-lg-4 text-center" >
+
+              <div class="col-lg-4 text-left" >
                 <b>Downloads</b><br>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li id="mei"></li>
@@ -111,6 +112,7 @@
   <script type="text/javascript">
 var qs = parent.document.URL.substring(parent.document.URL.indexOf('?')+1, parent.document.URL.length);
 var objectURL = "";
+var manifest = {{site.data.manifest | jsonify}};
       /* Load the file using HTTP GET */
       $.get( qs, function( dataType ) {
       //  alert( "Data Loaded: " + dataType );
@@ -131,12 +133,22 @@ var objectURL = "";
             $concsources = $xml.find( "annot");
             $link = $xml.find( "item");
             $parts = $xml.find( "incipText");
+            $needle = $link[0].attributes[2].textContent.split(",")[0];
             $quadruplum="";
             $contratenor="";
             $triplum="";
             $motetus="";
             $tenor="";
             objectURL = $link[0].attributes[1].textContent;
+            for (var i = 0; i < manifest.sequences[0].canvases.length; i++){
+                // look for the entry with a matching `code` value
+                if (manifest.sequences[0].canvases[i].label == $needle){
+                  $pagelink= manifest.sequences[0].canvases[i].images[0].on;
+                   // we found it
+                  // obj[i].name is the matched result
+                }
+              }
+              pagenum = $pagelink.split("/canvas/f")[1];
             if ($parts!=null){
 
             for (i = 0; i < $parts.length; i++) {
@@ -160,36 +172,41 @@ var objectURL = "";
                 $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>" );
                 $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>" );
                   $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>" );
+
+
+
                   if (objectURL !== ""){
-                  loadDiva(objectURL);
+                  loadDiva(objectURL,pagenum);
                 }
                 if ($concsources[2] !== ("")){
                 $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
               }
 
 
+
                 //
 
       }, 'text');
 
-      function loadDiva(objectURL) {
+      function loadDiva(objectURL, pagenum) {
         $('#diva-wrapper').diva({
-              enableAutoHeight: true,
-              fixedHeightGrid: true,
-              iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-              objectData: objectURL,
-              height: 10,
-              enableCanvas: true,
-              enableDownload: true,
-              goDirectlyTo: 30, //INSERT PAGE HERE
-              pagesPerRow: 1,
-              maxPagesPerRow: 1,
-              documentView: true,
-              enableToolbar: false,
-              zoomLevel: 1,
-              enableAutoTitle: false,
-              viewportMargin:0,
-              tileHeight:500
+          enableAutoHeight: false,
+                        fixedHeightGrid: false,
+                        iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
+                        objectData: objectURL,
+                        enableCanvas: false,
+                        enableDownload: false,
+                        goDirectlyTo: pagenum, //INSERT PAGE HERE
+                        pagesPerRow: 1,
+                        maxPagesPerRow: 1,
+                        gridView: false,
+                        enableToolbar: false,
+                        zoomLevel: 0,
+                        enableAutoTitle: false,
+                        viewportMargin:0,
+                        fixedPadding: 0,
+                        adaptivePadding: 0,
+                        verticalMiddleOfViewport: true
           });
 
           var diva = $('#diva-wrapper').data('diva');
