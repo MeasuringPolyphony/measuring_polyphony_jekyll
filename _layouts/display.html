@@ -9,6 +9,7 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <!-- A stylesheet for the help overlay -->
   <!--/////////////-->
@@ -48,11 +49,11 @@
       </div>
     </div>
   </nav>
-  <header class="masthead" style=" padding-top:30px;">
+  <header class="masthead" style=" padding-top:150px;">
     <div class="intro-body" style=" padding:10px;">
-      <div class="container-fluid" style="background-color:#5e0202; height:80vh; width:180vh;border: 1px solid black;">
+      <div class="container-fluid" style="height:88vh; width:180vh;">
         <div class="row">
-          <div class="col" style="font-family: 'Arima Madurai'; filter: drop-shadow(5px 5px 4px black); padding-top:15px;">
+          <div class="col text-left" style="font-family: 'Arima Madurai';  padding-top:15px; background-color:#5e0202;border-top: 1px solid black; border-left: 1px solid black;border-right: 1px solid black;">
             <p class="intro-text" id="iiif"></p>
             <h1 id="title"></h1>
             <p id="composer"></p><br>
@@ -60,35 +61,31 @@
           </div>
 
         </div>
-        <div class="row" style="color:black;overflow-wrap:normal;background-color:white; ">
-          <div class="col-lg-8" style="text-align:right;">
-            <p>Press <b>p</b> to start playing</p>
-            <a class="btn" data-toggle="modal" href="#myModal">More Images</a>
-            <div class="modal hide" id="myModal">
-              <!-- note the use of "hide" class -->
-              <div class="modal-header">
-                <button class="close" data-dismiss="modal">×</button>
-              </div>
-              <div id="svg-modal">
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-                <!-- note the use of "data-dismiss" -->
-              </div>
-            </div>​
-            <input id="clickMe" type="button" value="Fullscreen" onclick="setFullscreen();" />
-            <input id="flipDisplay" type="button" value="Display Mensural" onclick="loadMei();" />
+        <div class="row" style="color:black;overflow-wrap:normal;background-color:white;background-color:#5e0202; ">
 
-            <input id="clickMe" type="button" value="Flip Backward" onclick="flipPageBackward();" />
-            <input id="clickMe" type="button" value="Flip Forward" onclick="flipPageForward();" />
+
+          <div class="col-lg-4" style="text-align:right;">
+
+  <div id="player" style="text-align:right;"> </div>
+
+</div>
+
+    <div class="col-lg-4" style="text-align:left;">
+
+
+            <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: white;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
+            <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: white;"><span class="glyphicon glyphicon-arrow-right"></span></button>
+  <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: white;"> <span class="glyphicon glyphicon-resize-full"></span></button>
+
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
               <p class="intro-text" id="iiif"></p> -->
           </div>
-          <div id="player" class="col-lg-4" style="text-align:right;"> </div>
-
+  <div class="col-lg-4" style="text-align:right;">
+<input id="flipDisplay" type="button" value="Display Mensural" onclick="loadMei();" style="text-align:right; background-color:transparent; color:white; border:transparent;" />
+  </div>
         </div>
-        <div class="row" id = "svg_row" style="color:white;overflow-wrap:normal; background-color:white;height:25vh; ">
+        <div class="row" id = "svg_row" style="overflow-wrap:normal; background-color:white; border: 1px solid black;">
           <!-- The div where we are going to insert the SVG -->
           <div id="svg_output" style="background-color:white; margin:40px;    overflow-x: auto;
             white-space: nowrap;">
@@ -101,18 +98,12 @@
 
 
 
-        <div class="row" style="color:white;overflow-wrap:normal;">
-          <div class="col-lg-4 text-center">
+        <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; border: 1px solid black; ">
+          <div class="col-lg-2 text-left">
+              <a class="btn" data-toggle="modal" href="#myModal" onclick="loadDivaModal();">More Images</a>
             <div id="diva-wrapper"></div>
-          </div>
-          <div class="col-lg-4 text-left">
-            <b>Primary manuscript source for this transcription</b><br>
-            <p id="primarysource"></p>
-            <p id="diammlink"></p>
-            <p id="concsources"></p><br>
-            <p id="prevedition"></p><br>
-            <a class="btn" data-toggle="modal" href="#myModal">More Images</a>
-            <div class="modal hide" id="myModal">
+
+            <div class="modal fade" id="myModal">
               <!-- note the use of "hide" class -->
               <div class="modal-header">
                 <button class="close" data-dismiss="modal">×</button>
@@ -125,14 +116,23 @@
               </div>
             </div>​
           </div>
+          <div class="col-lg-4 text-left" style:"padding-left:15px;">
+            <h1><b>Primary manuscript source for this transcription</b></h1><br>
+            <p id="primarysource"></p> <br>
+
+            <p id="concsources"></p><br>
+            <p id="prevedition"></p><br>
+            <p id="diammlink"></p>
+
+          </div>
 
           <div class="col-lg-4 text-left">
-            <b>Downloads</b><br>
-            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-              <li id="mei"></li>
-              <li id="mens"></li>
-              <li id="pdf"></li>
-            </ul>
+            <h1><b>Downloads</b></h1><br>
+
+              <p id="mei"></p><br>
+              <p id="mens"></p><br>
+              <p id="pdf"></p>
+
             <!-- Button trigger modal -->
 
           </div>
@@ -247,17 +247,27 @@
 
         var diva = $('#diva-wrapper').data('diva');
         diva.disableScrollable();
-        $('#diva-modal').diva({
-          enableAutoHeight: true,
-          fixedHeightGrid: false,
-          iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-          objectData: objectURL,
-          enableCanvas: true,
-          enableDownload: true,
-          inBookLayout: true,
-          goDirectlyTo: pagenum
-        });
+
+        document.getElementById("1-diva-outer").style.height="238px";
+document.getElementById("1-diva-inner").style.height="238px";
+document.getElementById("1-diva-outer").style.width="165px";
+document.getElementById("1-diva-inner").style.width="165px !important";
+document.getElementById("1-diva-inner").style.margin="0px";
+
       }
+
+        function loadDivaModal(){
+          $('#diva-modal').diva({
+            enableAutoHeight: true,
+            fixedHeightGrid: false,
+            iipServerURL: "http://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
+            objectData: objectURL,
+            enableCanvas: true,
+            enableDownload: true,
+            inBookLayout: true,
+            goDirectlyTo: pagenum
+          });
+        }
     </script>
     <script type="text/javascript">
       var vrvToolkit = new verovio.toolkit();
@@ -290,18 +300,7 @@
       }
 
       function setFullscreen() {
-        file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
-        $meiarray = file.split("/")
-        for (i = 0; i < $meiarray.length; i++) {
-          if (i == ($meiarray.length - 1)) {
-            $meiarray[i] = $meiarray[i].replace("_MENSURAL", "");
-          } else if ($meiarray[i] == "mensural") {
-            $meiarray[i] = "mei";
-          }
-          style = "height:10px !important;"
-        }
-        $mei = $meiarray.join("/");
-        file = $mei;
+        if (document.getElementById("setFullscreen").innerHTML ==" <span class=\"glyphicon glyphicon-resize-full\"></span>"){
         $.ajax({
           url: file,
           dataType: "text",
@@ -310,8 +309,7 @@
           }
         });
         //expands size of div
-        document.getElementById("svg_row").style.height = "100vh";
-        document.getElementById("flipDisplay").value = "Display Mensural";
+        document.getElementById("svg_row").style.height = "2000px";
         //new settings for zooming
         page = 1;
         zoom = 30;
@@ -331,9 +329,41 @@
           ignoreLayout: 1
         };
         //set new options
-        document.getElementById("flipDisplay").value = "Display Mensural";
+        vrvToolkit.setOptions(options);
+        document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-small\"></span>";
+      } else{
+        $.ajax({
+          url: file,
+          dataType: "text",
+          success: function(data) {
+            loadData(data);
+          }
+        });
+        //expands size of div
+document.getElementById("svg_row").style.height = "";
+        //new settings for zooming
+        page = 1;
+        zoom = 40;
+        pageHeight = 2970;
+        pageWidth = 2100;
+        pageHeight = $(document).height() * 30 / zoom;
+        pageWidth = $(document).width() * 80 / zoom;
+        border = 50;
+        options = {
+          inputFormat: 'mei',
+          pageHeight: pageHeight,
+          pageWidth: pageWidth,
+
+          border: border,
+          scale: zoom,
+          adjustPageHeight: 1,
+          ignoreLayout: 1
+        };
+        //set new options
         vrvToolkit.setOptions(options);
         vrvToolkit.loadData(data);
+        document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-full\"></span>";
+      }
       }
 
       function flipPageForward() {
@@ -353,6 +383,7 @@
         vrvToolkit.loadData(data);
 
         page = 1;
+        display_midi();
         loadPage();
       }
 
@@ -369,6 +400,7 @@
           // bug! time needs to be divided by 2
           $("#midi-player").midiPlayer.seek(time / 2);
         });
+
       };
 
       function loadFile() {
@@ -385,7 +417,9 @@
           style = "height:10px !important;"
         }
         $mei = $meiarray.join("/");
+
         file = $mei;
+
         $.ajax({
           url: file,
           dataType: "text",
@@ -393,7 +427,6 @@
             loadData(data);
           }
         });
-
       }
 
       function loadMei() {
@@ -436,12 +469,20 @@
       ////////////////////////////////////////////
       function play_midi() {
         if (isPlaying == false) {
-          var base64midi = vrvToolkit.renderToMidi();
+          var base64midi = vrvToolkit.renderToMIDI();
           var song = 'data:audio/midi;base64,' + base64midi;
           $("#player").show();
           $("#player").midiPlayer.play(song);
           isPlaying = true;
         }
+      }
+
+      function display_midi() {
+
+          var base64midi = vrvToolkit.renderToMIDI();
+          var song = 'data:audio/midi;base64,' + base64midi;
+          display(song);
+
       }
 
       //////////////////////////////////////////////////////
@@ -472,6 +513,7 @@
         }
       }
 
+
       var midiStop = function() {
         ids.forEach(function(noteid) {
           $("#" + noteid).attr("fill", "#000").attr("stroke", "#000");
@@ -487,7 +529,7 @@
           /* Key events 'p' for playing */
           ////////////////////////////////
           if (event.keyCode == 80) {
-            play_midi();
+            display_midi();
           }
         });
 
@@ -501,8 +543,12 @@
           onStop: midiStop,
           width: 250
         });
+        document.getElementById("midiPlayer_div").style.color="white";
 
+        document.getElementById("midiPlayer_div").style.backgroundColor="#5e0202";
         loadFile();
+
+
       });
     </script>
     <script type="text/javascript">

@@ -6,9 +6,9 @@ function CircularAudioBuffer(slots) {
     // number of buffers
     this.slots = slots;
     this.buffers = new Array(slots);
-    
+
     this.reset();
-    
+
     for (var i = 0; i < this.slots; i++) {
         var buffer = audioCtx.createBuffer(channels, BUFFER, SAMPLE_RATE);
         this.buffers[i] = buffer;
@@ -72,13 +72,13 @@ function initAudio() {
     scriptNode = audioCtx.createScriptProcessor(BUFFER, 0, channels);
     circularBuffer = new CircularAudioBuffer(4);
     emptyBuffer = audioCtx.createBuffer(channels, BUFFER, SAMPLE_RATE);
-    
+
     scriptNode.onaudioprocess = onAudioProcess;
     source.connect(scriptNode);
     source.start(0);
 }
 
-function startAudio() {    
+function startAudio() {
     scriptNode.connect(audioCtx.destination);
 }
 
@@ -100,7 +100,7 @@ function processAudio(buffer_loc, size) {
     var buffer = circularBuffer.prepare();
     var left_buffer_f32 = buffer.getChannelData(0);
     var right_buffer_f32 = buffer.getChannelData(1);
-    
+
     // Copy emscripten memory (OpenAL stereo16 format) to JS
     for (var i = 0; i < size; i++) {
         left_buffer_f32[i] = MidiPlayer.HEAP16[(buffer_loc >> 1) + 2 * i + 0] / 32768;
@@ -114,7 +114,7 @@ function updateProgress(current, total) {
     midiPlayer_progress.style.width = (current / total * 100) + '%';
     midiPlayer_playingTime.innerHTML = samplesToTime(current);
     midiPlayer_totalTime.innerHTML = samplesToTime(total);
-    
+
     var millisec = Math.floor(current * 1000 / SAMPLE_RATE / midiPlayer_updateRate);
     if (midiPlayer_lastMillisec > millisec) {
         midiPlayer_lastMillisec = 0;
@@ -132,7 +132,7 @@ function completeConversion(status) {
     midiPlayer_convertionJob = null;
     // Not a pause
     if (_EM_signalStop != 2) {
-        stop();   
+        stop();
     }
 }
 
@@ -180,16 +180,16 @@ var MidiPlayer = {
               console.log("MIDI file set");
               setTimeout(function() {convertFile("midi.midi", convertDataURIToBinary(midiPlayer_input));}, 200);
           }
-  
+
         }
     }
 };
-MidiModule(MidiPlayer); 
+MidiModule(MidiPlayer);
 
- 
+
 function onAudioProcess(audioProcessingEvent) {
     var generated = circularBuffer.use();
-    
+
     if (! generated && midiPlayer_drainBuffer) {
         // wait for remaining buffer to drain before disconnect audio
         pauseAudio();
@@ -200,7 +200,7 @@ function onAudioProcess(audioProcessingEvent) {
         //console.log('buffer under run!!')
         generated = emptyBuffer;
     }
-    
+
     var outputBuffer = audioProcessingEvent.outputBuffer;
     var offset = 0;
     if (outputBuffer.copyToChannel !== undefined) {
@@ -234,7 +234,7 @@ function convertDataURIToBinary(dataURI) {
     var raw = window.atob(base64);
     var rawLength = raw.length;
     var array = new Uint8Array(new ArrayBuffer(rawLength));
-    
+
     for (var i = 0; i < rawLength; i++) {
         array[i] = raw.charCodeAt(i);
     }
@@ -248,7 +248,6 @@ function convertFile(file, data) {
     MidiPlayer['FS'].writeFile(midiPlayer_midiName, data, {
         encoding: 'binary'
     });
-    play();
 }
 
 function pause() {
@@ -263,7 +262,7 @@ function play() {
     if (midiPlayer_convertionJob) {
         return;
     }
-    
+
     _EM_signalStop = 0;
     midiPlayer_play.style.display = 'none';
     midiPlayer_pause.style.display = 'inline-block';
@@ -272,22 +271,35 @@ function play() {
     setTimeout(runConversion, 100);
 }
 
+function display(song) {
+  var byteArray = convertDataURIToBinary(song);
+  if (midiPlayer_totalSamples > 0) {
+      stop();
+      // a timeout is necessary because otherwise writing to the disk is not done
+      setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
+  }
+  else {
+      setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
+    }
+  _EM_signalStop = 1;
+  midiPlayer_play.style.display = 'inline-block';
+  midiPlayer_pause.style.display = 'none';
+  midiPlayer_stop.style.display = 'inline-block';
+}
+
 function stop() {
     _EM_signalStop = 1;
     _EM_seekSamples = 0;
     circularBuffer.reset();
-    
+
     midiPlayer_totalSamples = 0;
     midiPlayer_currentSamples = 0;
     midiPlayer_progress.style.width = '0%';
     midiPlayer_playingTime.innerHTML = "00.00";
     midiPlayer_totalTime.innerHTML = "00.00";
-    
-    midiPlayer_play.style.display = 'none';
+    midiPlayer_play.style.display = 'inline-block';
     midiPlayer_pause.style.display = 'none';
-    midiPlayer_stop.style.display = 'none';
-    
-    if (midiPlayer_onStop != null) midiPlayer_onStop(); 
+    midiPlayer_stop.style.display = 'inline-block';
 }
 
 function runConversion() {
@@ -297,13 +309,13 @@ function runConversion() {
         targetPath: '',
         conversion_start: Date.now()
     };
-    
+
     var sleep = 10;
     circularBuffer.reset();
     setTimeout(startAudio, 100);
 
     console.log(midiPlayer_convertionJob);
-        
+
     MidiPlayer.ccall('wildwebmidi',
         null,[ 'string', 'string', 'number'],[midiPlayer_convertionJob.sourceMidi, midiPlayer_convertionJob.targetPath, sleep], {
             async: true
@@ -311,11 +323,11 @@ function runConversion() {
 }
 
 /************************************************************************
- * jQuery player plugin 
+ * jQuery player plugin
  */
 
 (function ($) {
-    
+
     $.fn.midiPlayer = function (options) {
 
         var options = $.extend({
@@ -332,7 +344,7 @@ function runConversion() {
         options.width = Math.max(options.width, 150);
         // update rate should not be less than 10 milliseconds
         options.updateRate = Math.max(options.updateRate, 10);
-        
+
         $.fn.midiPlayer.play = function (song) {
             if (midiPlayer_isLoaded == false) {
                 midiPlayer_input = song;
@@ -349,18 +361,38 @@ function runConversion() {
                 }
             }
         };
-        
+
+        $.fn.midiPlayer.load = function (song) {
+            if (midiPlayer_isLoaded == false) {
+                midiPlayer_input = song;
+            }
+            else {
+                var byteArray = convertDataURIToBinary(song);
+                if (midiPlayer_totalSamples > 0) {
+                    stop();
+                    // a timeout is necessary because otherwise writing to the disk is not done
+                    setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
+
+                }
+                else {
+
+                    setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
+
+                }
+            }
+        };
+
         $.fn.midiPlayer.seek = function (millisec) {
             if (midiPlayer_totalSamples == 0) return;
             var samples = millisec * SAMPLE_RATE / 1000;
             midiPlayer_currentSamples = Math.min(midiPlayer_totalSamples, samples);
             play();
         };
-        
+
         $.fn.midiPlayer.stop = function () {
             stop();
         };
-        
+
         // Create the player
         this.append("<div id=\"midiPlayer_div\"></div>");
         $("#midiPlayer_div").append("<div id=\"midiPlayer_playingTime\">0:00</div>")
@@ -369,14 +401,14 @@ function runConversion() {
             .append("<a class=\"icon play\" id=\"midiPlayer_play\" onclick=\"play()\"></a>")
             .append("<a class=\"icon pause\" id=\"midiPlayer_pause\" onclick=\"pause()\"></a>")
             .append("<a class=\"icon stop\" id=\"midiPlayer_stop\" onclick=\"stop()\"></a>");
-            
+
         $("#midiPlayer_div").css("width", options.width + 200);
         $("#midiPlayer_bar").css("width", options.width);
         $("#midiPlayer_progress").css("background", options.color);
-        
+
         // Assign the global variables
         midiPlayer_onStop = options.onStop;
-        midiPlayer_onUpdate = options.onUnpdate; 
+        midiPlayer_onUpdate = options.onUnpdate;
         midiPlayer_updateRate = options.updateRate;
         midiPlayer_bar = document.getElementById('midiPlayer_bar');
         midiPlayer_progress = document.getElementById('midiPlayer_progress');
@@ -385,8 +417,8 @@ function runConversion() {
         midiPlayer_pause = document.getElementById('midiPlayer_pause');
         midiPlayer_stop = document.getElementById('midiPlayer_stop');
         midiPlayer_totalTime = document.getElementById('midiPlayer_totalTime');
-        
-        
+
+
         var pageDragStart = 0;
         var barDragStart = 0;
         midiPlayer_bar.addEventListener('mousedown', function (e) {
@@ -400,7 +432,7 @@ function runConversion() {
                 pause();
                 updateDragging(e.pageX);
             }
-            
+
         });
         window.addEventListener('mouseup', function (e) {
             if (pageDragStart == 0) return;
@@ -408,7 +440,7 @@ function runConversion() {
             pageDragStart = 0;
             play();
         });
-        
+
         function updateDragging(pageX) {
             var posX =  barDragStart + (pageX - pageDragStart);
             if (posX >= 0 && posX <= options.width) {
@@ -417,7 +449,7 @@ function runConversion() {
                 updateProgress(midiPlayer_currentSamples, midiPlayer_totalSamples);
             }
         }
-        
+
         return;
     };
 }

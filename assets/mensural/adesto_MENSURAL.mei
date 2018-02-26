@@ -131,15 +131,15 @@
 				<score xml:id="m-27">
 					<scoreDef xml:id="m-28" midi.bpm="800">
 						<staffGrp xml:id="m-39" n="1" symbol="bracket">
-							<staffDef xml:id="m-30" notationtype="mensural.black" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="2" tempus="2">
+							<staffDef xml:id="m-30" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.female.soprano.ensemble.ah -->
 								<instrDef xml:id="m-32" midi.channel="1" midi.pan="26" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-33" notationtype="mensural.black" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="motetus" lines="5" n="2" modusmaior="2" modusminor="2" tempus="2">
+							<staffDef xml:id="m-33" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="motetus" lines="5" n="2" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.male.tenor.ah -->
 								<instrDef xml:id="m-35" midi.channel="1" midi.pan="26" midi.volume="100" />
 							</staffDef>
-							<staffDef xml:id="m-36" notationtype="mensural.black" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="2">
+							<staffDef xml:id="m-36" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.male.tenor.ensemble.ah -->
 								<instrDef xml:id="m-38" midi.channel="1" midi.pan="81" midi.volume="100" />
 							</staffDef>
@@ -267,6 +267,7 @@
 									</verse>
 								</note>
 								<barLine xml:id="m-92ec6500-57f7-4ba8-ad21-da3f0b6e9658" />
+							<sb/>
 								<note xml:id="m-278" dur="longa" dur.ges="4096p" oct="4" pname="a">
 									<verse xml:id="m-285" n="1">
 										<syl xml:id="m-286" wordpos="t">mus</syl>
@@ -1440,6 +1441,7 @@
 								<barLine xml:id="m-d39496cb-542b-42c4-938c-42b6cfa745eb" />
 								<rest xml:id="m-270" dur="longa" dur.ges="4096p" EVENTUALDUR="2B" />
 								<barLine xml:id="m-33b0a13c-7110-4149-abab-1bd9f3b20f2f" />
+							  <sb/>
 								<note xml:id="m-289" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e">
 									<verse xml:id="m-292" n="1">
 										<syl xml:id="m-293" wordpos="i">mu</syl>
@@ -2023,6 +2025,7 @@
 								<barLine xml:id="m-b7cdc108-c5be-499a-a574-e5054cd374d2" />
 								<note xml:id="m-300" dur="longa" dur.ges="4096p" oct="3" oct.ges="2" pname="a" />
 								<barLine xml:id="m-187c62d1-675a-4bf4-9c6a-de32e144024e" />
+							<sb/>
 								<note xml:id="m-317" dur="maxima" dur.ges="8192p" oct="3" oct.ges="2" pname="g" />
 								<barLine xml:id="m-3f734b91-52e2-4483-896d-557f243652bc" />
 								<barLine xml:id="m-41483df4-56ec-4183-a3a0-f3710a85ed46" />
