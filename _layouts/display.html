@@ -304,7 +304,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
           }
         });
         //expands size of div
-        document.getElementById("svg_row").style.height = "2000px";
+
         //new settings for zooming
         page = 1;
         zoom = 30;
@@ -326,6 +326,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
         //set new options
         vrvToolkit.setOptions(options);
         document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-small\"></span>";
+          document.getElementById("svg_row").style.height = "2000px";
       } else{
         $.ajax({
           url: file,
@@ -359,6 +360,9 @@ document.getElementById("svg_row").style.height = "";
         vrvToolkit.loadData(data);
         document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-full\"></span>";
       }
+
+
+
       }
 
       function flipPageForward() {
