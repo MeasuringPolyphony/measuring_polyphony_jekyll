@@ -144,7 +144,6 @@
 
     <script type="text/javascript">
       var qs = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);
-      var objectURL = "";
       var manifest = {{ site.data.manifest | jsonify}};
       /* Load the file using HTTP GET */
       $.get(qs, function(dataType) {
@@ -173,7 +172,6 @@
         $triplum = "";
         $motetus = "";
         $tenor = "";
-        objectURL = $link[0].attributes[1].textContent;
         for (var i = 0; i < manifest.sequences[0].canvases.length; i++) {
           // look for the entry with a matching `code` value
           if (manifest.sequences[0].canvases[i].label == $needle) {
@@ -209,9 +207,9 @@
 
 
 
-        if (objectURL !== "") {
-          loadDiva(objectURL, pagenum);
-        }
+
+          loadDiva(pagenum);
+
         if ($concsources[2] !== ("")) {
           $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
         }
@@ -222,12 +220,12 @@
 
       }, 'text');
 
-      function loadDiva(objectURL, pagenum) {
+      function loadDiva( pagenum) {
         $('#diva-wrapper').diva({
           enableAutoHeight: false,
           fixedHeightGrid: false,
           iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-          objectData: objectURL,
+          objectData: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json",
           enableCanvas: false,
           enableDownload: false,
           goDirectlyTo: pagenum, //INSERT PAGE HERE
@@ -259,7 +257,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
             enableAutoHeight: true,
             fixedHeightGrid: false,
             iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-            objectData: objectURL,
+            objectData:  "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json",
             enableCanvas: true,
             enableDownload: true,
             inBookLayout: true,
