@@ -101,16 +101,12 @@
               <a class="btn" data-toggle="modal" href="#myModal" onclick="loadDivaModal();">More Images</a>
             <div id="diva-wrapper"></div>
 
-            <div class="modal fade" id="myModal">
+            <div class="modal fade" id="myModal" style="background-color:white;height:95vh; margin-top: 95px;">
               <!-- note the use of "hide" class -->
-              <div class="modal-header">
-                <button class="close" data-dismiss="modal">×</button>
+              <div class="modal-header" style="height:1vh;">
+                <button class="close" data-dismiss="modal" style="font-size:40;">×</button>
               </div>
               <div id="diva-modal">
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Close</a>
-                <!-- note the use of "data-dismiss" -->
               </div>
             </div>​
           </div>
@@ -263,6 +259,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
             inBookLayout: true,
             goDirectlyTo: pagenum
           });
+            document.getElementById("2-diva-outer").style.height="1000px";
         }
     </script>
     <script type="text/javascript">
