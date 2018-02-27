@@ -207,8 +207,8 @@
 
 
 
-
-          loadDiva(pagenum);
+manifest = "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json";
+          loadDiva(manifest, pagenum);
 
         if ($concsources[2] !== ("")) {
           $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
@@ -220,12 +220,12 @@
 
       }, 'text');
 
-      function loadDiva( pagenum) {
+      function loadDiva(manifest, pagenum) {
         $('#diva-wrapper').diva({
           enableAutoHeight: false,
           fixedHeightGrid: false,
           iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-          objectData: "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json",
+          objectData: manifest,
           enableCanvas: false,
           enableDownload: false,
           goDirectlyTo: pagenum, //INSERT PAGE HERE
@@ -257,7 +257,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
             enableAutoHeight: true,
             fixedHeightGrid: false,
             iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-            objectData:  "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json",
+            objectData: manifest ,
             enableCanvas: true,
             enableDownload: true,
             inBookLayout: true,
