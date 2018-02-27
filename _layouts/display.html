@@ -399,7 +399,7 @@ document.getElementById("svg_row").style.height = "";
           // bug! time needs to be divided by 2
           $("#midi-player").midiPlayer.seek(time / 2);
         });
-
+document.getElementsByClassName("pgHead")[0].remove();
       };
 
       function loadFile() {
