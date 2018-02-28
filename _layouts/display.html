@@ -84,7 +84,7 @@
 </div>
 
         <div class="row" id = "svg_row" style="overflow-wrap:normal; background-color:#5e0202; border: 1px solid black;">
-          <div class="col text-center">
+          <div class="col text-center" style="height:50vh;">
           <!-- The div where we are going to insert the SVG -->
           <div id="svg_output" style="background-color:white; margin:40px;    overflow-x: auto;
             white-space: nowrap;">
@@ -308,10 +308,10 @@ document.getElementById("1-diva-inner").style.margin="0px";
         //new settings for zooming
         page = 1;
         zoom = 30;
-        pageHeight = 4000;
-        pageWidth = 2000;
-        pageHeight = $(document).height() * 100 / zoom;
-        pageWidth = $(document).width() * 100 / zoom;
+        var pageHeight = 2970;
+var pageWidth = 2100;
+        pageHeight = $(window).height() * 100 / zoom;
+        pageWidth = $(window).width() * 100 / zoom;
         border = 50;
         options = {
           inputFormat: 'mei',
@@ -320,13 +320,14 @@ document.getElementById("1-diva-inner").style.margin="0px";
 
           border: border,
           scale: zoom,
-          adjustPageHeight: 1,
+          adjustPageHeight: true,
           ignoreLayout: 1
         };
         //set new options
         vrvToolkit.setOptions(options);
         document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-small\"></span>";
-          document.getElementById("svg_row").style.height = "2000px";
+          document.getElementById("svg_row").style.height = "2500px";
+          setTimeout(function(){document.getElementById("svg_row").style.height = "800px"}, 10);
       } else{
         $.ajax({
           url: file,
@@ -336,7 +337,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
           }
         });
         //expands size of div
-document.getElementById("svg_row").style.height = "";
+        document.getElementById("svg_row").style.height = "";
         //new settings for zooming
         page = 1;
         zoom = 40;
