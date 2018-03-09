@@ -17,7 +17,7 @@
   <!--/////////////-->
   <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}css/diva.min.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}css/grayscale.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}css/display.css" />
   <!-- Bootstrap core CSS -->
   <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -34,10 +34,10 @@
 </head>
 
 <body id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:#5e0202; filter: drop-shadow(5px 5px 4px black);">
-    <div class="container" style="font-family: 'Arima Madurai' !important;  filter: drop-shadow(5px 5px 4px black);">
-      <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px;">
-      <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">Measuring Polyphony</a>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; filter: drop-shadow(5px 5px 4px black);">
+
+
+      <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px;">Measuring Polyphony</a>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
@@ -47,13 +47,13 @@
 
         </ul>
       </div>
-    </div>
+
   </nav>
   <header class="masthead" style=" padding-top:150px;">
     <div class="intro-body" style=" padding:10px;">
       <div class="container-fluid" style="height:88vh; width:180vh;">
         <div class="row">
-          <div class="col text-left" style="font-family: 'Arima Madurai';  padding-top:15px; color:white; background-color:#5e0202;border-top: 1px solid black; border-left: 1px solid black;border-right: 1px solid black;">
+          <div class="col text-left" style="padding-top:15px; color:black;">
             <p class="intro-text" id="iiif"></p>
             <h1 id="title"></h1>
             <p id="composer"></p><br>
@@ -68,14 +68,14 @@
 
         </div>
 <div class="col-lg-4 text-center">
-                      <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: white;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
-<input id="flipDisplay" type="button" value="Display Mensural" onclick="loadMei();" style="text-align:right; background-color:transparent; color:white; border:transparent;" />
-                      <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: white;"><span class="glyphicon glyphicon-arrow-right"></span></button>
+
+<input id="flipDisplay" type="button" value="Switch to Modern Notation" onclick="loadMei();" style="text-align:right; background-color:transparent; color:white; border:transparent; font-size:20px;" />
+
         </div>
-        <div class="col-lg-4" style="text-align:right;">
-
-
-        <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: white;"> <span class="glyphicon glyphicon-resize-full"></span></button>
+        <div class="col-lg-4" style="text-align:right; font-size:20px;">
+    <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: white;font-size:20px;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
+    <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: white;font-size:20px;"><span class="glyphicon glyphicon-arrow-right"></span></button>
+        <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: white;font-size:20px;"> <span class="glyphicon glyphicon-resize-full"></span></button>
 
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
@@ -83,7 +83,7 @@
           </div>
 </div>
 
-        <div class="row" id = "svg_row" style="overflow-wrap:normal; background-color:#5e0202; border: 1px solid black;">
+        <div class="row" id = "svg_row" style="overflow-wrap:normal;">
           <div class="col text-center">
           <!-- The div where we are going to insert the SVG -->
           <div id="svg_output" style="background-color:white; margin:40px;    overflow-x: auto;
@@ -96,9 +96,10 @@
         </div>
       </div>
 
-        <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; border: 1px solid black; height: 30vh;">
-          <div class="col-lg-2 text-left">
-              <a class="btn" data-toggle="modal" href="#myModal" onclick="loadDivaModal();">More Images</a>
+        <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; height: 30vh;">
+            <div class="col-lg-1 text-left" style=""></div>
+          <div class="col-lg-2 text-left" style="">
+              <a class="btn" data-toggle="modal" href="#myModal" onclick="loadDivaModal();">Click For Manuscript Image</a>
             <div id="diva-wrapper"></div>
 
             <div class="modal fade" id="myModal" style="background-color:white;height:95vh; margin-top: 95px;">
@@ -111,17 +112,17 @@
             </div>​
           </div>
           <div class="col-lg-4 text-left" style:"padding-left:15px;">
-            <h1><b>Primary manuscript source for this transcription</b></h1><br>
-            <p id="primarysource"></p> <br>
-
+            <p><b>Source</b></p>
+            <p id="primarysource"></p>
+      <p id="diammlink"></p>
             <p id="concsources"></p><br>
             <p id="prevedition"></p><br>
-            <p id="diammlink"></p>
+
 
           </div>
 
           <div class="col-lg-4 text-left">
-            <h1><b>Downloads</b></h1><br>
+            <p><b>Downloads</b></p>
 
               <p id="mei"></p><br>
               <p id="mens"></p><br>
@@ -196,18 +197,18 @@
         $("#title").html($triplum + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
-        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Detailed information on this manuscript source</a>");
+        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this transcription</a>");
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
 
+//http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
-
-manifest = "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json";
+manifest = "https://api.myjson.com/bins/1com1l";
           loadDiva(manifest, pagenum);
 
         if ($concsources[2] !== ("")) {
-          $("#concsources").html("Concordant sources:" + $concsources[2].textContent);
+          $("#concsources").html("<p><b>Concordant source(s)</b><p>" + $concsources[2].textContent);
         }
 
 
@@ -404,25 +405,13 @@ var pageWidth = 2100;
           $("#midi-player").midiPlayer.seek(time / 2);
         });
 document.getElementsByClassName("pgHead")[0].remove();
+document.getElementsByClassName("pgFoot")[0].remove();
       };
 
       function loadFile() {
 
         //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
         file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
-        $meiarray = file.split("/")
-        for (i = 0; i < $meiarray.length; i++) {
-          if (i == ($meiarray.length - 1)) {
-            $meiarray[i] = $meiarray[i].replace("_MENSURAL", "");
-          } else if ($meiarray[i] == "mensural") {
-            $meiarray[i] = "mei";
-          }
-          style = "height:10px !important;"
-        }
-        $mei = $meiarray.join("/");
-
-        file = $mei;
-
         $.ajax({
           url: file,
           dataType: "text",
@@ -434,7 +423,7 @@ document.getElementsByClassName("pgHead")[0].remove();
 
       function loadMei() {
         //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
-        if (document.getElementById("flipDisplay").value == "Display Mensural") {
+        if (document.getElementById("flipDisplay").value == "Switch to Mensural Notation") {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
           $.ajax({
             url: file,
@@ -443,7 +432,7 @@ document.getElementsByClassName("pgHead")[0].remove();
               loadData(data);
             }
           });
-          document.getElementById("flipDisplay").value = "Display Mei";
+          document.getElementById("flipDisplay").value = "Switch to Modern Notation";
         } else {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
           $meiarray = file.split("/")
@@ -464,7 +453,7 @@ document.getElementsByClassName("pgHead")[0].remove();
               loadData(data);
             }
           });
-          document.getElementById("flipDisplay").value = "Display Mensural";
+          document.getElementById("flipDisplay").value = "Switch to Mensural Notation";
         }
       }
       ////////////////////////////////////////////
