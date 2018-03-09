@@ -37,7 +37,7 @@
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; filter: drop-shadow(5px 5px 4px black);">
 
 
-      <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px;">Measuring Polyphony</a>
+      <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">Measuring Polyphony</a>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
@@ -49,19 +49,18 @@
       </div>
 
   </nav>
-  <header class="masthead" style=" padding-top:150px;">
-    <div class="intro-body" style=" padding:10px;">
-      <div class="container-fluid" style="height:88vh; width:180vh;">
-        <div class="row">
+  <header style=" padding-top:150px;">
+    <div  style=" padding:10px;">
+      <div   class="container-fluid" style="height:88vh; width:180vh;">
+        <div class="row" id="transcriptionheader">
           <div class="col text-left" style="padding-top:15px; color:black;">
             <p class="intro-text" id="iiif"></p>
             <h1 id="title"></h1>
             <p id="composer"></p><br>
-
           </div>
 
         </div>
-        <div class="row" style="color:black;overflow-wrap:normal;background-color:white;background-color:#5e0202; text-align:center;">
+        <div class="row" style="color:black;overflow-wrap:normal;background-color:white;background-color:#DAD1C0; text-align:center;">
           <div class="col-lg-4" style="text-align:right;">
 
         <div id="player" style="text-align:right;"> </div>
@@ -69,13 +68,13 @@
         </div>
 <div class="col-lg-4 text-center">
 
-<input id="flipDisplay" type="button" value="Switch to Modern Notation" onclick="loadMei();" style="text-align:right; background-color:transparent; color:white; border:transparent; font-size:20px;" />
+<input id="flipDisplay" type="button" value="Switch to Modern Notation" onclick="loadMei();" style="text-align:right; background-color:transparent; border:transparent; font-size:20px;" />
 
         </div>
         <div class="col-lg-4" style="text-align:right; font-size:20px;">
-    <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: white;font-size:20px;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
-    <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: white;font-size:20px;"><span class="glyphicon glyphicon-arrow-right"></span></button>
-        <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: white;font-size:20px;"> <span class="glyphicon glyphicon-resize-full"></span></button>
+    <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: black;font-size:20px;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
+    <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: black;font-size:20px;"><span class="glyphicon glyphicon-arrow-right"></span></button>
+        <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: black;font-size:20px;"> <span class="glyphicon glyphicon-resize-full"></span></button>
 
             <!--  <p>Previous editions</p>
               <p>Downloads</p>
@@ -95,7 +94,7 @@
           </div>
         </div>
       </div>
-
+<hr>
         <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; height: 30vh;">
             <div class="col-lg-1 text-left" style=""></div>
           <div class="col-lg-2 text-left" style="">
@@ -530,14 +529,14 @@ document.getElementsByClassName("pgFoot")[0].remove();
         });
 
         $("#player").midiPlayer({
-          color: "#c00",
+          color: "#DAD1C0",
           onUnpdate: midiUpdate,
           onStop: midiStop,
           width: 250
         });
-        document.getElementById("midiPlayer_div").style.color="white";
+        document.getElementById("midiPlayer_div").style.color="black";
 
-        document.getElementById("midiPlayer_div").style.backgroundColor="#5e0202";
+        document.getElementById("midiPlayer_div").style.backgroundColor="#DAD1C0";
         loadFile();
 
 
