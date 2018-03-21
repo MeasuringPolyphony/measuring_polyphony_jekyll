@@ -161,6 +161,7 @@
         $triplum = "";
         $motetus = "";
         $tenor = "";
+        $pagelink = ""
         for (var i = 0; i < manifest.sequences[0].canvases.length; i++) {
           // look for the entry with a matching `code` value
           if (manifest.sequences[0].canvases[i].label == $needle) {
@@ -169,7 +170,11 @@
             // obj[i].name is the matched result
           }
         }
+        if ($pagelink ==""){
+          pagenum=1;
+        } else {
         pagenum = $pagelink.split("/canvas/f")[1];
+      }
         pagenum=pagenum-1;
         if ($parts != null) {
 
@@ -194,7 +199,12 @@
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
+        if ($pagelink == "") {
+          $("#full-manuscript").html("<a href=\"http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028\">Click For Manuscript Images</a>");
+        }
+        else {
         $("#full-manuscript").html("<a href=\"{{ site.baseurl }}iiif.html?" + pagenum + "\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\">Click For Manuscript Image</a>");
+      }
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
 manifest = "https://ekoshelev.github.io/mpol_manifest/manifest.json";
