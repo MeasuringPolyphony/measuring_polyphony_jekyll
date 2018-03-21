@@ -5,6 +5,7 @@
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Measuring Polyphony Demo Page</title>
+              <link href="favicon.ico" rel="icon" type="image/x-icon" />
             <link rel="stylesheet" href="http://ddmal.github.io/diva.js/try/css/diva.min.css" />
             <link rel="stylesheet" href="http://ddmal.github.io/diva.js/try/demo/demo.css" />
             <!--[if IE]>
@@ -34,11 +35,15 @@
                                 '</div>'
                         );
                     }
-
+                    var pagenum = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);
                     $('#diva-wrapper').diva({
-                        fixedHeightGrid: true,
-                        objectData: '{{ url }}',
-                        enableIIIFMetadata: true
+                      enableAutoHeight: true,
+                      fixedHeightGrid: false,
+                      iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
+                      objectData: "https://ekoshelev.github.io/mpol_manifest/manifest.json",
+                      enableCanvas: true,
+                      enableDownload: true,
+                      goDirectlyTo: pagenum
                     });
 
                     var selectObject = $('#object-select');

@@ -98,17 +98,10 @@
         <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; height: 30vh;">
             <div class="col-lg-1 text-left" style=""></div>
           <div class="col-lg-2 text-left" style="">
-              <a class="btn" data-toggle="modal" href="#myModal" onclick="loadDivaModal();">Click For Manuscript Image</a>
+              <div id="full-manuscript"></div>
+
             <div id="diva-wrapper"></div>
 
-            <div class="modal fade" id="myModal" style="background-color:white;height:95vh; margin-top: 95px;">
-              <!-- note the use of "hide" class -->
-              <div class="modal-header" style="height:1vh;">
-                <button class="close" data-dismiss="modal" style="font-size:40;">×</button>
-              </div>
-              <div id="diva-modal">
-              </div>
-            </div>​
           </div>
           <div class="col-lg-4 text-left" style:"padding-left:15px;">
             <p><b>Source</b></p>
@@ -177,6 +170,7 @@
           }
         }
         pagenum = $pagelink.split("/canvas/f")[1];
+        pagenum=pagenum-1;
         if ($parts != null) {
 
           for (i = 0; i < $parts.length; i++) {
@@ -200,11 +194,11 @@
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
-
+        $("#full-manuscript").html("<a href=\"{{ site.baseurl }}iiif.html?" + pagenum + "\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\">Click For Manuscript Image</a>");
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
 manifest = "https://ekoshelev.github.io/mpol_manifest/manifest.json";
-pagenum=pagenum-1;
+
           loadDiva(manifest, pagenum);
 
         if ($concsources[2] !== ("")) {
@@ -222,7 +216,7 @@ pagenum=pagenum-1;
           enableAutoHeight: false,
           fixedHeightGrid: false,
           iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-          objectData: manifest,
+          objectData: "https://ekoshelev.github.io/mpol_manifest/manifest.json",
           enableCanvas: false,
           enableDownload: false,
           goDirectlyTo: pagenum, //INSERT PAGE HERE
@@ -249,19 +243,6 @@ document.getElementById("1-diva-inner").style.margin="0px";
 
       }
 
-        function loadDivaModal(){
-          $('#diva-modal').diva({
-            enableAutoHeight: true,
-            fixedHeightGrid: false,
-            iipServerURL: "https://diva.simssa.ca/fcgi-bin/iipsrv.fcgi",
-            objectData: manifest ,
-            enableCanvas: true,
-            enableDownload: true,
-            inBookLayout: true,
-            goDirectlyTo: pagenum
-          });
-            document.getElementById("2-diva-outer").style.height="1000px";
-        }
     </script>
     <script type="text/javascript">
       var vrvToolkit = new verovio.toolkit();
