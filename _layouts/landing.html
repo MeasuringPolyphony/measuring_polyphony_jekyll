@@ -6,7 +6,11 @@
 
     <meta charset="utf-8">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,7 +32,7 @@
     <link href="{{ site.baseurl }}vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- Custom styles for this template -->
     <link href="{{ site.baseurl }}css/grayscale.css" rel="stylesheet">
 
@@ -39,36 +43,47 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; filter: drop-shadow(5px 5px 4px black);">
 
+<div class="col-lg-1" style="text-align: right;">
+  <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">
+</div>
+<div class="col-lg-7">
+  <div class="row">
+        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   Measuring Polyphony</a>
+      </div>
+        <div class="row" style= "">
+          Encoding and analyzing late medieval polyphony
+        </div>
+</div>
+<div class="col-lg-3">
+          <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
+              <ul class="navbar-nav ml-auto">
+                <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
+              </li>
+              <li></li>
+            <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px;"  href="#about">About</a></li>
 
-        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">Measuring Polyphony</a>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}transcriptions.html">Transcriptions</a>
-            </li>
 
           </ul>
         </div>
-
+      </div>
     </nav>
 
     <!-- Intro Header -->
     <header class="masthead">
       <div class="intro-body">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-
-              <h1 class="brand-heading"  style="font-family:Georgia, "Times New Roman", Times, serif !important;  filter: drop-shadow(5px 5px 4px black); color: #514328;">Measuring Polyphony</h1>
-                  <div class="col-lg-12">
-              <p class="intro-text" style="font-family:Georgia, "Times New Roman", Times, serif !important;  filter: drop-shadow(5px 5px 4px black);color: #514328;"><i>Encoding and analyzing late medieval polyphony</i></p>
+                <div class="col" style = " padding-left: 200px; padding-right: 200px;">
+<div class="jumbotron" style="background-color:#840705; opacity: 0.85; text-align:center;">
+              <h1 class="brand-heading" style=""><b>Measuring Polyphony</b></h1>
+<p class = "intro-line"></p>
+              <p class="intro-text">Encoding and analyzing late medieval polyphony</p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
-            </div>
+
+          </div>
+        </div>
           </div>
         </div>
       </div>
