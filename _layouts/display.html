@@ -120,7 +120,7 @@
 <hr>
         <div class="row" style="overflow-wrap:normal;color:black; background-color:white; padding-top:10px; height: 30vh;">
             <div class="col-lg-1 text-left" style=""></div>
-          <div class="col-lg-2 text-left" style="">
+          <div id = "diva-div" class="col-lg-2 text-left" style="" >
               <div id="full-manuscript"></div>
 
             <div id="diva-wrapper"></div>
@@ -130,6 +130,7 @@
             <p><b>Source</b></p>
             <p id="primarysource"></p>
       <p id="diammlink"></p>
+                <p id="ext-images"></p>
             <p id="concsources"></p><br>
             <p id="prevedition"></p><br>
 
@@ -198,6 +199,7 @@
         } else {
         pagenum = $pagelink.split("/canvas/f")[1];
       }
+
         pagenum=pagenum-1;
         if ($parts != null) {
 
@@ -223,7 +225,11 @@
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
         if ($pagelink == "") {
-          $("#full-manuscript").html("<a href=\"http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028\">Click For Manuscript Images</a>");
+          $("#ext-images").html("<a href=\"http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028\">Click For External Images</a>");
+                  var diva = document.getElementById("diva-wrapper");
+                  element.outerHTML = "";
+                  delete diva;
+
         }
         else {
         $("#full-manuscript").html("<a href=\"{{ site.baseurl }}iiif.html?" + pagenum + "\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\">Click For Manuscript Image</a>");
@@ -243,6 +249,7 @@ manifest = "https://ekoshelev.github.io/mpol_manifest/manifest.json";
         //
 
       }, 'text');
+
 
       function loadDiva(manifest, pagenum) {
         $('#diva-wrapper').diva({
