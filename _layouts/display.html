@@ -282,7 +282,13 @@ document.getElementById("1-diva-inner").style.width="165px !important";
 document.getElementById("1-diva-inner").style.margin="0px";
 
       }
+      var something = document.getElementById('diva-wrapper');
 
+      something.style.cursor = 'pointer';
+      something.onclick = function() {
+        window.open('{{ site.baseurl }}iiif.html?'+pagenum, 'newwindow','width=700,height=1000');return false;
+          // do something...
+      };
     </script>
     <script type="text/javascript">
       var vrvToolkit = new verovio.toolkit();
