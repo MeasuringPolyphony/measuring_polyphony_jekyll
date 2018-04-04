@@ -106,7 +106,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
               background-color: rgba(255, 236, 215, 0.69);
               position: absolute;
               top: 0px;
-              padding-top:100px;
+              padding-top:60px;
               overflow-x: hidden;
                 overflow-y: hidden;
               width: 100%;
@@ -214,7 +214,7 @@ background-color: #f8f2ec;
               height: 100%;
               padding: 0; }
               .transhead .intro-body .brand-heading {
-                font-size: 45px;
+                font-size: 70px;
                 padding-top:100px;
                   padding-bottom:0px;
                 font-weight: 1000;}
