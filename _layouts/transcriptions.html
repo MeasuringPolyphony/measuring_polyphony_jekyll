@@ -64,17 +64,17 @@
     <!-- Intro Header -->
     <header class="transhead" >
 <div class="intro-body" style="padding-top:150px; height: 100vh;">
-<div class="layer">
-        <div class="container-fluid">
+<div class="layer" style="width:100%;">
+        <div class="container-fluid" >
           <div class="col-lg-10 mx-auto" style="">
-  <h1 class="brand-heading" style="color: black;  text-align:left; margin-bottom:0px;"><b>Browse Transcriptions</b></h1></div>
+  <h1 class="brand-heading" style="color: black;  text-align:left; margin-bottom:0px;font-weight:1000;">Browse Transcriptions</h1></div>
   </div>
 
           <div class="row">
-            <div class="container-fluid" style=" ">
+            <div class="container-fluid" style="">
 
-              <p class="container-fluid" style="padding-right:20px;">
-                <table class= "table table-striped header-fixed" id="output"  style="background-color: white; border-top: 3px solid rgba(94, 2, 2, 0.69); border-bottom: 3px solid rgba(94, 2, 2, 0.69); color:black; text-align:left; width:100%;"> <thead ><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></thead><tbody id="table-body"></tbody></table>
+              <p class="container-fluid" style="">
+                <table class= "table table-striped header-fixed" id="output"  style="padding:0px; background-color: white; border-top: 3px solid rgba(94, 2, 2, 0.69); border-bottom: 3px solid rgba(94, 2, 2, 0.69); color:black; text-align:left;"> <thead ><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></thead><tbody id="table-body"></tbody></table>
                 {% for xml in site.static_files %}
                     {% if xml.path contains 'assets/mensural' %}
                     <script type="text/javascript">
