@@ -240,7 +240,8 @@ background-color: #f8f2ec;
     height:100%;
     float: left;
     border: none;
-
+    overflow-wrap:none;
+    padding-left: 200px;
 }
 
 
