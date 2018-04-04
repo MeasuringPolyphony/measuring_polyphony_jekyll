@@ -4,22 +4,22 @@
 		<fileDesc xml:id="m-3">
 			<titleStmt xml:id="m-4">
 				<title xml:id="m-10">Adesto</title>
-				<composer xml:id="m-11">Philippe de Vitry (attrib.)</composer> 
+				<composer xml:id="m-11">Philippe de Vitry (attrib.)</composer>
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
 				<funder>
-					<corpName> Schulich School of Music, McGill University </corpName> 
-				</funder> 
+					<corpName> Schulich School of Music, McGill University </corpName>
+				</funder>
 				 <funder>
 					<corpName>Brandeis University</corpName>
 				</funder>
-				 <respStmt> 
+				 <respStmt>
 					<persName role="project director">Karen Desmond</persName>
-					<persName role="encoder" date="5-1-2015">Karen Desmond</persName> 
-					<persName role="proofreader" date="3-25-2016">Emily Hopkins</persName> 
-					<persName role="proofreader" date="3-25-2016">Sam Howes</persName> 
-					<persName role="proofreader" date="3-25-2016">Karen Desmond</persName> 
+					<persName role="encoder" date="5-1-2015">Karen Desmond</persName>
+					<persName role="proofreader" date="3-25-2016">Emily Hopkins</persName>
+					<persName role="proofreader" date="3-25-2016">Sam Howes</persName>
+					<persName role="proofreader" date="3-25-2016">Karen Desmond</persName>
 				</respStmt>
 			</titleStmt>
 			<pubStmt xml:id="m-15">
@@ -27,15 +27,15 @@
 					 <persName>Karen Desmond</persName>
 					<corpName>Brandeis University</corpName>
 				 </publisher>
-				<date>2018</date> 
+				<date>2018</date>
 				<availability>
 					<useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
 				</availability>
-			</pubStmt> 
-			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
-				<editor> 
-					<persName>Karen Desmond</persName> 
+			</pubStmt>
+			<seriesStmt>
+				<title>Measuring Polyphony</title>
+				<editor>
+					<persName>Karen Desmond</persName>
 				</editor>
 			</seriesStmt>
 		</fileDesc>
@@ -76,12 +76,12 @@
 						</titleStmt>
 					</source>
 				</sourceDesc>
-				<encodingDesc xml:id="m-18"> 
+				<encodingDesc xml:id="m-18">
 					<appInfo xml:id="m-19">
 						<application xml:id="sibelius" isodate="2016-4-29T09:24:36Z" version="7510"><name xml:id="m-21" type="operating-system">Mac OS X Mountain Lion</name></application>
 					<application xml:id="sibmei" type="plugin" version="2.0.0b3">
 						<name xml:id="m-23">Sibelius to MEI Exporter (2.0.0b3)</name>
-					</application> 
+					</application>
 					<application xml:id="meiMENS" isodate="2016-4-29">
 						<name xml:id="m-23">CMN-MEI to MensuralMEI Translator</name>
 					</application>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Tr 63 There is small lacuna here over the triplum turn of the page. Notes inserted follow Br / 
+					Tr 63 There is small lacuna here over the triplum turn of the page. Notes inserted follow Br /
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">
@@ -133,15 +133,15 @@
 						<staffGrp xml:id="m-39" n="1" symbol="bracket">
 							<staffDef xml:id="m-30" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.female.soprano.ensemble.ah -->
-								<instrDef xml:id="m-32" midi.channel="1" midi.pan="26" midi.volume="100" />
+								 <instrDef xml:id="instrdef-0000001772317223" midi.instrnum="20" midi.instrname="Church_Organ" />
 							</staffDef>
 							<staffDef xml:id="m-33" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="motetus" lines="5" n="2" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.male.tenor.ah -->
-								<instrDef xml:id="m-35" midi.channel="1" midi.pan="26" midi.volume="100" />
+								 <instrDef xml:id="instrdef-0000001772317223" midi.instrnum="20" midi.instrname="Church_Organ" />
 							</staffDef>
 							<staffDef xml:id="m-36" clef.dis="8" clef.dis.place="below" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="tenor" lines="5" n="3" modusmaior="2" modusminor="2" tempus="2" notationtype="mensural.black">
 								<!-- voice.male.tenor.ensemble.ah -->
-								<instrDef xml:id="m-38" midi.channel="1" midi.pan="81" midi.volume="100" />
+								 <instrDef xml:id="instrdef-0000001772317223" midi.instrnum="20" midi.instrname="Church_Organ" />
 							</staffDef>
 						</staffGrp>
 					</scoreDef>
