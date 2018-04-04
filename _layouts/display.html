@@ -92,12 +92,13 @@
         <div id="player" style="text-align:right;"> </div>
 
         </div>
-<div class="col-lg-4 text-center">
+<div class="col-lg-4 text-right">
 
-<input id="flipDisplay" type="button" value="Switch to Modern Notation" onclick="loadMei();" style="text-align:right; background-color:transparent; border:transparent; font-size:20px;" />
+
 
         </div>
         <div class="col-lg-4" style="text-align:right; font-size:20px;">
+          <input id="flipDisplay" type="button" value="Switch score to modern notation" onclick="loadMei();" style=" font-weight:700; color: #9d2322; text-align:right; background-color:transparent; border:transparent; font-size:20px;" />
     <button type="button" class="btn btn-default btn-lg" onclick="flipPageBackward();" style="color: black;font-size:20px;"> <span class="glyphicon glyphicon-arrow-left"></span></button>
     <button type="button" class="btn btn-default btn-lg" onclick="flipPageForward();" style="color: black;font-size:20px;"><span class="glyphicon glyphicon-arrow-right"></span></button>
         <button type="button" id = "setFullscreen" class="btn btn-default btn-lg" onclick="setFullscreen();" style="color: black;font-size:20px;"> <span class="glyphicon glyphicon-resize-full"></span></button>
@@ -453,7 +454,7 @@ document.getElementsByClassName("pgFoot")[0].remove();
 
       function loadMei() {
         //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
-        if (document.getElementById("flipDisplay").value == "Switch to Mensural Notation") {
+        if (document.getElementById("flipDisplay").value == "Switch score to mensural notation") {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
           $.ajax({
             url: file,
@@ -462,7 +463,7 @@ document.getElementsByClassName("pgFoot")[0].remove();
               loadData(data);
             }
           });
-          document.getElementById("flipDisplay").value = "Switch to Modern Notation";
+          document.getElementById("flipDisplay").value = "Switch score to modern notation";
         } else {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
           $meiarray = file.split("/")
@@ -483,7 +484,7 @@ document.getElementsByClassName("pgFoot")[0].remove();
               loadData(data);
             }
           });
-          document.getElementById("flipDisplay").value = "Switch to Mensural Notation";
+          document.getElementById("flipDisplay").value = "Switch score to mensural notation";
         }
       }
       ////////////////////////////////////////////
