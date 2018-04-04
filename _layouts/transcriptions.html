@@ -28,20 +28,20 @@
         <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
         <!-- Custom styles for this template -->
-        <link href="{{ site.baseurl }}css/grayscale.css" rel="stylesheet">
+        <link href="{{ site.baseurl }}css/transcriptions.css" rel="stylesheet">
   </head>
 
-  <body id="page-top">
+  <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; filter: drop-shadow(5px 5px 4px black);">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322;">
 
   <div class="col-lg-1" style="text-align: right;">
   <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">
   </div>
   <div class="col-lg-7">
   <div class="row">
-        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}">   Measuring Polyphony</a>
+        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}" style="color:white !important;">   Measuring Polyphony</a>
       </div>
         <div class="row" style= "">
         Digital encodings of late medieval music
@@ -50,10 +50,10 @@
   <div class="col-lg-3">
           <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
               <ul class="navbar-nav ml-auto">
-                <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
+                <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px; color:white !important;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
               </li>
               <li></li>
-            <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px;"  href="#about">About</a></li>
+            <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px; color:white !important;"  href="#about">About</a></li>
 
 
           </ul>
@@ -62,20 +62,24 @@
     </nav>
 
     <!-- Intro Header -->
-    <header class="transhead" style="padding-top:150px;">
-      <div class="col-lg-10 mx-auto" style="">
-  <h1 class="brand-heading" style="color: white;  text-align:left; ">Transcriptions</h1></div>
-        <div class="container-fluid" style="background-color:white; overflow-y:auto;">
-          <div class="row">
-            <div class="container-fluid" style="height:75vh; ">
+    <header class="transhead" >
+<div class="intro-body" style="padding-top:150px; height: 100vh;">
+<div class="layer">
+        <div class="container-fluid">
+          <div class="col-lg-10 mx-auto" style="">
+  <h1 class="brand-heading" style="color: black;  text-align:left; margin-bottom:0px;"><b>Browse Transcriptions</b></h1></div>
+  </div>
 
-              <p class="container-fluid"><div class="col-lg-10 mx-auto" style="">
-                <table id="output"  style="font-family: 'Arima Madurai' !important;  color:black; text-align:left; width:100%;"><tbody style=""><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></tbody></table>
+          <div class="row">
+            <div class="container-fluid" style=" ">
+
+              <p class="container-fluid" style="padding-right:20px;">
+                <table class= "table table-striped header-fixed" id="output"  style="text-align:right; border-top: 3px solid rgba(94, 2, 2, 0.69); border-bottom: 3px solid rgba(94, 2, 2, 0.69); color:black; text-align:left; width:100%;"> <thead ><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></thead><tbody id="table-body"></tbody></table>
                 {% for xml in site.static_files %}
                     {% if xml.path contains 'assets/mensural' %}
                     <script type="text/javascript">
                         var qs = "/measuring_polyphony_jekyll{{xml.path}}"
-                        var d1 = document.getElementById('output');
+                        var d1 = document.getElementById('table-body');
 
                               /* Load the file using HTTP GET */
                               $.get( qs, function( dataType ) {
@@ -83,10 +87,10 @@
                                 xmlDoc = $.parseXML( dataType ),
                                 $xml = $( xmlDoc ),
                                 $parts = $xml.find( "incipText");
-                                $contratenor="";
-                                $triplum="";
-                                $motetus="";
-                                $tenor="";
+                                $contratenor="  ";
+                                $triplum="PART NOT FOUND";
+                                $motetus="PART NOT FOUND";
+                                $tenor="PART NOT FOUND";
                                 if ($parts!=null){
 
                                 for (i = 0; i < $parts.length; i++) {
@@ -102,7 +106,7 @@
                                 }
                               }
                                 $composer = $xml.find( "composer" );
-                                d1.insertAdjacentHTML('beforeend', '<tr style="border: 1px white;" ><td style="border: 1px white;"><a style="color:black" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $triplum + '</a></td><td><a style="color:black" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">'+$motetus+'</a></td><td><a style="color:black" id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">'+$tenor+$contratenor+'</a></td><td>'+ $composer.text() + '</td></tr>');
+                                d1.insertAdjacentHTML('beforeend', '<tr style="border: 1px white;" ><td><a id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">' + $triplum + '</a></td><td><a id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">'+$motetus+'</a></td><td><a id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">'+$tenor+$contratenor+'</a></td><td><a id="1" href="{{ site.baseurl }}display.html?{{ site.baseu }}{{ xml.path }}">'+ $composer.text() + '</a></td></tr>');
 
 
                               }, 'text');
@@ -115,6 +119,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
     </header>
 
     <!-- Bootstrap core JavaScript -->
