@@ -40,8 +40,8 @@
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}css/diva.min.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}css/display.css" />
-  <link href="{{ site.baseurl }}css/landing.css" rel="stylesheet">
+
+  <link href="{{ site.baseurl }}css/transcriptions.css" rel="stylesheet">
 
   <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -49,13 +49,13 @@
 </head>
 
 <body id="page-top">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; filter: drop-shadow(5px 5px 4px black);">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322; ">
   <div class="col-lg-1" style="text-align: right;">
     <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">
   </div>
   <div class="col-lg-7">
     <div class="row">
-          <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}" style="padding-left:0px; font-size:30px;">Measuring Polyphony</a>
+          <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}" style="padding-left:0px; font-size:30px;color:white !important;">Measuring Polyphony</a>
         </div>
           <div class="row" style= "color:white;  font-size:16px;">
             Digital encodings of late medieval music
@@ -64,26 +64,29 @@
   <div class="col-lg-3">
         <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
             <ul class="navbar-nav ml-auto">
-              <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
+              <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px;color:white !important;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
             </li>
             <li></li>
-          <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px;"  href="#about">About</a></li>
+          <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px;color:white !important;"  href="#about">About</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <header style=" padding-top:150px;">
-    <div  style=" padding:10px;">
-      <div   class="container-fluid" style="height:88vh; width:180vh;">
+
+
+        <header class="transhead"  style=" padding-top:150px;">
+<div class="layer" style="width:100%;">
         <div class="row" id="transcriptionheader">
-          <div class="col text-left" style="padding-top:15px; color:black;">
+          <div class="col text-left" style="padding-top:30px; color:black;padding-left:150px; padding-bottom:0px; font-weight:900;">
             <p class="intro-text" id="iiif"></p>
-            <h1 id="title"></h1>
-            <p id="composer"></p><br>
+            <h1 class="brand-heading" id="title" style="font-size:45px;"></h1>
+            <p id="composer" style="font-size:20px;"></p><br>
           </div>
 
         </div>
-        <div class="row" style="color:black;overflow-wrap:normal;background-color:white;background-color:#DAD1C0; text-align:center;">
+
+          <div   class="container-fluid" style="height:88vh; background-color:white;padding:150px;margin:0px;padding-top:50px; border-top: 3px solid rgba(94, 2, 2, 0.69);">
+        <div class="row" style="color:black;overflow-wrap:normal;background-color:white;background-color:#faf1e5; text-align:center;">
           <div class="col-lg-4" style="text-align:right;">
 
         <div id="player" style="text-align:right;"> </div>
@@ -153,7 +156,7 @@
     </div>
     </div>
 
-
+</header>
 
     <script type="text/javascript">
       var qs = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);
@@ -557,14 +560,14 @@ document.getElementsByClassName("pgFoot")[0].remove();
         });
 
         $("#player").midiPlayer({
-          color: "#DAD1C0",
+          color: "#9D2322",
           onUnpdate: midiUpdate,
           onStop: midiStop,
           width: 250
         });
         document.getElementById("midiPlayer_div").style.color="black";
 
-        document.getElementById("midiPlayer_div").style.backgroundColor="#DAD1C0";
+        document.getElementById("midiPlayer_div").style.backgroundColor="#faf1e5";
         loadFile();
 
 
