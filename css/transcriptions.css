@@ -106,7 +106,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
               background-color: rgba(255, 236, 215, 0.69);
               position: absolute;
               top: 0px;
-              padding-top:60px;
+              padding-top:50px;
               overflow-x: hidden;
                 overflow-y: hidden;
               width: 100%;
@@ -249,7 +249,7 @@ background-color: #f8f2ec;
 
 .header-fixed > tbody {
     overflow-y: auto;
-    height: 60vh;
+    height: 65vh;
 
 }
 
