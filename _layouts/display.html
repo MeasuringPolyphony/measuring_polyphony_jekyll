@@ -128,6 +128,7 @@
 
 
             <div id="diva-wrapper"></div>
+            <div id="graybox"></div>
             <div id="full-manuscript" style="position: absolute;
             top: 40%;
             left: 35%;
@@ -233,14 +234,15 @@
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
         if ($pagelink == "") {
-          $("#ext-images").html("<a href=\"http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028\">Click For External Images</a>");
+  //$("#graybox").html("  <img src=\"img/graybox.jpg\" alt=\"Mountain View\" style=\"padding-right:15px; filter:\">");
+          $("#full-manuscript").html("<button class=\"btn\" onclick=\"window.open('http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028');return false;\" style=\"height:238px;\">No IIIF images available. <br>Click here for external images.</a>");
                   var diva = document.getElementById("diva-wrapper");
                   element.outerHTML = "";
                   delete diva;
 
-        }
-        else {
-        $("#full-manuscript").html("<button class=\"btn\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"height:60px;\">IIIF Images Available</a>");
+
+        }else {
+          $("#full-manuscript").html("<button class=\"btn\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"height:60px;\">IIIF Images Available</a>");
       }
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
