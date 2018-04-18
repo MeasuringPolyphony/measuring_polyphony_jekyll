@@ -78,7 +78,7 @@
                 {% for xml in site.static_files %}
                     {% if xml.path contains 'assets/mensural' %}
                     <script type="text/javascript">
-                        var qs = "/measuring_polyphony_jekyll{{xml.path}}"
+                        var qs = "/{{xml.path}}"
                         var d1 = document.getElementById('table-body');
 
                               /* Load the file using HTTP GET */
