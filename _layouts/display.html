@@ -359,8 +359,8 @@ var pageWidth = 2100;
         vrvToolkit.setOptions(options);
         document.getElementById("svg_output").style.height = "";
         document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-small\"></span>";
-          document.getElementById("svg_row").style.height = "700px";
-          setTimeout(function(){document.getElementById("svg_row").style.height = "700px"}, 10);
+          document.getElementById("svg_row").style.height = "3000px";
+          setTimeout(function(){document.getElementById("svg_row").style.height = "2000px"}, 10);
       } else{
         $.ajax({
           url: file,
@@ -435,8 +435,8 @@ var pageWidth = 2100;
           // bug! time needs to be divided by 2
           $("#midi-player").midiPlayer.seek(time / 2);
         });
-document.getElementsByClassName("pgHead")[0].remove();
-document.getElementsByClassName("pgFoot")[0].remove();
+        document.getElementsByClassName("pgHead")[0].remove();
+        document.getElementsByClassName("pgFoot")[0].remove();
       };
 
       function loadFile() {
