@@ -53,6 +53,7 @@ h1#title {
   margin-top:10px;
   font-weight:bold;
   margin-bottom: 0px;
+  margin-right:20px;
 }
 
 #iiifHeader{
@@ -308,8 +309,7 @@ background-color: white;
     float: left;
     border: none;
     overflow-wrap:none;
-    padding-left: 200px;
-}
+    padding-left: 10%;}
 
 #details {
   height:88vh;
