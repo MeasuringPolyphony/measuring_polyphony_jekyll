@@ -435,8 +435,25 @@ var pageWidth = 2100;
           // bug! time needs to be divided by 2
           $("#midi-player").midiPlayer.seek(time / 2);
         });
-document.getElementsByClassName("pgHead")[0].remove();
-document.getElementsByClassName("pgFoot")[0].remove();
+        var i;
+        for (i=0; i<=vrvToolkit.getPageCount(); i++){
+          var foot;
+          var head;
+          if (i==0){
+          foot = "pgFoot" ;
+          head="pgHead";
+        } else {
+          foot = "pgFoot"+i.toString();
+          head = "pgHead"+i.toString();
+        }
+        if (  document.getElementsByClassName(head)[0]!=undefined){
+        document.getElementsByClassName(head)[0].remove();
+      }
+      if (document.getElementsByClassName(foot)[0]!=undefined){
+      document.getElementsByClassName(foot)[0].remove();
+    }
+  }
+//document.getElementsByClassName("pgFoot")[0].remove();
       };
 
       function loadFile() {
