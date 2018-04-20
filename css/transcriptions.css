@@ -44,11 +44,14 @@ p {
       line-height: 1.6;
       margin: 0 0 35px; } }
 p#composer {
-  font-size:25px;font-weight:900;
+  font-size:25px;
+  font-weight:bold;
   margin-bottom: 0px;
 }
 h1#title {
-  font-size:35px;font-weight:900;
+  font-size:35px;
+  margin-top:10px;
+  font-weight:bold;
   margin-bottom: 0px;
 }
 
@@ -129,6 +132,7 @@ color:white ! important; }
               top: 0px;
               padding-top:50px;
               overflow-x: hidden;
+              overflow-y:hidden;
               width: 100%;
               height: 100vh;
           }
@@ -259,7 +263,7 @@ background-color: white;
       color:black;
       padding-bottom:0px;
       font-weight:900;
-      margin-left:20vh;
+      margin-left:7vh;
 }
 
 #transcriptionHeader, #transcriptTitle {
@@ -307,7 +311,80 @@ background-color: white;
     padding-left: 200px;
 }
 
+#details {
+  height:88vh;
+  background-color:white;
+  padding:50px;
+  margin:0px;
+  padding-top:50px;
+  padding-bottom: 0px;
+  border-top: 3px solid rgba(94, 2, 2, 0.69);
+  overflow-y:auto;
+}
 
+#midiControlRow{
+  color:black;
+  overflow-wrap:normal;
+  background-color:#faf1e5;
+  text-align:center;
+}
+#svg-row{
+  display:block;
+}
+#diva-div{
+  position:relative;
+  width:32%;
+}
+#detail-splitter{
+  border: 1px solid black;
+  margin-bottom:15px;
+}
+#no-image-button{
+  height:175px;
+  margin-bottom:100%;
+}
+#full-manuscript{
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-45%, -50%);
+  -ms-transform: translate(-45%, -50%);
+}
+#source-column{
+  padding-left:15px;
+}
+#details-row{
+  overflow-wrap:normal;
+  color:black;
+   background-color:white;
+   padding-top:10px;
+    height: 87%;
+}
+#image-button{
+  height:60px;
+}
+#flipDisplay{
+  white-space: normal;
+   word-wrap:break-word;
+   padding-top:5px;
+   font-weight:bold;
+   color: #9d2322;
+   text-align:right;
+   background-color:transparent;
+   border:transparent;
+   font-size:20px;
+}
+
+#navigateButton{
+  color: black;
+  font-size:20px;
+  padding-bottom:15px;
+}
+
+#setFullscreen{
+  color: black;
+  font-size:20px;
+}
 a {  font-family: 'Open Sans', sans-serif;
 font-size:large;
 cursor: pointer;
