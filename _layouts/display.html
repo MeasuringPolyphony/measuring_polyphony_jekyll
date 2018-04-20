@@ -69,14 +69,12 @@
 
 
         <header class="transhead" id="displayHead">
-<div class="layer" style="width:100%;">
-        <div class="row" id="transcriptionheader">
-          <div class="col text-left" style="padding-top:80px; color:black;padding-left:190px; padding-bottom:0px; font-weight:900;">
-            <p class="intro-text" id="iiif"></p>
-            <h1 class="brand-heading" id="title" style="font-size:35px;font-weight:900;"></h1>
-            <p id="composer" style="font-size:25px;font-weight:900;"></p><br>
+<div class="layer">
+        <div class="row" id="transcriptionHeader">
+          <div class="col text-left" id="transcriptionHeaderColumn">
+            <h1  id="title" ></h1>
+            <p id="composer" ></p><br>
           </div>
-
         </div>
 
           <div   class="container-fluid" style="height:88vh; background-color:white;padding:50px;margin:0px;padding-top:50px; padding-bottom: 0px; border-top: 3px solid rgba(94, 2, 2, 0.69);  overflow-y:auto;">
@@ -223,7 +221,7 @@
         $("#title").html($triplum + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
-        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this transcription</a>");
+        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this transcription (DIAMM)</a>");
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
@@ -436,7 +434,7 @@ var pageWidth = 2100;
           $("#midi-player").midiPlayer.seek(time / 2);
         });
         var i;
-        for (i=0; i<=vrvToolkit.getPageCount(); i++){
+        for (i=0; i<=vrvToolkit.getPageCount()-2; i++){
           var foot;
           var head;
           if (i==0){
