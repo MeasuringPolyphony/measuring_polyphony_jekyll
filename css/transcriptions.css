@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
+
 body {
   font-family: 'Open Sans', sans-serif;
   position: relative;
@@ -79,7 +80,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 30px;
 padding-left:0px;
 color:white ! important; }
-  #mainNav a {
+  #mainNav a {#loadOverlay{display: none;}
     color: white; }
   #mainNav .navbar-nav .nav-item {
     -webkit-transition: background 0.3s ease-in-out;
@@ -181,7 +182,7 @@ background-color: white;
   text-align: center;
   color: white;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
+  -moz-background-size: cover;#loadOverlay{display: none;}
   -o-background-size: cover;
   background-size: cover; }
   .transhead .intro-body {
@@ -458,7 +459,6 @@ footer {
   background: #544216;
   background: rgba(255, 255, 255, 0.2);
   text-shadow: none; }
-
 
 
 body {
