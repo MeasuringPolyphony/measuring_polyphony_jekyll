@@ -30,47 +30,45 @@
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color:	#9D2322;">
-
-  <div class="col-lg-1" style="text-align: right;">
-  <img src="thumbnail.gif" alt="Mountain View" style="padding-right:15px; filter: drop-shadow(5px 5px 4px black);">
-  </div>
-  <div class="col-lg-7">
-  <div class="row">
-        <a class="navbar-brand js-scroll-trigger" href="{{ site.baseurl }}" style="color:white !important;">   Measuring Polyphony</a>
+    <body id="page-top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="col-lg-1" style="text-align: right;">
+        <img src="thumbnail.gif" id="thumbnail">
       </div>
-        <div class="row" style= "">
-        Digital encodings of late medieval music
-        </div>
-  </div>
-  <div class="col-lg-3">
-          <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
-              <ul class="navbar-nav ml-auto">
-                <li><a class="nav-link js-scroll-trigger" style= "font-size: 20px; padding-right:50px; color:white !important; hover:font-weight:none;" href="{{ site.baseurl }}transcriptions.html">Browse</a>
-              </li>
-              <li></li>
-            <li>  <a class="nav-link js-scroll-trigger"style= "font-size: 20px; color:white !important;"  href="#about">About</a></li>
-
-
-          </ul>
-        </div>
+      <div class="col-lg-7 hidden-md">
+        <div class="row">
+              <a class="navbar-brand js-scroll-trigger" href=" {{ site.baseurl }} ">Measuring Polyphony</a>
+            </div>
+              <div class="row" id="navDescription">
+                Digital encodings of late medieval music
+              </div>
       </div>
-    </nav>
+      <div class="col-lg-3">
+            <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
+                <ul class="navbar-nav ml-auto">
+                  <li><a class="nav-link js-scroll-trigger" id="browse" style= "" href="{{ site.baseurl }}transcriptions.html">Browse</a>
+                </li>
+                <li></li>
+              <li>  <a class="nav-link js-scroll-trigger" id="about" href="#about">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <!-- Intro Header -->
     <header class="transhead" >
 <div class="intro-body" style="padding-top:90px; height: 100vh;">
 <div class="layer" style="width:100%;">
-        <div class="container-fluid" >
-          <div class="col-lg-10 mx-auto" style="">
-  <h1 class="brand-heading" style="color: black;  text-align:left; margin-bottom:0px;font-weight:bold;">Browse Transcriptions</h1></div>
+        <div class="container-fluid">
+          <div class="col-lg-10 mx-auto">
+  <h1 class="brand-heading" id="transcriptions_title" style="">Browse Transcriptions</h1></div>
   </div>
 
-          <div class="row">
-            <div class="container-fluid" style="padding-right:14px;">
+          <div class="row" >
+            <div class="container-fluid">
 
-              <p class="container-fluid" style="">
-                <table class= "table table-striped header-fixed" id="output"  style="padding:0px; background-color: white; border-top: 3px solid rgba(94, 2, 2, 0.69); border-bottom: 3px solid rgba(94, 2, 2, 0.69); color:black; text-align:left;"> <thead ><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></thead><tbody id="table-body"></tbody></table>
+              <p class="container-fluid" id="transcriptions_container">
+                <table class= "table table-striped header-fixed" id="output" > <thead ><tr><th>Triplum</th><th>Motetus</th><th>Tenor/[Contratenor]</th> <th> Composer</th></tr></thead><tbody id="table-body"></tbody></table>
 
               </div></p>
             </div>

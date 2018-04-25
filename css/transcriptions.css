@@ -50,11 +50,37 @@ p#composer {
   margin-bottom: 0px;
 }
 h1#title {
-  font-size:35px;
+  font-size:45px;
   margin-top:10px;
   font-weight:bold;
   margin-bottom: 0px;
   margin-right:20px;
+
+}
+@media only screen and (max-width: 1500px) {
+  h1#title {
+    font-size:30px;
+    margin-top:10px;
+    font-weight:bold;
+    margin-bottom: 0px;
+    margin-right:20px;
+
+  }
+}
+
+
+#transcriptions_container{
+  padding-right:14px;
+  margin-bottom:0px !important;
+}
+
+#output{
+  padding:0px;
+  background-color: white;
+  border-top: 3px solid rgba(94, 2, 2, 0.69);
+  border-bottom: 3px solid rgba(94, 2, 2, 0.69);
+  color:black;
+  text-align:left;
 }
 
 #iiifHeader{
@@ -69,6 +95,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
       background-color:	#9D2322;
    color: white !important;
   margin-bottom: 0;
+
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
   #mainNav .navbar-toggler {
@@ -96,8 +123,7 @@ color:white ! important; }
       background-color: transparent; }
   @media (min-width: 992px) {
     #mainNav {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding:10px;
       background-color:	#9D2322;
       -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
       -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
@@ -114,9 +140,7 @@ color:white ! important; }
         background-color: rgba(255, 255, 255, 0.3); }
         #mainNav .nav-link.active:hover {
           color: white; }
-          #mainNav, #thumbnail {
-            padding-right:15px;
-            filter: drop-shadow(5px 5px 4px black);}
+
 #mainNav, #navDescription {
           color:white;  font-size:16px;}
           #mainNav, #browse {
@@ -127,12 +151,14 @@ color:white ! important; }
                               font-size: 20px;
                               color:white !important; }
         }
-
+        #thumbnail {
+          padding-right:15px;
+          filter: drop-shadow(5px 5px 4px black);}
           .layer {
               background-color: rgba(255, 236, 215, 0.69);
               position: absolute;
               top: 0px;
-              padding-top:50px;
+              padding-top:25px;
               overflow-x: hidden;
               overflow-y:hidden;
               width: 100%;
@@ -141,7 +167,7 @@ color:white ! important; }
           .table-striped > thead {
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
-            font-weight: 800;
+            font-weight: bold;
               color: #840705;
               background-color: rgba(248, 242, 236, 0.87);
 
@@ -248,9 +274,17 @@ background-color: white;
                 font-size: 45px;
                 padding-top:100px;
                   padding-bottom:0px;
-                font-weight: 900;}
+                font-weight: bold;}
               .transhead .intro-body .intro-text {
                 font-size: 22px; } }
+
+@media only screen and (max-width: 1500px) {
+  .transhead .intro-body .brand-heading {
+    font-size: 40px;
+    padding-top:100px;
+      padding-bottom:0px;
+    font-weight: bold;}
+}
 #transcriptions-table {
 
   border-top: 2px solid rgba(94, 2, 2, 0.69);
@@ -260,20 +294,39 @@ background-color: white;
 #transcriptionHeader {
 
   border-top: 2px solid rgba(94, 2, 2, 0.69);
+  height:27vh;
 }
 #transcriptionHeader, #transcriptionHeaderColumn {
       color:black;
       padding-bottom:0px;
-      font-weight:900;
+      font-weight:bold;
       margin-left:7vh;
+      height: 22vh;
 }
 
 #transcriptionHeader, #transcriptTitle {
-      padding-top:80px;
+      padding-top:104px;
       color:black;
       padding-bottom:0px;
       font-weight:bold;
       font-size:35px;
+}
+@media only screen and (max-width: 1500px) {
+  #transcriptionHeader, #transcriptTitle {
+        padding-top:80px;
+        color:black;
+        padding-bottom:0px;
+        font-weight:bold;
+        font-size:35px;
+  }
+  #transcriptionHeader, #transcriptionHeaderColumn {
+        color:black;
+        padding-bottom:0px;
+        font-weight:bold;
+        margin-left:6vh;
+        height:23vh;
+  }
+
 }
 .header-fixed {
     width: 100%
@@ -299,7 +352,7 @@ background-color: white;
 
 .header-fixed > tbody {
     overflow-y: auto;
-    height: 60vh;
+    height: 70vh;
 
 }
 
@@ -312,8 +365,15 @@ background-color: white;
     overflow-wrap:none;
     padding-left: 10%;}
 
+@media only screen and (max-width: 1500px) {
+  .header-fixed > tbody {
+      overflow-y: auto;
+      height: 63vh;
+
+  }
+}
 #details {
-  height:88vh;
+  height:79%;
   background-color:white;
   padding:50px;
   margin:0px;
@@ -341,8 +401,7 @@ background-color: white;
   margin-bottom:15px;
 }
 #no-image-button{
-  height:175px;
-  margin-bottom:100%;
+  height:200px;
 }
 #full-manuscript{
   position: absolute;
@@ -359,7 +418,6 @@ background-color: white;
   color:black;
    background-color:white;
    padding-top:10px;
-    height: 87%;
 }
 #image-button{
   height:60px;
