@@ -28,6 +28,8 @@
   <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
   <!-- Custom styles for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl }}css/midiplayer.css" />
   <link rel="stylesheet" href="{{ site.baseurl }}css/diva.min.css" />
 
@@ -39,7 +41,7 @@
   <script src="https://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
   <script src="{{ site.baseurl }}js/basic-events.js" type="text/javascript"></script>
-  <script type="text/javascript" language="javascript" src="{{ site.baseurl }}js/midi-player/wildwebmidi.js"></script>
+  <script type="text/javascript" language="javascript" src="{{ site.baseurl }}instruments/074_recorder.js"></script>
   <script type="text/javascript" language="javascript" src="{{ site.baseurl }}js/midi-player/midiplayer.js"></script>
   <script src="{{ site.baseurl }}js/diva.min.js" type="text/javascript"></script>
 </head>
@@ -214,7 +216,7 @@
         $("#title").html($triplum + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
-        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this transcription (DIAMM)</a>");
+        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this manuscript (DIAMM)</a>");
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");

@@ -6,15 +6,16 @@
 
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   position: relative;
   width: 100%;
   height: 100%;
   color: white;
+  font-size: 100%;
   background-color: black; }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
   height: 100%; }
 
@@ -24,19 +25,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   margin: 0 0 35px;
+  font-size: 2.5em;
   letter-spacing: 1px;
  }
   table, th, td {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
      border: 1px solid white;
   }
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 
-  font-size: 16px;
+  font-size: .875ems;
   line-height: 1.5;
   margin: 0 0 25px; }
   @media (min-width: 768px) {
@@ -46,13 +48,13 @@ p {
       margin: 0 0 35px; } }
 p#composer {
   font-size:25px;
-  font-weight:bold;
+
   margin-bottom: 0px;
 }
 h1#title {
   font-size:45px;
   margin-top:10px;
-  font-weight:bold;
+
   margin-bottom: 0px;
   margin-right:20px;
 
@@ -61,7 +63,7 @@ h1#title {
   h1#title {
     font-size:30px;
     margin-top:10px;
-    font-weight:bold;
+
     margin-bottom: 0px;
     margin-right:20px;
 
@@ -84,14 +86,14 @@ h1#title {
 }
 
 #iiifHeader{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
  background-color:#9D2322;
 margin-bottom: 0;
 border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 #mainNav {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
       background-color:	#9D2322;
    color: white !important;
   margin-bottom: 0;
@@ -103,7 +105,7 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
     border: 1px solid white; }
   #mainNav .navbar-brand {
-    font-weight: bold;
+
   font-size: 30px;
 padding-left:0px;
 color:white ! important; }
@@ -165,9 +167,9 @@ color:white ! important; }
               height: 100vh;
           }
           .table-striped > thead {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
             font-size: 18px;
-            font-weight: bold;
+
               color: #840705;
               background-color: rgba(248, 242, 236, 0.87);
 
@@ -274,7 +276,7 @@ background-color: white;
                 font-size: 45px;
                 padding-top:100px;
                   padding-bottom:0px;
-                font-weight: bold;}
+                }
               .transhead .intro-body .intro-text {
                 font-size: 22px; } }
 
@@ -283,7 +285,7 @@ background-color: white;
     font-size: 40px;
     padding-top:100px;
       padding-bottom:0px;
-    font-weight: bold;}
+    }
 }
 #transcriptions-table {
 
@@ -299,7 +301,7 @@ background-color: white;
 #transcriptionHeader, #transcriptionHeaderColumn {
       color:black;
       padding-bottom:0px;
-      font-weight:bold;
+
       margin-left:7vh;
       height: 22vh;
 }
@@ -308,7 +310,7 @@ background-color: white;
       padding-top:104px;
       color:black;
       padding-bottom:0px;
-      font-weight:bold;
+
       font-size:35px;
 }
 @media only screen and (max-width: 1500px) {
@@ -316,15 +318,15 @@ background-color: white;
         padding-top:80px;
         color:black;
         padding-bottom:0px;
-        font-weight:bold;
+
         font-size:35px;
   }
   #transcriptionHeader, #transcriptionHeaderColumn {
         color:black;
         padding-bottom:0px;
-        font-weight:bold;
+
         margin-left:6vh;
-        height:23vh;
+        height:27vh;
   }
 
 }
@@ -426,7 +428,7 @@ background-color: white;
   white-space: normal;
    word-wrap:break-word;
    padding-top:5px;
-   font-weight:bold;
+
    color: #9d2322;
    text-align:right;
    background-color:transparent;
@@ -434,6 +436,20 @@ background-color: white;
    font-size:20px;
 }
 
+.sortButton{
+  white-space: normal;
+   word-wrap:break-word;
+   padding-top:5px;
+   font-weight: bold;
+   color: #670200 ;
+   text-align:right;
+   background-color:transparent;
+   border:transparent;
+   font-size:20px;
+
+}
+.sortButton:hover {text-decoration: underline; cursor: pointer;}
+.sortButton:visited {border:none;}
 #navigateButton{
   color: black;
   font-size:20px;
@@ -444,13 +460,13 @@ background-color: white;
   color: black;
   font-size:20px;
 }
-a {  font-family: 'Open Sans', sans-serif;
+a {  font-family: 'Source Sans Pro', sans-serif;
 font-size:large;
 cursor: pointer;
 color: #670200 !important;}
 a:link {color: #670200;}
 a:visited {color: #670200;}
-a:hover {text-decoration: none; color: #670200; font-weight:bold;}
+a:hover {text-decoration: underline; color: #670200; }
 a:active {color: #670200;;text-decoration: none}
 
 .header-fixed > thead > tr > th {
