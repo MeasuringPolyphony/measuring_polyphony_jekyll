@@ -124,7 +124,7 @@
                     values.push($composer);
                     values.push("{{ site.baseurl }}{{xml.path}}");
                 $alldata.push(values);
-
+                populateTable();
 
                 }, 'text');
 
@@ -134,11 +134,7 @@
 
       {% endif %}
   {% endfor %}
-  {% int x=0 %}
-    <script type="text/javascript">
-    populateTable();
-    </script>
-  {% int y=1 %}
+
     <!-- Plugin JavaScript -->
   <script type="text/javascript">
   $(document).ready(function(){
