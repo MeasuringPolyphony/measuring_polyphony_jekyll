@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Edition made for Appendix to Desmond, Ars nova in Music and Medieval Thought (CUP, forthcoming).</p>
-						<p></p>
+						Edition made for Appendix to Desmond, Ars nova in Music and Medieval Thought (CUP, forthcoming).Readings from Günther’s edition (which do accord with the text of Durham), with some modifications to the punctuation and some alternate readings taken from the other available editions.</p>
+						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					The copy text for this edition is the three-voice version found in Durham; variants in the other three complete sources for this motet are listed below (there is a short lacuna in Iv from breve 74 to the first pitch in breve 86 in the triplum due to manuscript damage). The readings in Chantilly and Modena are very close to those in Durham, whereas there are several pitch variants (especially in the hocket sections) in Iv. A contratenor part is added in the Iv and Modena, and Chantilly has an alternate contratenor. The numbers below refer to the breve units, and the superscript refers to the pitch (not counting rests) within the breve unit. The text underlay in the hockets follows the recommendations given in Zayaruznaya, ‘Hockets as Compositional and Scribal Practice’ (see especially the table on 470-1). Ligature brackets are from Durham, and variants in ligatures, dots, and notated accidentals are not noted. Tr         31.1 Iv f / 31.5 Iv f / 31.5 Mod e / 32.5 Iv dd / 38.5 Iv f / 46.5 Iv f / 47.5 Ch aa / 58.5 Mod aa / 64.3 Ch aa bb (S M) / 65.5 Dur aa/ 66.5 Iv bb / 73.5 Iv dd / 74.5 Mod c / 90.5 Iv f (S) (Srest) Ch f (maxima) Dur f (L) / Mot 10-12 Ch c (B) c (B) (Brest) / 22.5 Iv g om / 29.5 Iv cde fef  (SSS MMM) / 43.3 om Ch Mod / 84.5-6 f g Ch / 89-90 Mod (Srest) e (S) f (S) (Brest) / T  90 final 2 S rests om Iv
+					Initial proofreading complete. Final proofreading needed.
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">

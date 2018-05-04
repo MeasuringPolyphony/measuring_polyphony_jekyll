@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
-						<p></p>
+						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows PMFC edition. Variants in source noted below.</p>
+						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					
+					Initial proofreading complete. Final proofreading needed.
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">
@@ -153,7 +153,7 @@
 								<layer xml:id="m-41" n="1">
 									<note xml:id="m-42" dots="1" dur="breve" dur.ges="3072p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
 										<verse xml:id="m-49" n="1">
-											<syl xml:id="m-50" wordpos="i">L&amp;apos;a</syl>
+											<syl xml:id="m-50" wordpos="i">L'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-43" dur="2" dur.ges="512p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
@@ -178,7 +178,7 @@
 									</note>
 									<note xml:id="m-47" dur="2" dur.ges="512p" layer="1" oct="4" pname="e" pnum="64" staff="1" stem.dir="up">
 										<verse xml:id="m-59" n="1">
-											<syl xml:id="m-60" wordpos="i">d&amp;apos;es</syl>
+											<syl xml:id="m-60" wordpos="i">d'es</syl>
 										</verse>
 									</note>
 									<note xml:id="m-48" dots="1" dur="breve" dur.ges="3072p" layer="1" oct="4" pname="d" pnum="62" staff="1" stem.dir="up">
@@ -253,7 +253,7 @@
 									<note xml:id="m-102" dots="1" dur="long" dur.ges="6144p" layer="1" oct="4" pname="c" pnum="61" staff="2" stem.dir="up">
 										<accid xml:id="m-103" accid="s" />
 										<verse xml:id="m-163" n="1">
-											<syl xml:id="m-164" wordpos="i">l&amp;apos;es</syl>
+											<syl xml:id="m-164" wordpos="i">l'es</syl>
 										</verse>
 									</note>
 								</layer>
@@ -312,7 +312,7 @@
 									</note>
 									<note xml:id="m-124" dur="2" dur.ges="512p" layer="1" oct="4" pname="a" pnum="69" staff="1" stem.dir="up">
 										<verse xml:id="m-145" n="1">
-											<syl xml:id="m-146" wordpos="i">d&amp;apos;an</syl>
+											<syl xml:id="m-146" wordpos="i">d'an</syl>
 										</verse>
 									</note>
 									<note xml:id="m-125" dur="2" dur.ges="512p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
@@ -352,7 +352,7 @@
 									</note>
 									<note xml:id="m-157" dots="1" dur="1" dur.ges="1536p" layer="1" oct="4" pname="e" pnum="64" staff="2" stem.dir="up">
 										<verse xml:id="m-194" n="1">
-											<syl xml:id="m-195" wordpos="i">d&amp;apos;a</syl>
+											<syl xml:id="m-195" wordpos="i">d'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-158" dots="1" dur="1" dur.ges="1536p" layer="1" oct="4" pname="f" pnum="65" staff="2" stem.dir="up" />
@@ -1277,7 +1277,7 @@
 									</note>
 									<note xml:id="m-716" dur="2" dur.ges="512p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
 										<verse xml:id="m-745" n="1">
-											<syl xml:id="m-746" wordpos="i">d&amp;apos;o</syl>
+											<syl xml:id="m-746" wordpos="i">d'o</syl>
 										</verse>
 									</note>
 									<note xml:id="m-717" dur="2" dur.ges="512p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
@@ -1302,7 +1302,7 @@
 									</note>
 									<note xml:id="m-721" dur="2" dur.ges="512p" layer="1" oct="4" pname="a" pnum="69" staff="1" stem.dir="up">
 										<verse xml:id="m-755" n="1">
-											<syl xml:id="m-756" wordpos="i">l&amp;apos;a</syl>
+											<syl xml:id="m-756" wordpos="i">l'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-722" dur="2" dur.ges="512p" layer="1" oct="4" pname="f" pnum="65" staff="1" stem.dir="up">
@@ -1312,7 +1312,7 @@
 									</note>
 									<note xml:id="m-723" dur="2" dur.ges="512p" layer="1" oct="4" pname="f" pnum="65" staff="1" stem.dir="up">
 										<verse xml:id="m-759" n="1">
-											<syl xml:id="m-760" wordpos="t">vé&amp;apos;</syl>
+											<syl xml:id="m-760" wordpos="t">vé'</syl>
 										</verse>
 									</note>
 									<note xml:id="m-724" dur="2" dur.ges="512p" layer="1" oct="4" pname="f" pnum="65" staff="1" stem.dir="up">
@@ -1458,7 +1458,7 @@
 									</note>
 									<note xml:id="m-830" dur="1" dur.ges="1024p" layer="1" oct="4" pname="a" pnum="69" staff="1" stem.dir="up">
 										<verse xml:id="m-848" n="1">
-											<syl xml:id="m-849" wordpos="i">n&amp;apos;est</syl>
+											<syl xml:id="m-849" wordpos="i">n'est</syl>
 										</verse>
 									</note>
 									<note xml:id="m-831" dur="2" dur.ges="512p" layer="1" oct="4" pname="b" pnum="71" staff="1" stem.dir="down">
@@ -1866,7 +1866,7 @@
 									</note>
 									<note xml:id="m-1084" dur="2" dur.ges="512p" layer="1" oct="5" pname="c" pnum="72" staff="1" stem.dir="down">
 										<verse xml:id="m-1108" n="1">
-											<syl xml:id="m-1109" wordpos="i">d&amp;apos;a</syl>
+											<syl xml:id="m-1109" wordpos="i">d'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-1085" dur="2" dur.ges="512p" layer="1" oct="5" pname="c" pnum="72" staff="1" stem.dir="down">
@@ -2120,7 +2120,7 @@
 									</note>
 									<note xml:id="m-1239" dur="1" dur.ges="1024p" layer="1" oct="4" pname="g" pnum="67" staff="1" stem.dir="up">
 										<verse xml:id="m-1253" n="1">
-											<syl xml:id="m-1254" wordpos="i">m&amp;apos;ont</syl>
+											<syl xml:id="m-1254" wordpos="i">m'ont</syl>
 										</verse>
 									</note>
 									<note xml:id="m-1240" dur="2" dur.ges="512p" layer="1" oct="4" pname="f" pnum="65" staff="1" stem.dir="up">
@@ -2230,7 +2230,7 @@
 									<note xml:id="m-1316" dur="2" dur.ges="512p" layer="1" oct="4" pname="c" pnum="61" staff="1" stem.dir="up">
 										<accid xml:id="m-1317" accid="s" />
 										<verse xml:id="m-1329" n="1">
-											<syl xml:id="m-1330" wordpos="i">m&amp;apos;ont</syl>
+											<syl xml:id="m-1330" wordpos="i">m'ont</syl>
 										</verse>
 									</note>
 									<note xml:id="m-1318" dur="1" dur.ges="1024p" layer="1" oct="4" pname="d" pnum="62" staff="1" stem.dir="up">
@@ -3189,7 +3189,7 @@
 									</note>
 									<note xml:id="m-1894" dur="1" dur.ges="1024p" layer="1" oct="4" pname="f" pnum="65" staff="1" stem.dir="up">
 										<verse xml:id="m-1906" n="1">
-											<syl xml:id="m-1907" wordpos="i">n&amp;apos;ay</syl>
+											<syl xml:id="m-1907" wordpos="i">n'ay</syl>
 										</verse>
 									</note>
 									<note xml:id="m-1895" dur="2" dur.ges="512p" layer="1" oct="4" pname="e" pnum="64" staff="1" stem.dir="up">
@@ -3330,7 +3330,7 @@
 								<layer xml:id="m-1992" n="1">
 									<note xml:id="m-1993" dur="2" dur.ges="512p" layer="1" oct="5" pname="c" pnum="72" staff="2" stem.dir="down">
 										<verse xml:id="m-2004" n="1">
-											<syl xml:id="m-2005" wordpos="i">qu&amp;apos;a</syl>
+											<syl xml:id="m-2005" wordpos="i">qu'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-1994" dur="2" dur.ges="512p" layer="1" oct="4" pname="b" pnum="71" staff="2" stem.dir="down" />
@@ -3345,7 +3345,7 @@
 									<note xml:id="m-1999" dur="2" dur.ges="512p" layer="1" oct="4" pname="a" pnum="69" staff="2" stem.dir="up" />
 									<note xml:id="m-2000" dur="1" dur.ges="1024p" layer="1" oct="4" pname="g" pnum="67" staff="2" stem.dir="up">
 										<verse xml:id="m-2008" n="1">
-											<syl xml:id="m-2009" wordpos="i">m&amp;apos;a</syl>
+											<syl xml:id="m-2009" wordpos="i">m'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-2001" dur="2" dur.ges="512p" layer="1" oct="4" pname="f" pnum="65" staff="2" stem.dir="up" />
@@ -3464,7 +3464,7 @@
 									</note>
 									<note xml:id="m-2069" dur="2" dur.ges="512p" layer="1" oct="4" pname="b" pnum="71" staff="1" stem.dir="down">
 										<verse xml:id="m-2086" n="1">
-											<syl xml:id="m-2087" wordpos="i">qu&amp;apos;a</syl>
+											<syl xml:id="m-2087" wordpos="i">qu'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-2070" dur="1" dur.ges="1024p" layer="1" oct="5" pname="c" pnum="72" staff="1" stem.dir="down">

@@ -89,7 +89,7 @@
 				<editorialDecl>
 					<p>
 						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
-						<p></p>
+						<annot title="variants">Initial proofreading complete. Final proofreading needed. Tr 40 lacuna – two semibreves on C supplied /</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					
+					Initial proofreading complete. Final proofreading needed. Tr 40 lacuna – two semibreves on C supplied /
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">

@@ -17,9 +17,10 @@
 				 <respStmt> 
 					<persName role="project director">Karen Desmond</persName>
 					<persName role="encoder" date="8-2-2016">Karen Desmond</persName> 
-					<persName role="proofreader" date="10-9-2016">Emily Hopkins</persName> 
-					<persName role="proofreader" date="10-9-2016">Sam Howes</persName> 
-					<persName role="proofreader" date="10-9-2016">Karen Desmond</persName> 
+					<persName role="proofreader" date="5-3-2018">Emily Hopkins</persName> 
+					<persName role="proofreader" date="5-3-2018">Sam Howes</persName> 
+					<persName role="proofreader" date="5-3-2018">Karen Desmond</persName> 
+					<persName role="proofreader" date="5-3-2018">Daniel Shapiro</persName> 
 				</respStmt>
 			</titleStmt>
 			<pubStmt xml:id="m-15">
@@ -88,8 +89,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Original MusicXML file from Cuthbert (which was transcribed from PMFC). Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
-						<p></p>
+						Original MusicXML file from Cuthbert (which was transcribed from PMFC). Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows PMFC edition. Variants in source noted below.</p>
+						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -115,14 +116,14 @@
 						<incip>
 							<incipText title="tenor">TENOR CUM STATUA</incipText>
 						</incip>
-						<otherChar>Original clefs </otherChar>
+						<otherChar>Original clefs c1 c3 c3</otherChar>
 						<classification>
 							<term>Motet</term>
 						</classification>
 					</work>
 				</workDesc>
 				<extMeta>
-					
+					Initial proofreading complete. Final proofreading needed.
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">

@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Zwick. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
-						<p></p>
+						Scanned file corrected from Zwick. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Zwick edition. Variants in manuscript noted below.</p>
+						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					
+					Initial proofreading complete. Final proofreading needed.
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">
@@ -944,7 +944,7 @@
 								<layer xml:id="m-554" n="1">
 									<note xml:id="m-556" dots="1" dur="breve" dur.ges="3072p" layer="1" oct="4" oct.ges="3" pname="f" pnum="53" staff="2" stem.dir="down">
 										<verse xml:id="m-560" n="1">
-											<syl xml:id="m-561" wordpos="i">s&amp;apos;a</syl>
+											<syl xml:id="m-561" wordpos="i">s'a</syl>
 										</verse>
 									</note>
 									<note xml:id="m-557" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
