@@ -3,7 +3,7 @@
 <head>
 
   <!-- Testing Auto-Update Feature (Stephan) -->
-  
+
   <title>Measuring Polyphony</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -128,14 +128,18 @@
             <p><b>Source</b></p>
             <p id="primarysource"></p>
             <p id="diammlink"></p>
-              <p id="ext-images"></p>
-            <p id="concsources"></p><br>
-            <p id="prevedition"></p><br>
+            <p id="ext-images"></p>
 
+            <p id="prevedition"></p><br>
+            <p><b>Commentary</b></p>
+            <p id="commentary"></p>
+            <p id="variants"></p>
+            <p id="entertranscriptions"></p>
+            <p id="checktranscriptions"></p><br>
 
           </div>
 
-          <div class="col-lg-4 text-left">
+          <div class="col-lg-2 text-left">
             <p><b>Downloads</b></p>
 
               <p id="mei"></p><br>
@@ -144,6 +148,10 @@
 
             <!-- Button trigger modal -->
 
+          </div>
+          <div class="col-lg-3 text-left">
+            <p id="concsources"></p><br>
+            <!-- Button trigger modal -->
           </div>
         </div>
       </div>
@@ -170,13 +178,30 @@
         }
         $mei = $meiarray.join("/");
         xmlDoc = $.parseXML(dataType),
-          $xml = $(xmlDoc),
-          $title = $xml.find("title").first();
+        $xml = $(xmlDoc),
+        $title = $xml.find("title").first();
         $composer = $xml.find("composer").first();
         $primesource = $xml.find("identifier").first();
         $concsources = $xml.find("annot");
         $link = $xml.find("item");
         $parts = $xml.find("incipText");
+        $people = $xml.find("persName");
+        $notes = $xml.find("p")[0].innerHTML;
+        $encoders="";
+        $checkers="";
+        for (var i = 0; i< $people.length; i++) {
+          if ($people[i].attributes[0] != null){
+            if ($people[i].attributes[0].textContent == "encoder") {
+              $encoders = $encoders + $people[i].innerHTML;
+            } else if ($people[i].attributes[0].textContent == "proofreader"){
+              if ($checkers == ""){
+$checkers = $checkers + $people[i].innerHTML;
+              } else {
+              $checkers = $checkers + ", " + $people[i].innerHTML;
+            }
+            }
+          }
+        }
         $needle = $link[0].attributes[2].textContent.split(",")[0];
         $quadruplum = "";
         $contratenor = "";
@@ -222,26 +247,31 @@
         $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
+          $("#commentary").html($notes);
+
+            $("#entertranscriptions").html("Encoded by " + $encoders);
+            $("#checktranscriptions").html("Checked by " + $checkers);
         if ($pagelink == "") {
   //$("#graybox").html("  <img src=\"img/graybox.jpg\" alt=\"Mountain View\" style=\"padding-right:15px; filter:\">");
           $("#full-manuscript").html("<button class=\"btn\" id=\"no-image-button\" onclick=\"window.open('http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028');return false;\" style=\"\">No IIIF images available. <br>Click here for external images.</a>");
                   var diva = document.getElementById("diva-wrapper");
-                  element.outerHTML = "";
+                  diva.outerHTML = "";
                   delete diva;
-
-
         }else {
           $("#full-manuscript").html("<button class=\"btn\" id=\"image-button\" onclick=\"window.open('{{ site.baseurl }}iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"\">IIIF Images Available</a>");
       }
+      if ($concsources[0].innerHTML != ("")) {
+        $("#concsources").html("<p><b>Concordant source(s)</b><p>" + $concsources[0].innerHTML);
+      }
+        if ($concsources[3].innerHTML != ("-")) {
+   $("#variants").html($concsources[3].innerHTML);
+ }
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
 manifest = "https://ekoshelev.github.io/mpol_manifest/manifest.json";
 
           loadDiva(manifest, pagenum);
 
-        if ($concsources[2] !== ("")) {
-          $("#concsources").html("<p><b>Concordant source(s)</b><p>" + $concsources[2].textContent);
-        }
 
 
 

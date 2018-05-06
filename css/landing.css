@@ -181,7 +181,9 @@ border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                 font-size: 100px; }
               .masthead .intro-body .intro-text {
                 font-size: 22px; } }
-
+section#about.content-section.text-center {
+  background-color: #FFFFFF;
+}
 .btn-circle {
   font-size: 26px;
   width: 60px;
