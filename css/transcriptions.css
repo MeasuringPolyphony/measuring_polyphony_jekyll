@@ -666,11 +666,33 @@ p#composer
 	border:transparent;
 	font-size:20px;
 }
-
+#pdfButton
+{
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  color: #670200 !important;
+	background-color:transparent;
+	border:transparent;
+  text-align:left;
+  cursor: pointer;
+  padding-left:0px;
+}
+.pdf:hover
+{
+	text-decoration: none;
+	color: #670200;
+	font-weight:bold;
+}
 #navigateButton{
   color: black;
   font-size:20px;
   padding-bottom:15px;
+}
+#navigateButton:hover
+{
+	text-decoration: none;
+	color: #670200;
+	font-weight:bold;
 }
 
 #setFullscreen{
