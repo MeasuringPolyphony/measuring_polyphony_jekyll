@@ -31,27 +31,26 @@
     <!-- Navigation -->
     <body id="page-top">
       <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="col-lg-1" style="text-align: right;">
-        <img src="thumbnail.gif" id="thumbnail">
-      </div>
-      <div class="col-lg-7 hidden-md">
-        <div class="row">
-              <a class="navbar-brand js-scroll-trigger" href=" {{ site.baseurl }} ">Measuring Polyphony</a>
-            </div>
-              <div class="row" id="navDescription">
-                Digital encodings of late medieval music
-              </div>
-      </div>
-      <div class="col-lg-3">
-            <div class="collapse navbar-collapse" id="navbarResponsive" style="text-align=left;">
-                <ul class="navbar-nav ml-auto">
-                  <li><a class="nav-link js-scroll-trigger" id="browse" style= "" href="{{ site.baseurl }}transcriptions.html">Browse</a>
-                </li>
-                <li></li>
-              <li>  <a class="nav-link js-scroll-trigger" id="about" href="#about">About</a></li>
+          <a class="navbar-brand" href="/">
+             <img src="thumbnail.png" id="thumbnail">
+             <div id="navTitle">Measuring Polyphony</div>
+             <div id="navDescription">Digital encodings of late medieval music</div>
+             <div class="clearfix"></div>
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a id="browse" class="nav-link " href="transcriptions.html">Browse</a>
+              </li>
+              <li class="nav-item">
+                <a id="about" class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
             </ul>
           </div>
-        </div>
       </nav>
 
     <!-- Intro Header -->
