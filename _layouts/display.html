@@ -136,27 +136,26 @@
             <div id="full-manuscript"></div>
           </div>
           <div class="col-lg-4 text-left" id="source-column">
-            <p><b>Source</b></p>
-            <p id="primarysource"></p>
-            <p id="diammlink"></p>
-            <p id="ext-images"></p>
-
-            <p id="prevedition"></p><br>
-              <p id="concsources"></p><br>
-            <p><b>Commentary</b></p>
-            <p id="commentary"></p>
-            <p id="variants"></p>
-            <p id="entertranscriptions"></p>
-            <p id="checktranscriptions"></p><br>
+            <b>Source</b>
+            <div id="primarysource"></div>
+            <div id="diammlink"></div>
+            <div id="ext-images"></div>
+            <div id="prevedition"></div><br>
+            <div id="concsources"></div><br>
+            <b>Commentary</b>
+            <div id="commentary"></div>
+            <div id="variants"></div><br>
+            <div id="entertranscriptions"></div>
+            <div id="checktranscriptions"></div><br>
 
           </div>
 
           <div class="col-lg-2 text-left" id="download-column">
-            <p><b>Downloads</b></p>
+            <b>Downloads</b>
 
-              <p id="mei"></p><br>
-              <p id="mens"></p><br>
-              <p id="pdf"></p>
+              <div id="mei"></div>
+              <div id="mens"></div>
+              <div id="pdf"></div>
 
             <!-- Button trigger modal -->
 
@@ -254,7 +253,7 @@
         $("#composer").html($composer.text());
         $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
         $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this transcription (DIAMM)</a>");
-        $("#mens").html("<a href=\"" + qs + "\" download>MENSURAL</a>");
+        $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<a href=\"" + $mei + "\" download>PDF</a>");
           $("#commentary").html($notes);
@@ -271,10 +270,10 @@
           $("#full-manuscript").html("<button class=\"btn\" id=\"image-button\" onclick=\"window.open('iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"\">IIIF Images Available</a>");
       }
       if ($concsources[0].innerHTML != ("")) {
-        $("#concsources").html("<p><b>Concordant source(s)</b><p>" + $concsources[0].innerHTML);
+        $("#concsources").html("<b>Concordant source(s)</b><br>" + $concsources[0].innerHTML);
       }
         if ($concsources[3].innerHTML != ("-")) {
-   $("#variants").html($concsources[3].innerHTML);
+   $("#variants").html("<br>" + $concsources[3].innerHTML);
  }
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
