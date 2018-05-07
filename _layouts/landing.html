@@ -85,12 +85,12 @@
     </header>
 
     <!-- About Section -->
-    <section id="aboutt" class="content-section text-center" style="margin-top:0px;padding-top:5%;padding-bottom:0px;">
+    <section id="aboutt" class="content-section text-center" style="margin-top:0px;padding-bottom:0px;">
 
         <div class="row-fluid" style="background-color:white; color: black;">
               <div class="col text-left" style="padding:5%;">
-                <div id="aboutProject" style="padding-top:50px;">
-                <h1>  ABOUT THIS PROJECT </h1>
+                <div id="aboutProject"  >
+                <h1>  About This Project </h1>
                 <p>
                 <a class="js-scroll-trigger" href= "#projectDescription" >Project Description</a></br>
                 <a class="js-scroll-trigger" href= "#projectTeam" >Project Team</a></br>
@@ -102,12 +102,14 @@
                 <a class="js-scroll-trigger"href= "#knownIssues" >Known Issues</a></br>
                 <a class="js-scroll-trigger"href= "#futurePlans" >Future Plans</a></br>
                 <a class="js-scroll-trigger" href= "#feedback" >Feedback</a></br>
+              </p>
                 </div>
                 <div  id="projectDescription" style="padding-top:5%;">
                 <h2>Project Description</h2>
-                <p style>The thirteenth and fourteenth centuries saw an unprecedented increase in the production of manuscripts not focused solely on music written for liturgical services, but which contained a diversity of musical styles, genres, and subject matter. These new repertoires were copied in music-only manuscripts, and in manuscripts that interweave songs, texts, and illustrations. At the same time, techniques for specifically notating individual rhythmic durations were developed, a notation called ‘mensural’ or ‘measurable.’ Almost all polyphonic music (music composed for two or more voice parts) from 1300-1600 is notated in mensural notation, the rules of which changed little from c. 1350. Yet modern editions invariably introduce many layers of translation when they present this music: for example, translating the original notation into modern notation that often obfuscates the original’s intent; or categorizing and collating individual music compositions according to the conventions of modern publications, ignoring the presentation context within the original manuscript sources. </p>
+                <p>The thirteenth and fourteenth centuries saw an unprecedented increase in the production of manuscripts not focused solely on music written for liturgical services, but which contained a diversity of musical styles, genres, and subject matter. These new repertoires were copied in music-only manuscripts, and in manuscripts that interweave songs, texts, and illustrations. At the same time, techniques for specifically notating individual rhythmic durations were developed, a notation called ‘mensural’ or ‘measurable.’ Almost all polyphonic music (music composed for two or more voice parts) from 1300-1600 is notated in mensural notation, the rules of which changed little from c. 1350. Yet modern editions invariably introduce many layers of translation when they present this music: for example, translating the original notation into modern notation that often obfuscates the original’s intent; or categorizing and collating individual music compositions according to the conventions of modern publications, ignoring the presentation context within the original manuscript sources. </p>
                 <p>
                 ‘Measuring Polyphony’ presents, for the first time, digitised versions of polyphonic compositions written during the thirteenth and fourteenth centuries, offering new possibilities for mediating the scholarly and public experience of this richly evocative music within its original manuscript context. The project began at the Schulich School of Music at McGill University, and now continues at Brandeis University. It leverages the potential of the rich digital image repositories of music manuscripts and the community-based standards for encoding music notation of the Music Encoding Initiative (MEI). ‘Measuring Polyphony’ has three goals:
+    </p>
                 <ol>
                 <li> makes transcriptions and audio freely available online to performers, scholars, and the general public, presented alongside images of the original music manuscripts;</li>
 
@@ -115,29 +117,29 @@
 
                 <li> streamlines the processes and tools for digitally encoding mensural polyphony so that other stakeholders can easily and rapidly enlarge the dataset.</li>
                 </ol>
-                </p>
+
                 </div>
                 <div  id="projectTeam" style="padding-top:5%;">
                 <h2>Project Team</h2>
-                <i>Project Director</i><br>
-                Karen Desmond, Brandeis University<br>
-                <br>
-                <i>Programming of the mensural notation transformation scripts</i><br>
-                Martha Thomae Elias, McGill University<br><br>
-
-                <i>Website design, architecture, and programming</i><br>
-                Elizabeth Koshelev, Brandeis University<br><br>
-
-                <i>Verovio customization</i><br>
-                Laurent Pugin, co-director, Répertoire International des Sources Musicales, Switzerland<br><br>
-
-                <i>Encoding and proofreading</i><br>
+                <p><i>Project Director</i><br>
+                Karen Desmond, Brandeis University
+              </p>
+                <p><i>Programming of the mensural notation transformation scripts</i><br>
+                Martha Thomae Elias, McGill University
+</p>
+                <p><i>Website design, architecture, and programming</i><br>
+                Elizabeth Koshelev, Brandeis University
+</p>
+                <p><i>Verovio customization</i><br>
+                Laurent Pugin, co-director, Répertoire International des Sources Musicales, Switzerland
+</p>
+                <p><i>Encoding and proofreading</i><br>
                 Emily Hopkins, Sam Howes, Sadie Menincain (McGill University)<br>
-                Shawn Mikkelson, Daniel Shapiro (Brandeis University)<br><br>
-
-                <i>Web interface prototype design</i><br>
-                Arya Boudaie, Brandeis University<br><br>
-
+                Shawn Mikkelson, Daniel Shapiro (Brandeis University)
+</p>
+                <p><i>Web interface prototype design</i><br>
+                Arya Boudaie, Brandeis University
+</p>
                 <div  id="advisoryBoard" style="padding-top:5%;">
                 <h2>Advisory Board</h2>
                 Julie Cumming, Professor, McGill University<br>
@@ -224,14 +226,14 @@
                 </p></div>
                 <div  id="knownIssues" style="padding-top:5%;">
                 <h2>Known Issues</h2>
-                <i>Hyphens between text syllables</i>: In the export of the texts from syllables, the placement of hyphens between syllables needs to be corrected. Hyphens are not currently displayed in this iteration of the interface (May 2018).
-                <br><br>
-                <i>Ligatures</i>: While ligature groupings, including coniuncturae, were recorded in the Sibelius transcription, Sibelius is primarily an engraving software concerned with the graphic appearance, and in Sibelius the brackets that mark ligatures are not associated properly with specific notes (i.e., they are not specifically attached to the notes at the beginning and ends of the ligature brackets). Thus it is currently tricky to export the ligature markings out from Sibelius to MEI. We are pondering solutions, however (May 2018).
-                <br><br>
-                <i>Plicas</i>: Currently Verovio does not display a specific grapheme for notes marked with plicas; these are, however, encoded in the mensural MEI file, and viewable in the code (May 2018).
-                <br><br>
-                <i>Ficta</i>: There is a current issue with distinguishing between original and added accidentals (ficta accidentals) in the Sibelius to MEI export. We are in the process of manually correcting the added accidentals, but not all compositions have been updated yet (May 2018).
-                </div>
+                <p><i>Hyphens between text syllables</i>: In the export of the texts from syllables, the placement of hyphens between syllables needs to be corrected. Hyphens are not currently displayed in this iteration of the interface (May 2018).
+                </p>
+                <p><i>Ligatures</i>: While ligature groupings, including coniuncturae, were recorded in the Sibelius transcription, Sibelius is primarily an engraving software concerned with the graphic appearance, and in Sibelius the brackets that mark ligatures are not associated properly with specific notes (i.e., they are not specifically attached to the notes at the beginning and ends of the ligature brackets). Thus it is currently tricky to export the ligature markings out from Sibelius to MEI. We are pondering solutions, however (May 2018).
+                </p>
+                <p><i>Plicas</i>: Currently Verovio does not display a specific grapheme for notes marked with plicas; these are, however, encoded in the mensural MEI file, and viewable in the code (May 2018).
+                </p>
+              <p>  <i>Ficta</i>: There is a current issue with distinguishing between original and added accidentals (ficta accidentals) in the Sibelius to MEI export. We are in the process of manually correcting the added accidentals, but not all compositions have been updated yet (May 2018).
+              </p></div>
                 <div  id="knownIssues" style="padding-top:5%;">
                 <h2>Future Plans</h2>
                 <p>There are 8 motets for which transcriptions have been made and proofread, however, because of some of their quirky mensuration issues (such as changes of mensuration, or coloration), they currently cannot be transformed accurately with the MEIMensural script, and are only viewable on this site currently in their ‘modern notation’ versions.
@@ -241,8 +243,8 @@
                 </div>
                 <div  id="feedback" style="padding-top:5%;padding-bottom:50px;">
                 <h2>Feedback</h2>
-                One of the primary purposes of this project is as ‘proof-of-concept’ and lessons learned will be applied to the next iteration of this project, to be implemented on a larger scale, with user feedback. Therefore, any responses, with respect to the interface, repertoire chosen, bugs, or ideas for further development are appreciated immensely and can be sent directly to admin@measuringpolyphony.org.
-                </div>
+                <p>One of the primary purposes of this project is as ‘proof-of-concept’ and lessons learned will be applied to the next iteration of this project, to be implemented on a larger scale, with user feedback. Therefore, any responses, with respect to the interface, repertoire chosen, bugs, or ideas for further development are appreciated immensely and can be sent directly to admin@measuringpolyphony.org.
+                </p></div>
                 <table id="top" style="border: 1px white;" ></table>
         </div>
         </div>
