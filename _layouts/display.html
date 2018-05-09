@@ -513,7 +513,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
                     document.getElementById("svg_output").style.height = "2500px";
                     document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
                       document.getElementById("svg-row").style.height = "";
-                      setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 100);
+                      setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 50);
         } else{
           $.ajax({
             url: file,
@@ -714,7 +714,8 @@ document.getElementById("1-diva-inner").style.margin="0px";
               loadData(data);
             }
           });
-          loadFullscreen();
+              setTimeout(function(){loadFullscreen();}, 25);
+
           document.getElementById("flipDisplay").value = "Switch score to modern notation";
         } else {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
@@ -736,7 +737,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
               loadData(data);
             }
           });
-          loadFullscreen();
+          setTimeout(function(){loadFullscreen();}, 25);
           document.getElementById("flipDisplay").value = "Switch score to mensural notation";
         }
       }
