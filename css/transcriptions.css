@@ -614,6 +614,13 @@ p#composer
 	font-size: 10px;
 }
 
+#no-image-button-2
+{
+	width: 175px;
+	height: 200px;
+	font-size: 10px;
+}
+
 #no-image-button:hover
 {
 	cursor: pointer;
@@ -662,6 +669,13 @@ p#composer
 	height: 200px;
 	font-size: 10px;
 }
+
+
+#image-button:hover
+{
+	cursor: pointer;
+}
+
 
 #flipDisplay
 {
