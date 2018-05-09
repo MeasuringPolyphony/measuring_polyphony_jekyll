@@ -797,7 +797,7 @@
 									</note>
 									<note xml:id="m-419" artic="stacc" dur="1" dur.ges="1024p" layer="1" oct="3" oct.ges="2" pname="g" pnum="43" staff="1" stem.dir="up">
 										<verse xml:id="m-453" n="1">
-											<syl xml:id="m-454" wordpos="i">qu&amp;amp;amp;apos;e</syl>
+											<syl xml:id="m-454" wordpos="i">qu'e</syl>
 										</verse>
 									</note>
 								</layer>
@@ -1176,7 +1176,7 @@
 										</note>
 										<note xml:id="m-638" dur="1" dur.ges="1024p" layer="1" oct="3" oct.ges="2" pname="b" pnum="47" staff="1" stem.dir="down">
 											<verse xml:id="m-656" n="1">
-												<syl xml:id="m-657" wordpos="i">m&amp;amp;amp;apos;en</syl>
+												<syl xml:id="m-657" wordpos="i">m'en</syl>
 											</verse>
 										</note>
 										<note xml:id="m-640" dur="1" dur.ges="1024p" layer="1" oct="3" oct.ges="2" pname="a" pnum="45" staff="1" stem.dir="up">

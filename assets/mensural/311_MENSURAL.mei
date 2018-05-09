@@ -1917,7 +1917,7 @@
 								<rest xml:id="m-1504" dur="brevis" dur.ges="2048p" />
 								<note xml:id="m-1505" dur="semibrevis" dur.ges="1024p" oct="4" pname="e">
 									<verse xml:id="m-1513" n="1">
-										<syl xml:id="m-1514" wordpos="i">qu&amp;amp;amp;apos;au</syl>
+										<syl xml:id="m-1514" wordpos="i">qu'au</syl>
 									</verse>
 								</note>
 								<note xml:id="m-1506" dur="semibrevis" dur.ges="1024p" oct="4" pname="d" quality="major" num="1" numbase="2">

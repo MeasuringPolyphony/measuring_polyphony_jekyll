@@ -156,7 +156,7 @@
 								</note>
 								<note xml:id="m-45" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="f">
 									<verse xml:id="m-72" n="1">
-										<syl xml:id="m-73" wordpos="i">d&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-73" wordpos="i">d'a</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-eb6eeb20-2e4f-4485-891c-d491b00f6beb" />
@@ -167,7 +167,7 @@
 								</note>
 								<note xml:id="m-65" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" quality="major" num="1" numbase="2">
 									<verse xml:id="m-76" n="1">
-										<syl xml:id="m-77" wordpos="i">n&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-77" wordpos="i">n'a</syl>
 									</verse>
 								</note>
 								<note xml:id="m-67" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e">
@@ -662,7 +662,7 @@
 								<note xml:id="m-940" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="f">
 									<accid xml:id="m-941" accid="s" func="edit" />
 									<verse xml:id="m-944" n="1">
-										<syl xml:id="m-945" wordpos="t">qu&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-945" wordpos="t">qu'a</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-520bf360-83a1-420e-a5b8-ae38acd2a89f" />

@@ -1142,7 +1142,7 @@
 								<note xml:id="m-565" dur="longa" dur.ges="4096p" oct="4" pname="f" quality="i" num="3" numbase="2">
 									<accid xml:id="m-566" accid="s" func="edit" />
 									<verse xml:id="m-591" n="1">
-										<syl xml:id="m-592" wordpos="i">d&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-592" wordpos="i">d'a</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-f883fb78-cece-49bf-923b-9b20cff94b34" />

@@ -313,7 +313,7 @@
 								<barLine form="dashed" xml:id="m-76ed5d1d-c158-4dc9-b7e1-e0c47355bcee" />
 								<note xml:id="m-328" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="g">
 									<verse xml:id="m-332" n="1">
-										<syl xml:id="m-333" wordpos="i">n&amp;amp;amp;apos;est</syl>
+										<syl xml:id="m-333" wordpos="i">n'est</syl>
 									</verse>
 								</note>
 								<note xml:id="m-329" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f">
@@ -349,7 +349,7 @@
 								</note>
 								<note xml:id="m-355" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="f" quality="major" num="1" numbase="2">
 									<verse xml:id="m-362" n="1">
-										<syl xml:id="m-363" wordpos="i">d&amp;amp;amp;apos;estre</syl>
+										<syl xml:id="m-363" wordpos="i">d'estre</syl>
 									</verse>
 								</note>
 								<dot xml:id="m-5e93d209-d460-4b0b-bb7a-8cfbcedde182" />
@@ -423,7 +423,7 @@
 								</note>
 								<note xml:id="m-515" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" quality="major" num="1" numbase="2">
 									<verse xml:id="m-523" n="1">
-										<syl xml:id="m-524" wordpos="i">d&amp;amp;amp;apos;estre</syl>
+										<syl xml:id="m-524" wordpos="i">d'estre</syl>
 									</verse>
 								</note>
 								<note xml:id="m-516" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c">
@@ -536,7 +536,7 @@
 								</note>
 								<note xml:id="m-742" dur="longa" dur.ges="4096p" oct="4" oct.ges="3" pname="f" quality="i" num="3" numbase="2">
 									<verse xml:id="m-759" n="1">
-										<syl xml:id="m-760" wordpos="i">d&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-760" wordpos="i">d'a</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-363d83e6-2054-44c6-aa83-6df5406f1a7d" />
@@ -552,7 +552,7 @@
 								</note>
 								<note xml:id="m-758" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="a">
 									<verse xml:id="m-765" n="1">
-										<syl xml:id="m-766" wordpos="i">c&amp;amp;amp;apos;on</syl>
+										<syl xml:id="m-766" wordpos="i">c'on</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-22ce9dde-ab4a-471f-805a-b6109dd4e755" />

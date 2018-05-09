@@ -416,7 +416,7 @@
 								</note>
 								<note xml:id="m-487" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d">
 									<verse xml:id="m-493" n="1">
-										<syl xml:id="m-494" wordpos="i">d&amp;amp;amp;apos;ou</syl>
+										<syl xml:id="m-494" wordpos="i">d'ou</syl>
 									</verse>
 								</note>
 								<note xml:id="m-488" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e">
@@ -575,7 +575,7 @@
 								<barLine form="dashed" xml:id="m-dc82db4b-aa1d-415f-aa56-7fb171356605" />
 								<note xml:id="m-765" dur="longa" dur.ges="4096p" oct="4" oct.ges="3" pname="e" quality="i" num="3" numbase="2">
 									<verse xml:id="m-768" n="1">
-										<syl xml:id="m-769" wordpos="i">n&amp;amp;amp;apos;ai</syl>
+										<syl xml:id="m-769" wordpos="i">n'ai</syl>
 									</verse>
 								</note>
 								<rest xml:id="m-766" dur="brevis" dur.ges="2048p" />
@@ -684,7 +684,7 @@
 								</note>
 								<note xml:id="m-931" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e">
 									<verse xml:id="m-971" n="1">
-										<syl xml:id="m-972" wordpos="i">d&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-972" wordpos="i">d'a</syl>
 									</verse>
 								</note>
 								<note xml:id="m-933" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />
@@ -899,7 +899,7 @@
 								<note xml:id="m-1330" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c" />
 								<note xml:id="m-1331" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d">
 									<verse xml:id="m-1381" n="1">
-										<syl xml:id="m-1382" wordpos="i">m&amp;amp;amp;apos;a</syl>
+										<syl xml:id="m-1382" wordpos="i">m'a</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-9e72b209-45eb-472a-a7ab-8a575ca5e89f" />

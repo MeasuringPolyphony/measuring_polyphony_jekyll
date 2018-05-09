@@ -630,7 +630,7 @@
 								</note>
 								<note xml:id="m-736" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="e">
 									<verse xml:id="m-745" n="1">
-										<syl xml:id="m-746" wordpos="i">d&amp;amp;amp;apos;eus</syl>
+										<syl xml:id="m-746" wordpos="i">d'eus</syl>
 									</verse>
 								</note>
 								<note xml:id="m-737" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e">
@@ -920,7 +920,7 @@
 								</note>
 								<note xml:id="m-1196" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="e">
 									<verse xml:id="m-1208" n="1">
-										<syl xml:id="m-1209" wordpos="i">n&amp;amp;amp;apos;i</syl>
+										<syl xml:id="m-1209" wordpos="i">n'i</syl>
 									</verse>
 								</note>
 								<note xml:id="m-1198" dur="semibrevis" dur.ges="1024p" oct="4" oct.ges="3" pname="d" />

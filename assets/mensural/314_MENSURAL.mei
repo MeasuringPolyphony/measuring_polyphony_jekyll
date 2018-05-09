@@ -864,7 +864,7 @@
 								</note>
 								<note xml:id="m-1039" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="d">
 									<verse xml:id="m-1045" n="1">
-										<syl xml:id="m-1046" wordpos="i">n&amp;amp;amp;apos;o</syl>
+										<syl xml:id="m-1046" wordpos="i">n'o</syl>
 									</verse>
 								</note>
 								<note xml:id="m-1040" dur="brevis" dur.ges="2048p" oct="4" oct.ges="3" pname="c">
@@ -1241,7 +1241,7 @@
 								<barLine form="dashed" xml:id="m-95720f77-f9f0-4118-b153-85833ba2baa6" />
 								<note xml:id="m-191" dur="longa" dur.ges="4096p" oct="3" oct.ges="2" pname="a" quality="i" num="3" numbase="2">
 									<verse xml:id="m-194" n="1">
-										<syl xml:id="m-195" wordpos="i">m&amp;amp;amp;apos;ont</syl>
+										<syl xml:id="m-195" wordpos="i">m'ont</syl>
 									</verse>
 								</note>
 								<note xml:id="m-192" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="b">

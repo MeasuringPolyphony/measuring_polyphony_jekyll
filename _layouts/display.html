@@ -474,9 +474,85 @@ document.getElementById("1-diva-inner").style.margin="0px";
            function calc_page_width() {
                return ($(document).width()) * 100 / zoom ; // - $( "#sidbar" ).width();
            }
+
+
+
+      function loadFullscreen() {
+
+          if (document.getElementById("setFullscreen").innerHTML.includes("fas fa-plus")){
+          $.ajax({
+            url: file,
+            dataType: "text",
+            success: function(data) {
+              loadData(data);
+            }
+          });
+          //expands size of div
+
+          //new settings for zooming
+          page = 1;
+              zoom = 35;
+              var pageHeight = 2970;
+              var pageWidth = 2100;
+              pageHeight = $(window).height() * 100 / zoom;
+              pageWidth = $(window).width() * 100 / zoom;
+          border = 50;
+          options = {
+            inputFormat: 'mei',
+            pageHeight: pageHeight,
+            pageWidth: pageWidth,
+
+            border: border,
+            scale: zoom,
+            adjustPageHeight: true,
+            ignoreLayout: 1
+          };
+          //set new options
+          vrvToolkit.setOptions(options);
+                    removeHeadFoot();
+                    document.getElementById("svg_output").style.height = "2000px";
+                    document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
+                      document.getElementById("svg-row").style.height = "";
+                      setTimeout(function(){  document.getElementById("svg_output").style.height = "55vh";}, 100);
+        } else{
+          $.ajax({
+            url: file,
+            dataType: "text",
+            success: function(data) {
+              loadData(data);
+            }
+          });
+          //expands size of div
+          document.getElementById("svg-row").style.height = "";
+          //new settings for zooming
+          page = 1;
+          zoom = 40;
+          pageHeight = 2970;
+        pageWidth = 2100;
+        pageHeight = $(document).height() * 30 / zoom;
+        pageWidth = $(document).width() * 80 / zoom;
+          border = 50;
+          options = {
+            inputFormat: 'mei',
+            pageHeight: pageHeight,
+            pageWidth: pageWidth,
+
+            border: border,
+            scale: zoom,
+            adjustPageHeight: 1,
+            ignoreLayout: 1
+          };
+          //set new options
+          vrvToolkit.setOptions(options);
+          removeHeadFoot();
+            document.getElementById("svg_output").style.height = "300px";
+
+        }
+      }
+
       function setFullscreen() {
 
-        if (document.getElementById("setFullscreen").innerHTML ==" <span class=\"glyphicon glyphicon-resize-full\"></span>"){
+        if (document.getElementById("setFullscreen").innerHTML.includes("fas fa-expand-arrows-alt")){
         $.ajax({
           url: file,
           dataType: "text",
@@ -487,11 +563,12 @@ document.getElementById("1-diva-inner").style.margin="0px";
         //expands size of div
 
         //new settings for zooming
-        page = 3;
-        zoom = 30;
-
-        pageHeight = $(document).height() * 30 / zoom;
-        pageWidth = $(document).width() * 80 / zoom;
+        page = 1;
+            zoom = 35;
+            var pageHeight = 2970;
+            var pageWidth = 2100;
+            pageHeight = $(window).height() * 100 / zoom;
+            pageWidth = $(window).width() * 100 / zoom;
         border = 50;
         options = {
           inputFormat: 'mei',
@@ -505,10 +582,11 @@ document.getElementById("1-diva-inner").style.margin="0px";
         };
         //set new options
         vrvToolkit.setOptions(options);
-        document.getElementById("svg_output").style.height = "";
-        document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-small\"></span>";
-          document.getElementById("svg_row").style.height = "700px";
-          setTimeout(function(){document.getElementById("svg_row").style.height = "700px"}, 10);
+                  removeHeadFoot();
+        document.getElementById("svg_output").style.height = "2000px";
+        document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
+          document.getElementById("svg-row").style.height = "";
+          setTimeout(function(){  document.getElementById("svg_output").style.height = "55vh";}, 100);
       } else{
         $.ajax({
           url: file,
@@ -518,12 +596,14 @@ document.getElementById("1-diva-inner").style.margin="0px";
           }
         });
         //expands size of div
-        document.getElementById("svg_row").style.height = "";
+        document.getElementById("svg-row").style.height = "";
         //new settings for zooming
         page = 1;
         zoom = 40;
-        pageHeight = $(document).height() * 30 / zoom;
-        pageWidth = $(document).width() * 80 / zoom;
+        pageHeight = 2970;
+      pageWidth = 2100;
+      pageHeight = $(document).height() * 30 / zoom;
+      pageWidth = $(document).width() * 80 / zoom;
         border = 50;
         options = {
           inputFormat: 'mei',
@@ -536,10 +616,11 @@ document.getElementById("1-diva-inner").style.margin="0px";
           ignoreLayout: 1
         };
         //set new options
+        document.getElementById("svg_output").style.height = "300px";
+      document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-expand-arrows-alt\"></span>";
         vrvToolkit.setOptions(options);
-        vrvToolkit.loadData(data);
-          document.getElementById("svg_output").style.height = "300px";
-        document.getElementById("setFullscreen").innerHTML =" <span class=\"glyphicon glyphicon-resize-full\"></span>";
+                  removeHeadFoot();
+
 
       }
 
@@ -581,6 +662,13 @@ document.getElementById("1-diva-inner").style.margin="0px";
           // bug! time needs to be divided by 2
           $("#midi-player").midiPlayer.seek(time / 2);
         });
+        removeHeadFoot();
+//document.getElementsByClassName("pgFoot")[0].remove();
+      };
+      function removeHeadFoot() {
+        if (document.getElementsByClassName("pgHead autogenerated")[0]!=undefined){
+        document.getElementsByClassName("pgHead autogenerated")[0].remove();
+      }
         var i;
         for (i=0; i<=vrvToolkit.getPageCount()-2; i++){
           var foot;
@@ -595,13 +683,12 @@ document.getElementById("1-diva-inner").style.margin="0px";
         if (  document.getElementsByClassName(head)[0]!=undefined){
         document.getElementsByClassName(head)[0].remove();
       }
+
       if (document.getElementsByClassName(foot)[0]!=undefined){
       document.getElementsByClassName(foot)[0].remove();
     }
   }
-//document.getElementsByClassName("pgFoot")[0].remove();
-      };
-
+      }
       function loadFile() {
 
         //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
@@ -618,7 +705,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
       function loadMei() {
         //file="/mei/Beethoven_Sonata_no.29_op.106.mei";
         if (document.getElementById("flipDisplay").value == "Switch score to mensural notation") {
-          file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
+          file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);
           $.ajax({
             url: file,
             dataType: "text",
@@ -626,6 +713,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
               loadData(data);
             }
           });
+          loadFullscreen();
           document.getElementById("flipDisplay").value = "Switch score to modern notation";
         } else {
           file = parent.document.URL.substring(parent.document.URL.indexOf('?') + 1, parent.document.URL.length);;
@@ -647,6 +735,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
               loadData(data);
             }
           });
+          loadFullscreen();
           document.getElementById("flipDisplay").value = "Switch score to mensural notation";
         }
       }

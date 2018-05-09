@@ -1827,7 +1827,7 @@
 								</note>
 								<note xml:id="m-68" dur="brevis" dur.ges="2048p" oct="3" oct.ges="2" pname="f">
 									<verse xml:id="m-73" n="1">
-										<syl xml:id="m-74" wordpos="i">T&amp;amp;amp;apos;OUT</syl>
+										<syl xml:id="m-74" wordpos="i">T'OUT</syl>
 									</verse>
 								</note>
 								<barLine form="dashed" xml:id="m-b13a195d-95ff-4715-a99b-e51be04a5226" />
