@@ -47,7 +47,7 @@ p
 li
 {
 	font-family: "Merriweather", serif;
-	font-size: 15px;
+	font-size: 15px !important;
 	line-height: 1.3;
 }
 
@@ -63,7 +63,7 @@ li
   li
   {
   	font-family: "Merriweather", serif;
-  	font-size: 15px;
+  	font-size: 15px !important;
   	line-height: 1.3;
   }
 }
