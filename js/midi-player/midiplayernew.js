@@ -30,6 +30,7 @@ CircularAudioBuffer.prototype.filledBuffers = function () {
 
 // returns whether buffers are all filled
 CircularAudioBuffer.prototype.full = function () {
+    //console.debug(this.filledBuffers());
     return this.filledBuffers() >= this.slots - 1;
 }
 
@@ -68,24 +69,28 @@ var emptyBuffer;
 
 function initAudio() {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    source = audioCtx.createBufferSource();
     scriptNode = audioCtx.createScriptProcessor(BUFFER, 0, channels);
-    circularBuffer = new CircularAudioBuffer(4);
+    scriptNode.onaudioprocess = onAudioProcess;
+
+    source = audioCtx.createBufferSource();
+    circularBuffer = new CircularAudioBuffer(8);
     emptyBuffer = audioCtx.createBuffer(channels, BUFFER, SAMPLE_RATE);
 
-    scriptNode.onaudioprocess = onAudioProcess;
     source.connect(scriptNode);
     source.start(0);
+    console.debug("initAudio");
 }
 
 function startAudio() {
     scriptNode.connect(audioCtx.destination);
+    console.debug("startAudio");
 }
 
 function pauseAudio() {
+    circularBuffer.reset();
     scriptNode.disconnect();
+	console.debug("pauseAudio");
 }
-
 
 
 /************************************************************************
@@ -128,7 +133,7 @@ function updateProgress(current, total) {
 
 function completeConversion(status) {
     midiPlayer_drainBuffer = true;
-    console.log('complete conversion');
+    console.debug('completeConversion');
     midiPlayer_convertionJob = null;
     // Not a pause
     if (_EM_signalStop != 2) {
@@ -152,6 +157,7 @@ var midiPlayer_totalTime;
 
 // variables
 var midiPlayer_isLoaded = false;
+var midiPlayer_isAudioInit = false;
 var midiPlayer_input = null;
 var midiPlayer_lastMillisec = 0;
 var midiPlayer_midiName = ''
@@ -170,17 +176,11 @@ var MidiPlayer = {
     noInitialRun: true,
     totalDependencies: 1,
     monitorRunDependencies: function(left) {
-        console.log(this.totalDependencies);
-        console.log(left);
-        if (left == 0) {
+        //console.log(this.totalDependencies);
+        //console.log(left);
+        if ((left == 0) && !midiPlayer_isLoaded) {
           console.log("MidiPlayer is loaded");
           midiPlayer_isLoaded = true;
-          setTimeout(initAudio, 100);
-          if (midiPlayer_input != null) {
-              console.log("MIDI file set");
-              setTimeout(function() {convertFile("midi.midi", convertDataURIToBinary(midiPlayer_input));}, 200);
-          }
-
         }
     }
 };
@@ -190,13 +190,13 @@ MidiModule(MidiPlayer);
 function onAudioProcess(audioProcessingEvent) {
     var generated = circularBuffer.use();
 
-    if (! generated && midiPlayer_drainBuffer) {
+    if (!generated && midiPlayer_drainBuffer) {
         // wait for remaining buffer to drain before disconnect audio
         pauseAudio();
         midiPlayer_drainBuffer = false;
         return;
     }
-    if (! generated) {
+    if (!generated) {
         //console.log('buffer under run!!')
         generated = emptyBuffer;
     }
@@ -248,6 +248,7 @@ function convertFile(file, data) {
     MidiPlayer['FS'].writeFile(midiPlayer_midiName, data, {
         encoding: 'binary'
     });
+    play();
 }
 
 function pause() {
@@ -258,6 +259,15 @@ function pause() {
 }
 
 function play() {
+    if (!midiPlayer_isLoaded) {
+        console.error("MidiPlayer is not loaded yet");
+        return;
+    }
+    if (!midiPlayer_isAudioInit) {
+          initAudio();
+          midiPlayer_isAudioInit = true;
+    }
+
     _EM_seekSamples = midiPlayer_currentSamples;
     if (midiPlayer_convertionJob) {
         return;
@@ -271,22 +281,6 @@ function play() {
     setTimeout(runConversion, 100);
 }
 
-function display(song) {
-  var byteArray = convertDataURIToBinary(song);
-  if (midiPlayer_totalSamples > 0) {
-      stop();
-      // a timeout is necessary because otherwise writing to the disk is not done
-      setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
-  }
-  else {
-      setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
-    }
-  _EM_signalStop = 1;
-  midiPlayer_play.style.display = 'inline-block';
-  midiPlayer_pause.style.display = 'none';
-  midiPlayer_stop.style.display = 'inline-block';
-}
-
 function stop() {
     _EM_signalStop = 1;
     _EM_seekSamples = 0;
@@ -297,9 +291,12 @@ function stop() {
     midiPlayer_progress.style.width = '0%';
     midiPlayer_playingTime.innerHTML = "00.00";
     midiPlayer_totalTime.innerHTML = "00.00";
-    midiPlayer_play.style.display = 'inline-block';
+
+    midiPlayer_play.style.display = 'none';
     midiPlayer_pause.style.display = 'none';
-    midiPlayer_stop.style.display = 'inline-block';
+    midiPlayer_stop.style.display = 'none';
+
+    if (midiPlayer_onStop != null) midiPlayer_onStop();
 }
 
 function runConversion() {
@@ -313,6 +310,7 @@ function runConversion() {
     var sleep = 10;
     circularBuffer.reset();
     startAudio();
+
     console.log(midiPlayer_convertionJob);
 
     MidiPlayer.ccall('wildwebmidi',
@@ -356,27 +354,7 @@ function runConversion() {
                     setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
                 }
                 else {
-                    setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
-                }
-            }
-        };
-
-        $.fn.midiPlayer.load = function (song) {
-            if (midiPlayer_isLoaded == false) {
-                midiPlayer_input = song;
-            }
-            else {
-                var byteArray = convertDataURIToBinary(song);
-                if (midiPlayer_totalSamples > 0) {
-                    stop();
-                    // a timeout is necessary because otherwise writing to the disk is not done
-                    setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
-
-                }
-                else {
-
-                    setTimeout(function() {convertFile("player.midi", byteArray);}, 200);
-
+                    convertFile("player.midi", byteArray);
                 }
             }
         };
@@ -407,7 +385,7 @@ function runConversion() {
 
         // Assign the global variables
         midiPlayer_onStop = options.onStop;
-        midiPlayer_onUpdate = options.onUnpdate;
+        midiPlayer_onUpdate = options.onUpdate;
         midiPlayer_updateRate = options.updateRate;
         midiPlayer_bar = document.getElementById('midiPlayer_bar');
         midiPlayer_progress = document.getElementById('midiPlayer_progress');
