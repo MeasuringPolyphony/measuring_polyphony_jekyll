@@ -614,6 +614,15 @@ p#composer
 	font-size: 10px;
 }
 
+#no-image-button:hover
+{
+	cursor: pointer;
+}
+
+#no-image-button:visited
+{
+	border-color: #670200;
+}
 #full-manuscript
 {
 }
@@ -746,7 +755,7 @@ a:active
    text-align:right;
    background-color:transparent;
    border:transparent;
-   font-size:20px;
+   font-size:15px
 
 }
 .sortButton:hover {text-decoration: underline; cursor: pointer;}

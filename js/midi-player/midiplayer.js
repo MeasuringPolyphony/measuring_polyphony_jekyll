@@ -178,7 +178,7 @@ var MidiPlayer = {
           setTimeout(initAudio, 100);
           if (midiPlayer_input != null) {
               console.log("MIDI file set");
-              setTimeout(function() {convertFile("midi.midi", convertDataURIToBinary(midiPlayer_input));}, 200);
+              setTimeout(function() {convertFile("midi.midi", convertDataURIToBinary(midiPlayer_input));}, 1000);
           }
 
         }

@@ -225,7 +225,7 @@
         $triplum = "";
         $motetus = "";
         $tenor = "";
-        $pagelink = ""
+        $pagelink = "";
         for (var i = 0; i < manifest.sequences[0].canvases.length; i++) {
           // look for the entry with a matching `code` value
           if (manifest.sequences[0].canvases[i].label == $needle) {
@@ -274,7 +274,7 @@
                   var diva = document.getElementById("diva-wrapper");
                   diva.outerHTML = "";
                   delete diva;
-        }else {
+        } else {
           $("#full-manuscript").html("<button class=\"btn\" id=\"image-button\" onclick=\"window.open('iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"\">IIIF Images Available</a>");
       }
       if ($concsources[0].innerHTML != ("")) {
