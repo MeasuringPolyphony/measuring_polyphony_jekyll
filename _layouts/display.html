@@ -284,8 +284,8 @@
         } else {
           $("#full-manuscript").html("<button class=\"btn\" id=\"image-button\" onclick=\"window.open('iiif.html?" + pagenum +"', 'newwindow','width=700,height=1000');return false;\" style=\"\">IIIF Images Available</a>");
       }
-      if ($concsources[0].innerHTML != ("")) {
-        $("#concsources").html("<b>Concordant source(s)</b><br>" + $concsources[0].innerHTML);
+      if ($concsources[2].innerHTML != ("")) {
+        $("#concsources").html("<b>Concordant source(s)</b><br>" + $concsources[2].innerHTML);
       }
         if ($concsources[3].innerHTML != ("-")) {
    $("#variants").html("<br>" + $concsources[3].innerHTML);
