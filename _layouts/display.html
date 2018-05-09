@@ -513,7 +513,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
                     document.getElementById("svg_output").style.height = "2000px";
                     document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
                       document.getElementById("svg-row").style.height = "";
-                      setTimeout(function(){  document.getElementById("svg_output").style.height = "55vh";}, 100);
+                      setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 100);
         } else{
           $.ajax({
             url: file,
@@ -545,7 +545,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
           //set new options
           vrvToolkit.setOptions(options);
           removeHeadFoot();
-            document.getElementById("svg_output").style.height = "300px";
+            setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 100);
 
         }
       }
@@ -586,7 +586,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
         document.getElementById("svg_output").style.height = "2000px";
         document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
           document.getElementById("svg-row").style.height = "";
-          setTimeout(function(){  document.getElementById("svg_output").style.height = "55vh";}, 100);
+          setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 100);
       } else{
         $.ajax({
           url: file,
@@ -616,9 +616,10 @@ document.getElementById("1-diva-inner").style.margin="0px";
           ignoreLayout: 1
         };
         //set new options
-        document.getElementById("svg_output").style.height = "300px";
+
       document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-expand-arrows-alt\"></span>";
         vrvToolkit.setOptions(options);
+          setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 50);
                   removeHeadFoot();
 
 
