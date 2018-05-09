@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="355v, 356r, 356v"></item>
-								<item title="other/images" target="O clemencie" folio="355v, 356r, 356v"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&VUE_ID=1261800" motetus="O clemencie" folio="355v, 356r, 356v"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/3507/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Mo.</p>
+						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Text follows Mo.</p>
 						<annot title="variants">Mot 49.1-2 notated as 2-note c.o.p. but should be a 2-note ligature without perfection (B-B), which is how Rokseth interprets it / 50.1 notated as a B in manuscript /Ten 5.1 Rokseth interprets as a plicated L but here interpreted as stem reaffirming L as the last note of the ligature/</annot>
 					</editorialDecl>
 					<projectDesc>
@@ -409,7 +409,7 @@
 							<staff xml:id="m-196" n="3">
 								<layer xml:id="m-197" n="1">
 									<note xml:id="m-198" dur="long" dur.ges="4096p" layer="1" oct="3" oct.ges="2" pname="c" pnum="36" staff="3" stem.dir="up" />
-									<rest xml:id="m-199" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-199" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<fermata xml:id="m-200" form="norm" layer="1" shape="curved" staff="3" startid="#m-199" />
@@ -499,7 +499,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-254" dur="breve" dur.ges="2048p" layer="1" oct="3" oct.ges="2" pname="b" pnum="47" staff="2" stem.dir="down">
-										<accid xml:id="m-255" accid="n" func="caution" />
+										<accid xml:id="m-255" accid="n" />
 									</note>
 									<note xml:id="m-256" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="c" pnum="48" staff="2" stem.dir="down">
 										<verse xml:id="m-311" n="1">
@@ -1337,7 +1337,7 @@
 											<syl xml:id="m-769" wordpos="i">n'ai</syl>
 										</verse>
 									</note>
-									<rest xml:id="m-766" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-766" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<staff xml:id="m-770" n="2">
@@ -1347,7 +1347,7 @@
 											<syl xml:id="m-780" wordpos="t">um</syl>
 										</verse>
 									</note>
-									<rest xml:id="m-773" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-773" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<staff xml:id="m-781" n="3">

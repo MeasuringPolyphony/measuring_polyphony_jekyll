@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" folio="30r"></item>
-								<item title="other/images" target="Heu! Fortuna subdola" folio="30r"></item>
+								<item title="other/images" target="" motetus="Heu! Fortuna subdola" folio="30r"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/88/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
+						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against Fauv. Initial proofreading complete. Final proofreading needed. Coding of editorial accidentals needs to be fixed. </p>
 						<annot title="variants">Ten 45.1 pitch missing in MS /</annot>
 					</editorialDecl>
 					<projectDesc>

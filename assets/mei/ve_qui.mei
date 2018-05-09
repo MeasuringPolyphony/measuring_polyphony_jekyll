@@ -57,7 +57,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" folio="6v"></item>
-								<item title="other/images" target="Ve qui gregi deficiunt" folio="6v"></item>
+								<item title="other/images" target="" motetus="Ve qui gregi deficiunt" folio="6v"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/88/"></item>
 							</itemList>
@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
-						<annot title="variants">Initial proofreading complete. Final proofreading needed. Quad 17, pensat in MS, Schrade Pensant / Tr 9 decent in MS, but docent in Br and Schrade / 11 prano in Schrade, primo in Fauv and Br / Mot 18 daculo in MS, dapulo in Schrade / 73.2 is notated as a breve (sort of like a B-SS ligature that fits in the time of 1 breve) / 46 last ms has e, schrade puts f (#) /</annot>
+						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against Fauv. Initial proofreading complete. Final proofreading needed. Coding of editorial accidentals needs to be fixed. </p>
+						<annot title="variants">Quad 17, pensat in MS, Schrade Pensant / Tr 9 decent in MS, but docent in Br and Schrade / 11 prano in Schrade, primo in Fauv and Br / Mot 18 daculo in MS, dapulo in Schrade / 73.2 is notated as a breve (sort of like a B-SS ligature that fits in the time of 1 breve) / 46 last ms has e, schrade puts f (#) /</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -125,7 +125,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Initial proofreading complete. Final proofreading needed. Quad 17, pensat in MS, Schrade Pensant / Tr 9 decent in MS, but docent in Br and Schrade / 11 prano in Schrade, primo in Fauv and Br / Mot 18 daculo in MS, dapulo in Schrade / 73.2 is notated as a breve (sort of like a B-SS ligature that fits in the time of 1 breve) / 46 last ms has e, schrade puts f (#) /
+					Quad 17, pensat in MS, Schrade Pensant / Tr 9 decent in MS, but docent in Br and Schrade / 11 prano in Schrade, primo in Fauv and Br / Mot 18 daculo in MS, dapulo in Schrade / 73.2 is notated as a breve (sort of like a B-SS ligature that fits in the time of 1 breve) / 46 last ms has e, schrade puts f (#) /
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">

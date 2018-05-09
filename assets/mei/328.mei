@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="378v, 379r"></item>
-								<item title="other/images" target="Ad amorem sequitur" folio="378v, 379r"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&VUE_ID=1261846" motetus="Ad amorem sequitur" folio="378v, 379r"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/3526/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Mo.</p>
+						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Text follows Mo.</p>
 						<annot title="variants">Mot 23.3 dot not present in MS / Ten 33 ‘iterum’ annotation under tenor part here and two short strokes on staff second line indicates repetition of tenor statement / 43-46 last 4 notes of second statement of tenor pitches to be replaced by these 4L notated at end of tenor part / </annot>
 					</editorialDecl>
 					<projectDesc>
@@ -1229,7 +1229,7 @@
 							</staff>
 							<staff xml:id="m-686" n="2">
 								<layer xml:id="m-687" n="1">
-									<rest xml:id="m-688" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-688" dur="breve" dur.ges="2048p" />
 									<note xml:id="m-691" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="2" stem.dir="down" />
 								</layer>
 							</staff>
@@ -1380,7 +1380,7 @@
 							<staff xml:id="m-782" n="1">
 								<layer xml:id="m-783" n="1">
 									<note xml:id="m-784" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
-									<rest xml:id="m-785" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-785" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<staff xml:id="m-787" n="2">

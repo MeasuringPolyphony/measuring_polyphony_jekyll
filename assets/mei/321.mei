@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="371r, 371v"></item>
-								<item title="other/images" target="L’autrier m’estuet venue volenté" folio="371r, 371v"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&VUE_ID=1261831" motetus="L’autrier m’estuet venue volenté" folio="371r, 371v"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/3519/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Mo.</p>
+						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Text follows Mo.</p>
 						<annot title="variants">Mot 6-7 ‘amours’ omitted by text scribe, and added later in a smaller script above the text / Mot 32 text syllable 'sen' written twice, both before and after staff break  /</annot>
 					</editorialDecl>
 					<projectDesc>
@@ -238,7 +238,7 @@
 									</note>
 									<note xml:id="m-94" dur="breve" dur.ges="2048p" layer="1" oct="3" oct.ges="2" pname="b" pnum="47" staff="3" stem.dir="down">
 										<verse xml:id="m-97" n="1">
-											<syl xml:id="m-98" wordpos="t">PEIGNE</syl>
+											<syl xml:id="m-98" wordpos="t">PIEGNE</syl>
 										</verse>
 									</note>
 								</layer>
@@ -280,7 +280,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-113" dur="breve" dur.ges="2048p" layer="1" oct="3" oct.ges="2" pname="b" pnum="46" staff="2" stem.dir="down">
-										<accid xml:id="m-114" accid="f" />
+										<accid xml:id="m-114" accid="f" func="edit" />
 										<verse xml:id="m-121" n="1">
 											<syl xml:id="m-122" wordpos="m">nu</syl>
 										</verse>
@@ -872,7 +872,7 @@
 											<syl xml:id="m-490" wordpos="t">er</syl>
 										</verse>
 									</note>
-									<rest xml:id="m-483" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-483" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<staff xml:id="m-491" n="2">
@@ -961,7 +961,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-538" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="c" pnum="49" staff="1" stem.dir="down">
-										<accid xml:id="m-539" accid="s" />
+										<accid xml:id="m-539" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1037,7 +1037,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-586" dur="1" dur.ges="1024p" layer="1" oct="3" oct.ges="2" pname="f" pnum="42" staff="1" stem.dir="up">
-										<accid xml:id="m-587" accid="s" />
+										<accid xml:id="m-587" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>

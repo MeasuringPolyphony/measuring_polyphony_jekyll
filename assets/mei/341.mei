@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="393v, 394r, 394v"></item>
-								<item title="other/images" target="Huic ut placuit, tres magi mistica" folio="393v, 394r, 394v"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&VUE_ID=1261876" motetus="Huic ut placuit, tres magi mistica" folio="393v, 394r, 394v"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/3539/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Mo.</p>
+						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Text follows Mo.</p>
 						<annot title="variants">Ten 4, 17, 30: breve rest not in MS (in brackets in Rokseth) / </annot>
 					</editorialDecl>
 					<projectDesc>
@@ -577,7 +577,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-308" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-309" accid="s" />
+										<accid xml:id="m-309" accid="s" func="edit" />
 										<verse xml:id="m-314" n="1">
 											<syl xml:id="m-315" wordpos="i">et</syl>
 										</verse>
@@ -680,7 +680,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-367" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-368" accid="s" />
+										<accid xml:id="m-368" accid="s" func="edit" />
 										<verse xml:id="m-374" n="1">
 											<syl xml:id="m-375" wordpos="i">ut</syl>
 										</verse>
@@ -1080,7 +1080,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-628" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-629" accid="s" />
+										<accid xml:id="m-629" accid="s" func="edit" />
 										<verse xml:id="m-634" n="1">
 											<syl xml:id="m-635" wordpos="i">et</syl>
 										</verse>
@@ -1176,7 +1176,7 @@
 									<note xml:id="m-695" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="1" stem.dir="down" />
 									<note xml:id="m-696" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									<note xml:id="m-697" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-698" accid="s" />
+										<accid xml:id="m-698" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1336,7 +1336,7 @@
 										<note xml:id="m-813" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="1" stem.dir="down" />
 										<note xml:id="m-815" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
 										<note xml:id="m-816" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-											<accid xml:id="m-817" accid="s" />
+											<accid xml:id="m-817" accid="s" func="edit" />
 										</note>
 									</tuplet>
 								</layer>
@@ -1347,7 +1347,7 @@
 									<note xml:id="m-821" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-823" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-824" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-825" accid="s" />
+										<accid xml:id="m-825" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1404,7 +1404,7 @@
 									<note xml:id="m-862" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<rest xml:id="m-863" dur="1" dur.ges="1024p" />
 									<note xml:id="m-864" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-865" accid="s" />
+										<accid xml:id="m-865" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1424,7 +1424,7 @@
 										<note xml:id="m-875" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="1" stem.dir="down" />
 										<note xml:id="m-877" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
 										<note xml:id="m-878" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-											<accid xml:id="m-879" accid="s" />
+											<accid xml:id="m-879" accid="s" func="edit" />
 										</note>
 									</tuplet>
 									<note xml:id="m-880" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
@@ -1435,7 +1435,7 @@
 								<layer xml:id="m-883" n="1">
 									<note xml:id="m-885" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-886" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-887" accid="s" />
+										<accid xml:id="m-887" accid="s" func="edit" />
 									</note>
 									<rest xml:id="m-888" dur="1" dur.ges="1024p" />
 									<note xml:id="m-889" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="2" stem.dir="down" />
@@ -1456,7 +1456,7 @@
 									<note xml:id="m-899" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									<note xml:id="m-900" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="1" stem.dir="down" />
 									<note xml:id="m-901" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-902" accid="s" />
+										<accid xml:id="m-902" accid="s" func="edit" />
 									</note>
 									<rest xml:id="m-903" dur="1" dur.ges="1024p" />
 								</layer>
@@ -1490,7 +1490,7 @@
 									<note xml:id="m-924" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="1" stem.dir="down" />
 									<note xml:id="m-925" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
 									<note xml:id="m-926" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-927" accid="s" />
+										<accid xml:id="m-927" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1500,7 +1500,7 @@
 									<note xml:id="m-932" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="2" stem.dir="down" />
 									<note xml:id="m-933" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-934" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-935" accid="s" />
+										<accid xml:id="m-935" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1560,7 +1560,7 @@
 									<note xml:id="m-974" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="2" stem.dir="down" />
 									<note xml:id="m-975" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-976" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-977" accid="s" />
+										<accid xml:id="m-977" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1660,7 +1660,7 @@
 							<staff xml:id="m-1049" n="3">
 								<layer xml:id="m-1050" n="1">
 									<note xml:id="m-1051" dur="long" dur.ges="4096p" layer="1" oct="3" oct.ges="2" pname="e" pnum="40" staff="3" stem.dir="up" />
-									<rest xml:id="m-1052" dur="breve" dur.ges="2048p" fermata="above" />
+									<rest xml:id="m-1052" dur="breve" dur.ges="2048p" />
 								</layer>
 							</staff>
 							<fermata xml:id="m-1037" form="norm" layer="1" shape="curved" staff="1" startid="#m-1036" />
@@ -1747,7 +1747,7 @@
 										<note xml:id="m-1112" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="2" stem.dir="down" />
 										<note xml:id="m-1114" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="2" stem.dir="down" />
 										<note xml:id="m-1115" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-											<accid xml:id="m-1116" accid="s" />
+											<accid xml:id="m-1116" accid="s" func="edit" />
 										</note>
 									</tuplet>
 								</layer>
@@ -1794,7 +1794,7 @@
 									<note xml:id="m-1145" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									<rest xml:id="m-1146" dur="1" dur.ges="1024p" />
 									<note xml:id="m-1147" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-1148" accid="s" />
+										<accid xml:id="m-1148" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1837,7 +1837,7 @@
 										<note xml:id="m-1176" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="2" stem.dir="down" />
 										<note xml:id="m-1178" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="2" stem.dir="down" />
 										<note xml:id="m-1179" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-											<accid xml:id="m-1180" accid="s" />
+											<accid xml:id="m-1180" accid="s" func="edit" />
 										</note>
 									</tuplet>
 									<note xml:id="m-1181" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="2" stem.dir="down" />
@@ -1860,7 +1860,7 @@
 									<note xml:id="m-1193" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									<rest xml:id="m-1194" dur="1" dur.ges="1024p" />
 									<note xml:id="m-1195" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-1196" accid="s" />
+										<accid xml:id="m-1196" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>
@@ -1869,7 +1869,7 @@
 									<note xml:id="m-1200" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="2" stem.dir="down" />
 									<note xml:id="m-1201" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="2" stem.dir="down" />
 									<note xml:id="m-1202" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="2" stem.dir="down">
-										<accid xml:id="m-1203" accid="s" />
+										<accid xml:id="m-1203" accid="s" func="edit" />
 									</note>
 									<rest xml:id="m-1204" dur="1" dur.ges="1024p" />
 								</layer>
@@ -1891,7 +1891,7 @@
 									<note xml:id="m-1215" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="1" stem.dir="down" />
 									<note xml:id="m-1216" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									<note xml:id="m-1217" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-1218" accid="s" />
+										<accid xml:id="m-1218" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>

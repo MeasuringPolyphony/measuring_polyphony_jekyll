@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" folio="7r"></item>
-								<item title="other/images" target="Vos pastores adulteri" folio="7r"></item>
+								<item title="other/images" target="" motetus="Vos pastores adulteri" folio="7r"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/88/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.</p>
+						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against Fauv. Initial proofreading complete. Final proofreading needed. Coding of editorial accidentals needs to be fixed. </p>
 						<annot title="variants">Tr 8 dot added incorrectly after first two semibreves / Mot 17 dot supplied, not in MS / 25-6 – the notes d edc (L 26) b are supplied – there is a lacuna in the source / 32 dot supplied, not in MS / 41 – the notes e c are supplied – there is a lacuna in the source / 43 Lambertan conjunctura [Interesting that this lacuna happens at almost the same spot in the tenor repetition (L26 is equivalent to L41 in the tenor)]</annot>
 					</editorialDecl>
 					<projectDesc>

@@ -57,7 +57,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="338v, 339r"></item>
-								<item title="other/images" target="Flos virginum, decus et species" folio="338v, 339r"></item>
+								<item title="other/images" target="" motetus="Flos virginum, decus et species" folio="338v, 339r"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/363/"></item>
 							</itemList>
@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Edition made for Appendix to Desmond, Ars nova in Music and Medieval Thought (CUP, forthcoming).Readings from Günther’s edition (which do accord with the text of Durham), with some modifications to the punctuation and some alternate readings taken from the other available editions.</p>
-						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
+						Edition made for Appendix to Desmond, Music and the moderni, 1300-1350 (CUP, 2018 forthcoming). Coding of editorial accidentals needs to be fixed. Text is mostly from Günther’s edition (which do accord with the text of Durham), with some modifications to the punctuation and some alternate readings taken from the other available editions.</p>
+						<annot title="variants"></annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,14 +122,14 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Initial proofreading complete. Final proofreading needed.
+					
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">
 		<body xml:id="m-23">
 			<mdiv xml:id="m-24">
 				<score xml:id="m-25">
-					<scoreDef xml:id="m-26" midi.bpm="800">
+					<scoreDef xml:id="m-26" midi.bpm="500">
 						<staffGrp xml:id="m-37" n="1" symbol="bracket">
 							<staffDef xml:id="m-28" notationtype="mensural.black" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1" modusmaior="2" modusminor="3" tempus="3" prolatio="3">
 								<!-- voice.female.soprano.ensemble.ah -->

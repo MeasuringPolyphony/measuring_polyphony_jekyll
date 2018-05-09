@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="353v, 354r, 354v"></item>
-								<item title="other/images" target="O regina glorie" folio="353v, 354r, 354v"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?VUE_ID=1261796" motetus="O regina glorie" folio="353v, 354r, 354v"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/86559/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>
@@ -89,7 +89,7 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text follows Mo.</p>
+						Scanned file corrected from Rokseth. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Text follows Mo.</p>
 						<annot title="variants">-</annot>
 					</editorialDecl>
 					<projectDesc>
@@ -261,16 +261,17 @@
 											<verse xml:id="m-116" n="1">
 												<syl xml:id="m-117" wordpos="i">ui</syl>
 											</verse>
+										</note>
+										<note xml:id="m-108" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="1" stem.dir="down">
 											<verse xml:id="m-118" n="1">
 												<syl xml:id="m-119" wordpos="t">e</syl>
 											</verse>
 										</note>
-										<note xml:id="m-108" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="d" pnum="50" staff="1" stem.dir="down">
+										<note xml:id="m-109" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" >
 											<verse xml:id="m-120" n="1">
 												<syl xml:id="m-121" wordpos="i">des</syl>
 											</verse>
 										</note>
-										<note xml:id="m-109" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="e" pnum="52" staff="1" stem.dir="down" />
 									</tuplet>
 									<note xml:id="m-111" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="f" pnum="53" staff="1" stem.dir="down" stem.mod="2slash">
 										<verse xml:id="m-144" n="1">
@@ -968,16 +969,17 @@
 											<verse xml:id="m-540" n="1">
 												<syl xml:id="m-541" wordpos="i">tant</syl>
 											</verse>
+										</note>
+										<note xml:id="m-536" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down">
 											<verse xml:id="m-542" n="1">
 												<syl xml:id="m-543" wordpos="i">se</syl>
 											</verse>
 										</note>
-										<note xml:id="m-536" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down">
+										<note xml:id="m-537" artic="stacc" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down">
 											<verse xml:id="m-567" n="1">
 												<syl xml:id="m-568" wordpos="i">main</syl>
 											</verse>
 										</note>
-										<note xml:id="m-537" artic="stacc" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
 									</tuplet>
 								</layer>
 							</staff>
@@ -1247,16 +1249,17 @@
 											<verse xml:id="m-711" n="1">
 												<syl xml:id="m-712" wordpos="i">et</syl>
 											</verse>
+										</note>
+										<note xml:id="m-703" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="53" staff="1" stem.dir="down">
 											<verse xml:id="m-713" n="1">
 												<syl xml:id="m-714" wordpos="i">de</syl>
 											</verse>
 										</note>
-										<note xml:id="m-703" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="53" staff="1" stem.dir="down">
+										<note xml:id="m-704" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down">
 											<verse xml:id="m-715" n="1">
 												<syl xml:id="m-716" wordpos="i">chant</syl>
 											</verse>
 										</note>
-										<note xml:id="m-704" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="g" pnum="55" staff="1" stem.dir="down" />
 									</tuplet>
 									<note xml:id="m-706" dur="breve" dur.ges="2048p" layer="1" oct="4" oct.ges="3" pname="a" pnum="57" staff="1" stem.dir="down">
 										<verse xml:id="m-717" n="1">
@@ -2576,7 +2579,7 @@
 										</verse>
 									</note>
 									<note xml:id="m-1511" dur="1" dur.ges="1024p" layer="1" oct="4" oct.ges="3" pname="f" pnum="54" staff="1" stem.dir="down">
-										<accid xml:id="m-1512" accid="s" />
+										<accid xml:id="m-1512" accid="s" func="edit" />
 									</note>
 								</layer>
 							</staff>

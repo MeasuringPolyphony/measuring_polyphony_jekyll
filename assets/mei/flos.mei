@@ -4,22 +4,22 @@
 		<fileDesc xml:id="m-3">
 			<titleStmt xml:id="m-4">
 				<title xml:id="m-10">Flos</title>
-				<composer xml:id="m-11">Anonymous</composer> 
+				<composer xml:id="m-11">Anonymous</composer>
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
 				<funder>
-					<corpName> Schulich School of Music, McGill University </corpName> 
-				</funder> 
+					<corpName> Schulich School of Music, McGill University </corpName>
+				</funder>
 				 <funder>
 					<corpName>Brandeis University</corpName>
 				</funder>
-				 <respStmt> 
+				 <respStmt>
 					<persName role="project director">Karen Desmond</persName>
-					<persName role="encoder" date="7-22-2016">Karen Desmond</persName> 
-					<persName role="proofreader" date="4-11-2017">Emily Hopkins</persName> 
-					<persName role="proofreader" date="4-11-2017">Sam Howes</persName> 
-					<persName role="proofreader" date="4-11-2017">Karen Desmond</persName> 
+					<persName role="encoder" date="7-22-2016">Karen Desmond</persName>
+					<persName role="proofreader" date="4-11-2017">Emily Hopkins</persName>
+					<persName role="proofreader" date="4-11-2017">Sam Howes</persName>
+					<persName role="proofreader" date="4-11-2017">Karen Desmond</persName>
 				</respStmt>
 			</titleStmt>
 			<pubStmt xml:id="m-15">
@@ -27,15 +27,15 @@
 					 <persName>Karen Desmond</persName>
 					<corpName>Brandeis University</corpName>
 				 </publisher>
-				<date>2018</date> 
+				<date>2018</date>
 				<availability>
 					<useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
 				</availability>
-			</pubStmt> 
-			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
-				<editor> 
-					<persName>Karen Desmond</persName> 
+			</pubStmt>
+			<seriesStmt>
+				<title>Measuring Polyphony</title>
+				<editor>
+					<persName>Karen Desmond</persName>
 				</editor>
 			</seriesStmt>
 		</fileDesc>
@@ -57,7 +57,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="338v, 339r"></item>
-								<item title="other/images" target="Flos virginum, decus et species" folio="338v, 339r"></item>
+								<item title="other/images" target="" motetus="Flos virginum, decus et species" folio="338v, 339r"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/363/"></item>
 							</itemList>
@@ -76,20 +76,20 @@
 						</titleStmt>
 					</source>
 				</sourceDesc>
-				<encodingDesc xml:id="m-18"> 
+				<encodingDesc xml:id="m-18">
 					<appInfo xml:id="m-19">
 						<application xml:id="sibelius" isodate="2016-4-29T09:24:36Z" version="7510"><name xml:id="m-21" type="operating-system">Mac OS X Mountain Lion</name></application>
 					<application xml:id="sibmei" type="plugin" version="2.0.0b3">
 						<name xml:id="m-23">Sibelius to MEI Exporter (2.0.0b3)</name>
-					</application> 
+					</application>
 					<application xml:id="meiMENS" isodate="2016-4-29">
 						<name xml:id="m-23">CMN-MEI to MensuralMEI Translator</name>
 					</application>
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Edition made for Appendix to Desmond, Ars nova in Music and Medieval Thought (CUP, forthcoming).Readings from Günther’s edition (which do accord with the text of Durham), with some modifications to the punctuation and some alternate readings taken from the other available editions.</p>
-						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
+						Edition made for Appendix to Desmond, Music and the moderni, 1300-1350 (CUP, 2018 forthcoming). Coding of editorial accidentals needs to be fixed. Text is mostly from Günther’s edition (which do accord with the text of Durham), with some modifications to the punctuation and some alternate readings taken from the other available editions.</p>
+						<annot title="variants"></annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,14 +122,14 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Initial proofreading complete. Final proofreading needed.
+
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">
 		<body xml:id="m-23">
 			<mdiv xml:id="m-24">
 				<score xml:id="m-25">
-					<scoreDef xml:id="m-26" midi.bpm="800" lyric.name="Opus Text Std" meter.count="9" meter.unit="1" music.name="Opus Std" page.botmar="15mm" page.height="279.4mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="431.8mm" ppq="256" text.name="Times New Roman">
+					<scoreDef xml:id="m-26" midi.bpm="500" lyric.name="Opus Text Std" meter.count="9" meter.unit="1" music.name="Opus Std" page.botmar="15mm" page.height="279.4mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="431.8mm" ppq="256" text.name="Times New Roman">
 						<staffGrp xml:id="m-27">
 							<staffGrp xml:id="m-37" n="1" symbol="bracket">
 								<staffDef xml:id="m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" label="triplum" lines="5" n="1">

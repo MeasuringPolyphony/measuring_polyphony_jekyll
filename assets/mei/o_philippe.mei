@@ -57,7 +57,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" folio="10v, 11r"></item>
-								<item title="other/images" target="O Philippe, prelustris Francorum" folio="10v, 11r"></item>
+								<item title="other/images" target="" motetus="O Philippe, prelustris Francorum" folio="10v, 11r"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/88/"></item>
 							</itemList>
@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Lacuna of some ligatures towards end of Triplum voice in manuscript (supplied notes indicated with blue noteheads).</p>
-						<annot title="variants">Initial proofreading complete. Final proofreading needed.Tr 51 no music only text until end / Mot 24 motetus clef change in middle of stave here /</annot>
+						Scanned file corrected from PMFC. Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against Fauv. Initial proofreading complete. Final proofreading needed. Coding of editorial accidentals needs to be fixed. </p>
+						<annot title="variants">Tr 51 no music only text until end / Mot 24 motetus clef change in middle of stave here /</annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Initial proofreading complete. Final proofreading needed.Tr 51 no music only text until end / Mot 24 motetus clef change in middle of stave here /
+					Tr 51 no music only text until end / Mot 24 motetus clef change in middle of stave here /
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">

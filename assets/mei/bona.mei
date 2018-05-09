@@ -57,7 +57,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8451108d/manifest.json" folio="2v"></item>
-								<item title="other/images" target="Bona condit" folio="2v"></item>
+								<item title="other/images" target="" motetus="Bona condit" folio="2v"></item>
 								<item title="DIAMM_composition" target=""></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/98/"></item>
 							</itemList>
@@ -88,8 +88,8 @@
 				</appInfo>
 				<editorialDecl>
 					<p>
-						Original MusicXML file from Cuthbert (which was transcribed from PMFC). Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source.Text corrected against David Howlett edition in Wathey, EMH 1993, 137-8, differences in Trem noted below.</p>
-						<annot title="variants">Initial proofreading complete. Final proofreading needed.</annot>
+						Original MusicXML file from Cuthbert (which was transcribed from PMFC). Rhythmic durations augmented following our project’s transcription conventions. Pitches, rhythms and mensural notation features checked and corrected against manuscript source. Initial proofreading complete. Final proofreading needed. Coding of editorial accidentals needs to be fixed. Text corrected against David Howlett edition in Wathey, EMH 1993, 137-8, differences in Trem noted below.</p>
+						<annot title="variants"></annot>
 					</editorialDecl>
 					<projectDesc>
 						<p>Short Project Description</p>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-					Initial proofreading complete. Final proofreading needed.
+					
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-24">
