@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="366r, 367v, 367r"></item>
-								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&VUE_ID=1261821" motetus="Iure tuis laudibus" folio="366r, 367v, 367r"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261821" motetus="Iure tuis laudibus" folio="366r, 367v, 367r"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/3515/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>

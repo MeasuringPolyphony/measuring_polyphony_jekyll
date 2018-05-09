@@ -58,7 +58,7 @@
 							<annot>Scan checked and corrected against this manuscript</annot>
 							<itemList>
 								<item title="IIIF" target="" folio="352v, 353r"></item>
-								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?8028&VUE_ID=1261794" motetus="O virtutis speculum" folio="352v, 353r"></item>
+								<item title="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?8028&amp;VUE_ID=1261794" motetus="O virtutis speculum" folio="352v, 353r"></item>
 								<item title="DIAMM_composition" target="https://www.diamm.ac.uk/compositions/86560/"></item>
 								<item title="DIAMM_source" target="https://www.diamm.ac.uk/sources/888/"></item>
 							</itemList>

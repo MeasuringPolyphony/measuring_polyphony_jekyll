@@ -4,22 +4,22 @@
 		<fileDesc xml:id="m-3">
 			<titleStmt xml:id="m-4">
 				<title xml:id="m-10">Flos</title>
-				<composer xml:id="m-11">Anonymous</composer>
+				<composer xml:id="m-11">Anonymous</composer> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
 				<funder>
-					<corpName> Schulich School of Music, McGill University </corpName>
-				</funder>
+					<corpName> Schulich School of Music, McGill University </corpName> 
+				</funder> 
 				 <funder>
 					<corpName>Brandeis University</corpName>
 				</funder>
-				 <respStmt>
+				 <respStmt> 
 					<persName role="project director">Karen Desmond</persName>
-					<persName role="encoder" date="7-22-2016">Karen Desmond</persName>
-					<persName role="proofreader" date="4-11-2017">Emily Hopkins</persName>
-					<persName role="proofreader" date="4-11-2017">Sam Howes</persName>
-					<persName role="proofreader" date="4-11-2017">Karen Desmond</persName>
+					<persName role="encoder" date="7-22-2016">Karen Desmond</persName> 
+					<persName role="proofreader" date="4-11-2017">Emily Hopkins</persName> 
+					<persName role="proofreader" date="4-11-2017">Sam Howes</persName> 
+					<persName role="proofreader" date="4-11-2017">Karen Desmond</persName> 
 				</respStmt>
 			</titleStmt>
 			<pubStmt xml:id="m-15">
@@ -27,15 +27,15 @@
 					 <persName>Karen Desmond</persName>
 					<corpName>Brandeis University</corpName>
 				 </publisher>
-				<date>2018</date>
+				<date>2018</date> 
 				<availability>
 					<useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
 				</availability>
-			</pubStmt>
-			<seriesStmt>
-				<title>Measuring Polyphony</title>
-				<editor>
-					<persName>Karen Desmond</persName>
+			</pubStmt> 
+			<seriesStmt> 
+				<title>Measuring Polyphony</title> 
+				<editor> 
+					<persName>Karen Desmond</persName> 
 				</editor>
 			</seriesStmt>
 		</fileDesc>
@@ -76,12 +76,12 @@
 						</titleStmt>
 					</source>
 				</sourceDesc>
-				<encodingDesc xml:id="m-18">
+				<encodingDesc xml:id="m-18"> 
 					<appInfo xml:id="m-19">
 						<application xml:id="sibelius" isodate="2016-4-29T09:24:36Z" version="7510"><name xml:id="m-21" type="operating-system">Mac OS X Mountain Lion</name></application>
 					<application xml:id="sibmei" type="plugin" version="2.0.0b3">
 						<name xml:id="m-23">Sibelius to MEI Exporter (2.0.0b3)</name>
-					</application>
+					</application> 
 					<application xml:id="meiMENS" isodate="2016-4-29">
 						<name xml:id="m-23">CMN-MEI to MensuralMEI Translator</name>
 					</application>
@@ -122,7 +122,7 @@
 					</work>
 				</workDesc>
 				<extMeta>
-
+					
 					</extMeta>
 					</meiHead>
 	<music xml:id="m-22">
