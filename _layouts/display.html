@@ -261,10 +261,24 @@
         $("#composer").html($composer.text());
         $("#primarysource").html($primesource.text() + ", fol(s)." + $link[0].attributes[2].textContent);
         $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
-        $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+        if (!qs.includes("_MENSURAL.")){
+        var menslink = qs;
+        menslink = menslink.replace(".", "_MENSURAL.")
+        menslink = menslink.replace("/mei/", "/mensural/")
+        var http = new XMLHttpRequest();
+         http.open('HEAD', menslink, false);
+         http.send();
+        if ( http.status==404){
+          document.getElementById("flipDisplay").value = "";
+        } else {
+          $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+        }
+} else {
+$("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+}
         $("#mei").html("<a href=\"" + $mei + "\" download>MEI</a>");
         $("#pdf").html("<input id=\"pdfButton\" class=\"pdf\" type=\"button\" value=\"PDF\" onclick=\"generate_pdf();\" />");
-          $("#commentary").html($notes);
+        $("#commentary").html($notes);
 
             $("#entertranscriptions").html("Encoded by " + $encoders);
             $("#checktranscriptions").html("Checked by " + $checkers);
@@ -510,7 +524,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
           //set new options
           vrvToolkit.setOptions(options);
                     removeHeadFoot();
-                    document.getElementById("svg_output").style.height = "2500px";
+                    document.getElementById("svg_output").style.height = "2000px";
                     document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
                       document.getElementById("svg-row").style.height = "";
                       setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 50);
@@ -583,7 +597,7 @@ document.getElementById("1-diva-inner").style.margin="0px";
         //set new options
         vrvToolkit.setOptions(options);
                   removeHeadFoot();
-        document.getElementById("svg_output").style.height = "2500px";
+        document.getElementById("svg_output").style.height = "2000px";
         document.getElementById("setFullscreen").innerHTML ="<span class=\"fas fa-plus\"></span>";
           document.getElementById("svg-row").style.height = "";
           setTimeout(function(){  document.getElementById("svg_output").style.height = "100%";}, 50);

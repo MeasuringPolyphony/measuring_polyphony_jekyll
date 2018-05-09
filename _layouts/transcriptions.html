@@ -84,7 +84,7 @@
   $counter=0;
 </script>
   {% for xml in site.static_files %}
-      {% if xml.path contains 'assets/mensural' %}
+      {% if xml.path contains 'assets/mei' %}
   <script type="text/javascript">
 
           var qs = "{{ site.baseurl }}{{xml.path}}"
@@ -121,7 +121,17 @@
                     values.push($tenor);
                     values.push($contratenor);
                     values.push($composer);
-                    values.push("{{ site.baseurl }}{{xml.path}}");
+                    var menslink = "{{ site.baseurl }}{{xml.path}}";
+                    menslink = menslink.replace(".", "_MENSURAL.")
+                      menslink = menslink.replace("/mei/", "/mensural/")
+                    var http = new XMLHttpRequest();
+                     http.open('HEAD', menslink, false);
+                     http.send();
+                    if ( http.status==404){
+                      values.push("{{ site.baseurl }}{{xml.path}}");
+                    } else {
+                      values.push(menslink);
+                    }
                 $alldata.push(values);
                 populateTable();
 
