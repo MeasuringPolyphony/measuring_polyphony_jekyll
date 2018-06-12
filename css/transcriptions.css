@@ -57,14 +57,14 @@ li
 	p
 	{
 		font-size: 15px;
-		line-height: 1.4;
+		line-height: 1.6em;
 		margin: 0 0 35px;
 	}
   li
   {
   	font-family: "Merriweather", serif;
   	font-size: 15px !important;
-  	line-height: 1.3;
+  	line-height: 1.6em;
   }
 }
 
