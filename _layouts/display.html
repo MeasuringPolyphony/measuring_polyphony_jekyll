@@ -144,7 +144,7 @@
             <div id="full-manuscript"></div>
           </div>
           <div class="col-lg-4 text-left" id="source-column">
-            <b>Source</b>
+            <b id="source">Source</b>
             <div id="primarysource"></div>
             <div id="diammlink"></div>
             <div id="ext-images"></div>
@@ -284,6 +284,9 @@
       }
         if ($dcomp != null){
         $("#diammlink").html("<a href=\"" + $dcomp.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
+      }
+      if ($dcomp==null && $otherimages==null && $iiif==null){
+          document.getElementById("source").outerHTML="";
       }
         if (!qs.includes("_MENSURAL.")){
         var menslink = qs;
