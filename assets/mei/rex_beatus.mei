@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Rex beatus</title>
-				<composer>Anonymous</composer> 
+				<title>Rex beatus: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,24 @@
 							<title>
 								<identifier>Fauv</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c3 c3 c5</annot>
-								<annot label="commentary">Tr 12 last four notes not in MS / Mot 12 tiny ‘re’ added above text, looks like scribe misunderstood ‘iusto’ ‘regimine’ and wrote ‘iustore’ and then ‘gimine’ and then went back an inserted the syllable ‘re’ before ‘gimine’ so that that word would make sense / 18, 39, 60 all three-note ligatures where the initial stem has been erased to make it a lig without propriety / </annot>
-								<itemList>
-									<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codeval="10v"></item>
-									<item targettype="other/images" target="" motetus="Rex beatus, confessor Domini" folio="10v"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
-									<item targettype="DIAMM_composition_record" target=""></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c3 c3 c5</annot>
+							<annot label="commentary">Tr 12 last four notes not in MS / Mot 12 tiny ‘re’ added above text, looks like scribe misunderstood ‘iusto’ ‘regimine’ and wrote ‘iustore’ and then ‘gimine’ and then went back an inserted the syllable ‘re’ before ‘gimine’ so that that word would make sense / 18, 39, 60 all three-note ligatures where the initial stem has been erased to make it a lig without propriety / </annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="10v"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot>Br, Lbl 41667, Trem (index)</annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Br, Lbl 41667, Trem (index)</annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +108,21 @@
 					<lg><l>AVE</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c3 c3 c5</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Tr 12 last four notes not in MS / Mot 12 tiny ‘re’ added above text, looks like scribe misunderstood ‘iusto’ ‘regimine’ and wrote ‘iustore’ and then ‘gimine’ and then went back an inserted the syllable ‘re’ before ‘gimine’ so that that word would make sense / 18, 39, 60 all three-note ligatures where the initial stem has been erased to make it a lig without propriety / 
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Vos pastores</title>
-				<composer>Anonymous</composer> 
+				<title>Vos pastores: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,24 @@
 							<title>
 								<identifier>Fauv</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c4 c2 c5</annot>
-								<annot label="commentary">Tr 8 dot added incorrectly after first two semibreves / Mot 17 dot supplied, not in MS / 25-6 – the notes d edc (L 26) b are supplied – there is a lacuna in the source / 32 dot supplied, not in MS / 41 – the notes e c are supplied – there is a lacuna in the source / 43 Lambertan conjunctura [Interesting that this lacuna happens at almost the same spot in the tenor repetition (L26 is equivalent to L41 in the tenor)]</annot>
-								<itemList>
-									<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codeval="7r"></item>
-									<item targettype="other/images" target="" motetus="Vos pastores adulteri" folio="7r"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
-									<item targettype="DIAMM_composition_record" target=""></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c4 c2 c5</annot>
+							<annot label="commentary">Tr 8 dot added incorrectly after first two semibreves / Mot 17 dot supplied, not in MS / 25-6 – the notes d edc (L 26) b are supplied – there is a lacuna in the source / 32 dot supplied, not in MS / 41 – the notes e c are supplied – there is a lacuna in the source / 43 Lambertan conjunctura [Interesting that this lacuna happens at almost the same spot in the tenor repetition (L26 is equivalent to L41 in the tenor)]</annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="7r"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot></annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot></annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +108,21 @@
 					<lg><l>FUR NON VENIT NISI UT FURETUR ET MACTET ET PERDAT</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c4 c2 c5</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Tr 8 dot added incorrectly after first two semibreves / Mot 17 dot supplied, not in MS / 25-6 – the notes d edc (L 26) b are supplied – there is a lacuna in the source / 32 dot supplied, not in MS / 41 – the notes e c are supplied – there is a lacuna in the source / 43 Lambertan conjunctura [Interesting that this lacuna happens at almost the same spot in the tenor repetition (L26 is equivalent to L41 in the tenor)]
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

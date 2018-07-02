@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Li grant desirs</title>
-				<composer>Anonymous</composer> 
+				<title>Li grant desirs: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,25 @@
 							<title>
 								<identifier>Mo</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c3 c3 f3</annot>
-								<annot label="commentary">Tr 7.2-4, 14.2-4, 33.2-4 Rokseth interprets this ligature as BSS / 19.1-4 the two c.o.p. ligatures appear to be connected / Ten 5.1, 30.1, 38.1 Rokseth gives a plica but here interpreted as the manner in which this scribe notates this ligature / 27.1 ‘bis’ written under tenor indicates from here to end is to be stated ‘twice’ / 40.1 in the second statement of this last tenor phrase the notated version ends with an E breve and a 2B rest, but instead the motet must end here on a PL D /</annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="373r, 373v, 374r"></item>
-									<item targettype="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261835" motetus="Li grant desirs, qui j'ai de recouvrer" folio="373r, 373v, 374r"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
-									<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3521/"></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c3 c3 f3</annot>
+							<annot label="commentary">Tr 7.2-4, 14.2-4, 33.2-4 Rokseth interprets this ligature as BSS / 19.1-4 the two c.o.p. ligatures appear to be connected / Ten 5.1, 30.1, 38.1 Rokseth gives a plica but here interpreted as the manner in which this scribe notates this ligature / 27.1 ‘bis’ written under tenor indicates from here to end is to be stated ‘twice’ / 40.1 in the second statement of this last tenor phrase the notated version ends with an E breve and a 2B rest, but instead the motet must end here on a PL D /</annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="other_images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261835" motetus="Li grant desirs, qui j'ai de recouvrer" folio="373r, 373v, 374r"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
+							<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3521/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot></annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot></annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +109,21 @@
 					<lg><l>NON VEUL MARI</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c3 c3 f3</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Tr 7.2-4, 14.2-4, 33.2-4 Rokseth interprets this ligature as BSS / 19.1-4 the two c.o.p. ligatures appear to be connected / Ten 5.1, 30.1, 38.1 Rokseth gives a plica but here interpreted as the manner in which this scribe notates this ligature / 27.1 ‘bis’ written under tenor indicates from here to end is to be stated ‘twice’ / 40.1 in the second statement of this last tenor phrase the notated version ends with an E breve and a 2B rest, but instead the motet must end here on a PL D /
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

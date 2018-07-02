@@ -201,6 +201,21 @@
         $primesource = $xml.find("identifier")[1].innerHTML;
         $concsources = $xml.find("annot");
         $link = $xml.find("item");
+        $iiif = null;
+        $dcomp = null;
+        $daimmsource = null;
+        $otherimages = null;
+          for (var i = 0; i< $link.length; i++) {
+            if($link[i].attributes[0].textContent=="IIIF"){
+                $iiif = $link[i];
+            } else if ($link[i].attributes[0].textContent=="DIAMM_source_record"){
+                $diammsource = $link[i];
+            } else if ($link[i].attributes[0].textContent=="DIAMM_composition_record"){
+                $dcomp = $link[i];
+            } else {
+                $otherimages=$link[i];
+            }
+          }
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
         $notes = $xml.find("p")[0].innerHTML;
@@ -219,7 +234,10 @@
             }
           }
         }
-        $needle = $link[0].attributes[2].textContent.split(",")[0];
+        $needle = null;
+        if ($iiif !=null){
+        $needle = $iiif.attributes[2].textContent.split(",")[0];
+      }
         $quadruplum = "";
         $contratenor = "";
         $triplum = "";
@@ -259,8 +277,14 @@
         }
         $("#title").html($triplum + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
-        $("#primarysource").html($primesource + ", fol(s)." + $link[0].attributes[2].textContent);
-        $("#diammlink").html("<a href=\"" + $link[3].attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
+        if ($iiif != null){
+        $("#primarysource").html($primesource + ", fol(s)." + $iiif.attributes[2].textContent);
+      } else if ($otherimages != null){
+          $("#primarysource").html($primesource + ", fol(s)." + $otherimages.attributes[3].textContent);
+      }
+        if ($dcomp != null){
+        $("#diammlink").html("<a href=\"" + $dcomp.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
+      }
         if (!qs.includes("_MENSURAL.")){
         var menslink = qs;
         menslink = menslink.replace(".", "_MENSURAL.")
@@ -282,15 +306,15 @@ $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" downl
 
             $("#entertranscriptions").html("Encoded by " + $encoders);
             $("#checktranscriptions").html("Checked by " + $checkers);
-        if ($link[0].attributes[1].textContent == "") {
+        if ($iiif == null) {
           var diva = document.getElementById("diva-wrapper");
           diva.outerHTML = "";
           delete diva;
-          if ($link[1].attributes[1].textContent == "")
+          if ($otherimages == null)
           {
   $("#full-manuscript").html("<button class=\"btn\" id=\"no-image-button-2\" style=\"\">No IIIF images available.</a>");
           } else {
-            $("#full-manuscript").html("<button class=\"btn\" id=\"no-image-button\" onclick=\"window.open('http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028');return false;\" style=\"\">No IIIF images available. <br>Click here for external images.</a>");
+            $("#full-manuscript").html("<button class=\"btn\" id=\"no-image-button\" onclick=\"window.open('" + $otherimages.attributes[1].textContent + "');return false;\" style=\"\">No IIIF images available. <br>Click here for external images.</a>");
 
           }
   //

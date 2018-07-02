@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Qui secuntur</title>
-				<composer>Anonymous</composer> 
+				<title>Qui secuntur: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -36,7 +36,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -50,26 +50,24 @@
 							<title>
 								<identifier>Fauv</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c2 c3 c4</annot>
-								<annot label="commentary"></annot>
-								<itemList>
-									<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codeval="4r"></item>
-									<item targettype="other/images" target="" motetus="Qui secuntur castra sunt" folio="4r"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
-									<item targettype="DIAMM_composition_record" target=""></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c2 c3 c4</annot>
+							<annot label="commentary"></annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="4r"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot>Pn 571</annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Pn 571</annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -109,24 +107,21 @@
 					<lg><l>VERBUM INIQUUM ET DOLOSUM ABHOMINABITUR DOMINUS</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c2 c3 c4</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Florens</title>
-				<composer>Anonymous</composer> 
+				<title>Florens: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -36,7 +36,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -50,26 +50,23 @@
 							<title>
 								<identifier>Br</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c2 c3 f2c4</annot>
-								<annot label="commentary"></annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="v"></item>
-									<item targettype="other/images" target="" motetus="Florens vigor ulciscendo" folio="v"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/4/"></item>
-									<item targettype="DIAMM_composition_record" target=""></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c2 c3 f2c4</annot>
+							<annot label="commentary"></annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/4/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot></annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot></annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -109,24 +106,21 @@
 					<lg><l>[TENOR]</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c2 c3 f2c4</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

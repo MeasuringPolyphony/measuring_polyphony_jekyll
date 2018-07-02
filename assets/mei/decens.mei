@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Decens</title>
-				<composer>Philippe de Vitry (attrib.)</composer> 
+				<title>Decens: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,23 @@
 							<title>
 								<identifier>Iv</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c2 c2 c4 f3</annot>
-								<annot label="commentary"></annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="55v"></item>
-									<item targettype="other/images" target="" motetus="Decens carmen edere" folio="55v"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/141/"></item>
-									<item targettype="DIAMM_composition_record" target=""></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c2 c2 c4 f3</annot>
+							<annot label="commentary"></annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/141/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot>Pn 2444, Trem (index)</annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Pn 2444, Trem (index)</annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -113,24 +110,21 @@
 				<lg><l>[CONTRATENOR]</l></lg>
 		</incipText>
 	</incip>
-	<otherChar>Original clefs c2 c2 c4 f3</otherChar>
-	<classification>
-		<termList>
-			<term>Motet</term>
-		</termList>
-	</classification>
-</work>
+	
+		<classification>
+			<termList>
+				<term>Motet</term>
+			</termList>
+		</classification>
+	</work>
 </workDesc>
 <revisionDesc>
-<change resp="#KD" isodate="2018-05-31">
-	<changeDesc>
-		<p></p>
-	</changeDesc>
-</change>
+	<change resp="#KD" isodate="2018-05-31">
+		<changeDesc>
+			<p></p>
+		</changeDesc>
+	</change>
 </revisionDesc>
-<extMeta>
-
-</extMeta>
 </meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

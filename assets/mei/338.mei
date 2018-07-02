@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Solem iusticie</title>
-				<composer>Anonymous</composer> 
+				<title>Solem iusticie: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,25 @@
 							<title>
 								<identifier>Mo</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c3 c4 f3</annot>
-								<annot label="commentary">Rokseth does not have a separate edition of No. 338, since the same piece is also in fascicle 7 (No. 289). Tr 49.7 semibreve in MS / </annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="390r, 390v, 391r"></item>
-									<item targettype="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261869" motetus="Solem iusticie, letiticie" folio="390r, 390v, 391r"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
-									<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3487/"></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c3 c4 f3</annot>
+							<annot label="commentary">Rokseth does not have a separate edition of No. 338, since the same piece is also in fascicle 7 (No. 289). Tr 49.7 semibreve in MS / </annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="other_images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261869" motetus="Solem iusticie, letiticie" folio="390r, 390v, 391r"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
+							<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3487/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot>Arras frag</annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Arras frag</annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +109,21 @@
 					<lg><l>SOLEM</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c3 c4 f3</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Rokseth does not have a separate edition of No. 338, since the same piece is also in fascicle 7 (No. 289). Tr 49.7 semibreve in MS / 
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

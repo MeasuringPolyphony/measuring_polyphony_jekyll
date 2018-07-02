@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Huic ut placuit</title>
-				<composer>Anonymous</composer> 
+				<title>Huic ut placuit: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,25 @@
 							<title>
 								<identifier>Mo</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c2 c3 c4</annot>
-								<annot label="commentary">Ten 4, 17, 30: breve rest not in MS (in brackets in Rokseth) / </annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="393v, 394r, 394v"></item>
-									<item targettype="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261876" motetus="Huic ut placuit, tres magi mistica" folio="393v, 394r, 394v"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
-									<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3539/"></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c2 c3 c4</annot>
+							<annot label="commentary">Ten 4, 17, 30: breve rest not in MS (in brackets in Rokseth) / </annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="other_images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261876" motetus="Huic ut placuit, tres magi mistica" folio="393v, 394r, 394v"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
+							<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3539/"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot>Onc</annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Onc</annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +109,21 @@
 					<lg><l>[HUIC MAGI]</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c2 c3 c4</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Ten 4, 17, 30: breve rest not in MS (in brackets in Rokseth) / 
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">

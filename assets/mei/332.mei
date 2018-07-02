@@ -3,8 +3,8 @@
 	<meiHead xml:id="m-2">
 		<fileDesc>
 			<titleStmt>
-				<title>Se j'ai folement</title>
-				<composer>Anonymous</composer> 
+				<title>Se j'ai folement: A Digital Edition</title>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
@@ -37,7 +37,7 @@
 				</availability>
 			</pubStmt> 
 			<seriesStmt> 
-				<title>Measuring Polyphony</title> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
 				<editor> 
 					<persName>Karen Desmond</persName> 
 				</editor>
@@ -51,26 +51,25 @@
 							<title>
 								<identifier>Mo</identifier>
 							</title>
-							<notesStmt>
-								<annot>Primary manuscript source for this encoding.</annot>
-								<annot label="original_clefs">Original clefs for this source: c3 c3 f3</annot>
-								<annot label="commentary">Tr 23.2-4 Ms has d-c-d, Rokseth has c-d (S-B) / 24.2, dot missing after first rest in MS / 30.10 dot missing in MS / 34.1 dot missing in MS / Mot 4, Rokseth has ligature bracket over all six S / 5, B rest added after L in Rokseth /</annot>
-								<itemList>
-									<item targettype="IIIF" target="" codeval="382r, 382v, 383r, 383v"></item>
-									<item targettype="other/images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261853" motetus="Se j’ai folement amé" folio="382r, 382v, 383r, 383v"></item>
-									<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
-									<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/sources/888/#/inventory"></item>
-								</itemList>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot>Primary manuscript source for this encoding.</annot>
+							<annot label="original_clefs">Original clefs for this source: c3 c3 f3</annot>
+							<annot label="commentary">Tr 23.2-4 Ms has d-c-d, Rokseth has c-d (S-B) / 24.2, dot missing after first rest in MS / 30.10 dot missing in MS / 34.1 dot missing in MS / Mot 4, Rokseth has ligature bracket over all six S / 5, B rest added after L in Rokseth /</annot>
+						</notesStmt>
+						<itemList>
+							<item targettype="other_images" target="http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=8028&amp;VUE_ID=1261853" motetus="Se j’ai folement amé" folio="382r, 382v, 383r, 383v"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></item>
+							<item targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/sources/888/#/inventory"></item>
+						</itemList>
 					</source>
 					<source>
 						<titleStmt>
 							<title>[Other concordant sources]</title>
-							<notesStmt>
-								<annot></annot>
-							</notesStmt>
 						</titleStmt>
+						<notesStmt>
+							<annot></annot>
+						</notesStmt>
 					</source>
 				</sourceDesc>
 			</fileDesc>
@@ -110,24 +109,21 @@
 					<lg><l>SOLEM</l></lg>
 			</incipText>
 		</incip>
-		<otherChar>Original clefs c3 c3 f3</otherChar>
-		<classification>
-			<termList>
-				<term>Motet</term>
-			</termList>
-		</classification>
-	</work>
-</workDesc>
-<revisionDesc>
-	<change resp="#KD" isodate="2018-05-31">
-		<changeDesc>
-			<p></p>
-		</changeDesc>
-	</change>
-</revisionDesc>
-<extMeta>
-	Tr 23.2-4 Ms has d-c-d, Rokseth has c-d (S-B) / 24.2, dot missing after first rest in MS / 30.10 dot missing in MS / 34.1 dot missing in MS / Mot 4, Rokseth has ligature bracket over all six S / 5, B rest added after L in Rokseth /
-	</extMeta>
+		
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>
 	</meiHead>
 	<music xml:id="m-24">
 		<body xml:id="m-25">
