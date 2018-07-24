@@ -4,25 +4,25 @@
 		<fileDesc>
 			<titleStmt>
 				<title>Iure quod: A Digital Edition</title>
-				<editor>Karen Desmond</editor>
+				<editor>Karen Desmond</editor> 
 				 <funder>
 					<corpName>Social Sciences and Humanities Research Council, Canada (SSHRC) </corpName>
 				</funder>
 				<funder>
-					<corpName> Schulich School of Music, McGill University</corpName>
-				</funder>
+					<corpName> Schulich School of Music, McGill University</corpName> 
+				</funder> 
 				 <funder>
 					<corpName>Brandeis University</corpName>
 				</funder>
 				 <funder>
-					<corpName>National Endowment for Humanities (NEH)</corpName>
-				</funder>
-				 <respStmt>
+					<corpName>National Endowment for Humanities (NEH)</corpName> 
+				</funder> 
+				 <respStmt> 
 					<persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
-					<persName role="encoder" isodate="2015-5-9" xml:id="SM">Sadie Menicanin</persName>
-					<persName role="proofreader" isodate="2018-6-22" xml:id="EH">Emily Hopkins</persName>
-					<persName role="proofreader" isodate="2018-6-22" xml:id="SH">Sam Howes</persName>
-					<persName role="proofreader" isodate="2018-6-22" xml:id="KD">Karen Desmond</persName>
+					<persName role="encoder" isodate="2015-5-9" xml:id="SM">Sadie Menicanin</persName> 
+					<persName role="proofreader" isodate="2018-6-22" xml:id="EH">Emily Hopkins</persName> 
+					<persName role="proofreader" isodate="2018-6-22" xml:id="SH">Sam Howes</persName> 
+					<persName role="proofreader" isodate="2018-6-22" xml:id="KD">Karen Desmond</persName> 
 				</respStmt>
 			</titleStmt>
 			<pubStmt>
@@ -30,15 +30,15 @@
 					 <persName>Karen Desmond</persName>
 					<corpName>Brandeis University</corpName>
 				 </publisher>
-				<date>2018</date>
+				<date>2018</date> 
 				<availability>
 					<useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
 				</availability>
-			</pubStmt>
-			<seriesStmt>
-				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
-				<editor>
-					<persName>Karen Desmond</persName>
+			</pubStmt> 
+			<seriesStmt> 
+				<title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title> 
+				<editor> 
+					<persName>Karen Desmond</persName> 
 				</editor>
 				<identifier>
 					<ref targettype="home_page" target="http://www.measuringpolyphony.org"/>
@@ -71,12 +71,12 @@
 					</source>
 				</sourceDesc>
 			</fileDesc>
-			<encodingDesc>
+			<encodingDesc> 
 				<appInfo>
 					<application xml:id="sibelius" isodate="2016-4-29T09:24:36Z" version="7510"><name type="operating-system">Mac OS X Mountain Lion</name></application>
 				<application xml:id="sibmei" type="plugin" version="2.0.0b3">
 					<name>Sibelius to MEI Exporter (2.0.0b3)</name>
-				</application>
+				</application> 
 				<application xml:id="meiMENS" isodate="2016-4-29">
 					<name>CMN-MEI to MensuralMEI Translator</name>
 				</application>
@@ -107,7 +107,7 @@
 					<lg><l>SUPERNE MATRIS GAUDIA</l></lg>
 			</incipText>
 		</incip>
-
+		
 			<classification>
 				<termList>
 					<term>Motet</term>
