@@ -129,7 +129,7 @@
 		<body xml:id="m-27">
 			<mdiv xml:id="m-28">
 				<score xml:id="m-29">
-					<scoreDef xml:id="m-30" midi.bpm="600">
+					<scoreDef xml:id="m-30">
 						<staffGrp xml:id="m-44" n="1" symbol="bracket">
 							<staffDef xml:id="motetus" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" lines="5" n="1" modusmaior="2" modusminor="2" tempus="2" prolatio="3" notationtype="mensural.black">
 									<label>motetus</label>

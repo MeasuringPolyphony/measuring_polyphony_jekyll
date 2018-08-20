@@ -126,7 +126,7 @@
 		<body xml:id="m-25">
 			<mdiv xml:id="m-26">
 				<score xml:id="m-27">
-					<scoreDef xml:id="m-28" midi.bpm="600" lyric.name="Plantin MT Std" meter.count="27" meter.unit="2" music.name="Opus Std" page.botmar="15mm" page.height="279.4mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="215.9mm" ppq="256" text.name="Plantin MT Std">
+					<scoreDef xml:id="m-28" lyric.name="Plantin MT Std" meter.count="27" meter.unit="2" music.name="Opus Std" page.botmar="15mm" page.height="279.4mm" page.leftmar="15mm" page.rightmar="15mm" page.topmar="15mm" page.width="215.9mm" ppq="256" text.name="Plantin MT Std">
 						<staffGrp xml:id="m-29">
 							<staffGrp xml:id="m-39" n="1" symbol="bracket">
 								<staffDef xml:id="triplum" clef.line="2" clef.shape="G" key.mode="major" key.sig="0" lines="5" n="1">
@@ -745,7 +745,7 @@
 							<line xml:id="m-407" dur.ges="3072p" layer="1" staff="2" tstamp="19" tstamp2="0m+25" type="bracket" vo="7mm" />
 							<line xml:id="m-423" dur.ges="27644p" layer="1" staff="3" subtype="start" tstamp="19" tstamp2="3m+9.9922" type="bracket" vo="8.0391mm" />
 						</measure>
-						<scoreDef xml:id="m-45 midi.bpm="600"2" meter.count="18" meter.unit="2" />
+						<scoreDef xml:id="m-452" meter.count="18" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-429" n="6">
 							<staff xml:id="m-430" n="1">
 								<layer xml:id="m-431" n="1">
@@ -872,7 +872,7 @@
 							<line xml:id="m-522" dur.ges="4096p" layer="1" staff="3" subtype="end" tstamp="10" tstamp2="0m+18" type="bracket" vo="7.5469mm" />
 						</measure>
 						<sb xml:id="m-527" />
-						<scoreDef xml:id="m-60 midi.bpm="600"9" meter.count="27" meter.unit="2" />
+						<scoreDef xml:id="m-609" meter.count="27" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-526" n="9">
 							<staff xml:id="m-528" n="1">
 								<layer xml:id="m-529" n="1">
@@ -1666,7 +1666,7 @@
 							<line xml:id="m-1032" dur.ges="4096p" layer="1" staff="3" subtype="end" tstamp="10" tstamp2="0m+18" type="bracket" vo="6.125mm" />
 							<line xml:id="m-1036" dur.ges="7680p" layer="1" staff="3" tstamp="19" tstamp2="1m+7" type="bracket" vo="6.6719mm" />
 						</measure>
-						<scoreDef xml:id="m-10 midi.bpm="600"64" meter.count="18" meter.unit="2" />
+						<scoreDef xml:id="m-1064" meter.count="18" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-1040" n="16">
 							<staff xml:id="m-1041" n="1">
 								<layer xml:id="m-1042" n="1">
@@ -1823,7 +1823,7 @@
 							<line xml:id="m-1137" dur.ges="8704p" layer="1" staff="3" subtype="end" tstamp="1" tstamp2="0m+18" type="bracket" vo="8.2031mm" />
 						</measure>
 						<sb xml:id="m-1150" />
-						<scoreDef xml:id="m-12 midi.bpm="600"40" meter.count="27" meter.unit="2" />
+						<scoreDef xml:id="m-1240" meter.count="27" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-1149" n="19">
 							<staff xml:id="m-1151" n="1">
 								<layer xml:id="m-1152" n="1">
@@ -2624,7 +2624,7 @@
 							<line xml:id="m-1658" dur.ges="3072p" layer="1" staff="2" tstamp="19" tstamp2="0m+25" type="bracket" vo="7mm" />
 							<line xml:id="m-1682" dur.ges="9212p" layer="1" staff="3" subtype="start" tstamp="19" tstamp2="1m+9.9922" type="bracket" vo="7.1641mm" />
 						</measure>
-						<scoreDef xml:id="m-17 midi.bpm="600"06" meter.count="18" meter.unit="2" />
+						<scoreDef xml:id="m-1706" meter.count="18" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-1686" n="26">
 							<staff xml:id="m-1687" n="1">
 								<layer xml:id="m-1688" n="1">
@@ -2747,7 +2747,7 @@
 							<tie xml:id="m-1777" endid="#m-1778" startid="#m-1776" />
 						</measure>
 						<sb xml:id="m-1780" />
-						<scoreDef xml:id="m-18 midi.bpm="600"69" meter.count="27" meter.unit="2" />
+						<scoreDef xml:id="m-1869" meter.count="27" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-1779" n="29">
 							<staff xml:id="m-1781" n="1">
 								<layer xml:id="m-1782" n="1">
@@ -3559,7 +3559,7 @@
 							<line xml:id="m-2304" dur.ges="4096p" layer="1" staff="3" subtype="end" tstamp="10" tstamp2="0m+18" type="bracket" vo="7.4375mm" />
 							<line xml:id="m-2308" dur.ges="13100p" layer="1" staff="3" tstamp="19" tstamp2="1m+17.5859" type="bracket" vo="7.875mm" />
 						</measure>
-						<scoreDef xml:id="m-23 midi.bpm="600"33" meter.count="18" meter.unit="2" />
+						<scoreDef xml:id="m-2333" meter.count="18" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-2312" n="36">
 							<staff xml:id="m-2313" n="1">
 								<layer xml:id="m-2314" n="1">
@@ -3691,7 +3691,7 @@
 							<line xml:id="m-2402" dur.ges="8224p" layer="1" staff="3" subtype="end" tstamp="1" tstamp2="0m+17.0625" type="bracket" vo="8.5312mm" />
 						</measure>
 						<sb xml:id="m-2411" />
-						<scoreDef xml:id="m-24 midi.bpm="600"95" meter.count="27" meter.unit="2" />
+						<scoreDef xml:id="m-2495" meter.count="27" meter.unit="2"  midi.bpm="600" />
 						<measure xml:id="m-2410" n="39">
 							<staff xml:id="m-2412" n="1">
 								<layer xml:id="m-2413" n="1">
