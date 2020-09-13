@@ -1,0 +1,50 @@
+
+<script>
+// vim: ts=3:nowrap
+
+document.addEventListener("DOMContentLoaded", function () {
+	if (sessionStorage.INDEX) {
+		try {
+			INDEX = JSON.parse(sessionStorage.INDEX);
+			doAction(INDEX);
+		} catch (err) {
+			console.log("ERROR:", err.message);
+		}
+	} else {
+		var id = "AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ";
+		var url = "https://script.google.com/macros/s/" + id + "/exec";
+		var request = new XMLHttpRequest;
+		request.open("GET", url);
+		request.send();
+		request.addEventListener("load", function () {
+			try {
+				INDEX = JSON.parse(request.responseText);
+				sessionStorage.INDEX = request.responseText;
+				doAction(INDEX);
+			} catch (err) {
+				console.log("ERROR:", err.message);
+			}
+		});
+	}
+});
+
+
+
+//////////////////////////////
+//
+// doAction -- What to do after index has been prepared.
+//
+
+function doAction(obj) {
+	// nothing to do on the homepage.  The index is downloaded
+	// now so that when someone goes to the browse page, the data
+	// is already in sessionStorage to speed up loading of the
+	// browse page.
+}
+
+
+
+</script>
+
+
+

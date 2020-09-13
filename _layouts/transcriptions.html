@@ -1,208 +1,77 @@
 
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+<!-- 
+	vim: ts=3
+-->
+	<meta charset="utf-8">
+	<link href="favicon.ico" rel="icon" type="image/x-icon" />
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <head>
+    <script src="https://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
 
-        <meta charset="utf-8">
-
-        <link href="favicon.ico" rel="icon" type="image/x-icon" />
-      <link rel="manifest" href="/manifest.json">
-      <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-      <meta name="theme-color" content="#ffffff">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <title>Measuring Polyphony</title>
-        <!-- Bootstrap core CSS -->
-        <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom fonts for this template -->
-        <link href="{{ site.baseurl }}vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
-        <!-- Custom styles for this template -->
-        <link href="{{ site.baseurl }}css/transcriptions.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <body id="page-top">
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-          <a class="navbar-brand" href="/">
-             <img src="thumbnail.png" id="thumbnail">
-             <div id="navTitle">Measuring Polyphony</div>
-             <div id="navDescription">Digital encodings of late medieval music</div>
-             <div class="clearfix"></div>
-          </a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fa fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a id="browse" class="nav-link " href="transcriptions.html">Browse</a>
-              </li>
-              <li class="nav-item">
-                <a id="about" class="nav-link js-scroll-trigger" href="/#aboutt">About</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
-
-    <!-- Intro Header -->
-    <header class="transhead" >
-<div class="intro-body" style="padding-top:90px; height: 100vh;">
-<div class="layer" style="width:100%;">
-
-  <div id="transcriptionHeader">
-   <h1 id="title">Browse Transcriptions</h1>
-  </div>
-          <div class="row" >
-            <div class="container-fluid">
-
-              <p class="container-fluid" id="transcriptions_container">
-                <table class= "table table-striped header-fixed" id="output" > <thead ><tr><th><u>  <input class="sortButton" type="button" value="Triplum" onclick="sortTriplum();"/></u></th><th><input class="sortButton"type="button" value="Motetus" onclick="sortMotetus();"/></th><th><input class="sortButton" type="button" value="Tenor/[Contratenor]" onclick="sortTenor();"/></th> <th><input class="sortButton" type="button" value="Composer" onclick="sortComposer();"/></th></tr></thead><tbody id="table-body"></tbody></table>
-              </div></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    </header>
-<div id="loadOverlay" style="background-color:white; position:absolute; top:0px; left:0px; width:100%; height:100%; z-index:2000;"></div>
-    <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script type="text/javascript">
-  $alldata =  new Array();
-  $counter=0;
-</script>
-  {% for xml in site.static_files %}
-      {% if xml.path contains 'assets/mei' %}
-  <script type="text/javascript">
-
-          var qs = "{{ site.baseurl }}{{xml.path}}"
-          $counter +=1;
-
-                /* Load the file using HTTP GET */
-                $.get( qs, function( dataType ) {
-                  var values =  new Array();
-                //  alert( "Data Loaded: " + dataType );
-                  xmlDoc = $.parseXML( dataType ),
-                  $xml = $( xmlDoc ),
-                  $parts = $xml.find( "incipText");
-                  $contratenor="  ";
-                  $triplum="PART NOT FOUND";
-                  $motetus="PART NOT FOUND";
-                  $tenor="PART NOT FOUND";
-                  if ($parts!=null){
-
-                  for (i = 0; i < $parts.length; i++) {
-                    if ($parts[i].attributes[0].textContent=="triplum"){
-                        $triplum= $parts[i].textContent;
-                    } else if ($parts[i].attributes[0].textContent=="motetus"){
-                        $motetus= $parts[i].textContent;
-                    } else if ($parts[i].attributes[0].textContent=="tenor"){
-                        $tenor= $parts[i].textContent;
-                    } else if ($parts[i].attributes[0].textContent=="contratenor"){
-                        $contratenor= " / CT.";
-                    }
-                  }
-                }
-                  $composer = $xml.find( "composer" ).text();
-                values.push($triplum);
-                  values.push($motetus);
-                    values.push($tenor);
-                    values.push($contratenor);
-                    values.push($composer);
-                    var menslink = "{{ site.baseurl }}{{xml.path}}";
-                    menslink = menslink.replace(".", "_MENSURAL.")
-                      menslink = menslink.replace("/mei/", "/mensural/")
-                    var http = new XMLHttpRequest();
-                     http.open('HEAD', menslink, false);
-                     http.send();
-                    if ( http.status==404){
-                      values.push("{{ site.baseurl }}{{xml.path}}");
-                    } else {
-                      values.push(menslink);
-                    }
-                $alldata.push(values);
-                populateTable();
-
-                }, 'text');
-
-
-
-            </script>
-
-      {% endif %}
-  {% endfor %}
-
-    <!-- Plugin JavaScript -->
-  <script type="text/javascript">
-  $(document).ready(function(){
-      $("#loadOverlay").css("display","none");
-
-  });
-  function populateTable() {
-  var d1 = document.getElementById('table-body');
-  d1.innerHTML="";
-  for (i = 0; i < $alldata.length; i++) {
-            d1.insertAdjacentHTML('beforeend', '<tr style="border: 1px white;" ><td><a id="1" href="{{ site.baseurl }}display.html?'+ $alldata[i][5] + '">' + $alldata[i][0] + '</a></td><td><a id="1" href="{{ site.baseurl }}display.html?'+ $alldata[i][5] + '">'+$alldata[i][1]+'</a></td><td><a id="1" href="{{ site.baseurl }}display.html?'+ $alldata[i][5] + '">' + $alldata[i][2] + $alldata[i][3] + '</a></td><td><a id="1" href="{{ site.baseurl }}display.html?'+ $alldata[i][5] + '">' + $alldata[i][4] + '</a></td></tr>');
-  }
-    }
-
-  function sortTriplum(){
-      $sortvalue=0;
-      sort();
-  }
-  function sortMotetus(){
-      $sortvalue=1;
-      sort();
-  }
-  function sortTenor(){
-      $sortvalue=2;
-      sort();
-  }
-  function sortComposer(){
-      $sortvalue=4;
-      sort();
-  }
-  function sort(){
-    $alldata.sort(sortFunction);
-    populateTable();
-  }
-
-  function sortFunction(a, b) {
-    if (a[$sortvalue] === b[$sortvalue]) {
-        return 0;
-    }
-    else {
-        return (a[$sortvalue] < b[$sortvalue]) ? -1 : 1;
-    }
-}
-
-
-
-
-
-  </script>
-
-
-
-    <script src="http://www.verovio.org/javascript/develop/verovio-toolkit.js" type="text/javascript" ></script>
     <!-- We also use jQuery -->
-
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" ></script>
     <!-- Basic events from example 02 -->
     <script src="{{ site.baseurl }}js/basic-events.js" type="text/javascript" ></script>
 
+    <title>Measuring Polyphony</title>
 
-  </body>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ site.baseurl }}vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom fonts for this template -->
+    <link href="{{ site.baseurl }}vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
+    <!-- Custom styles for this template -->
+    <link href="{{ site.baseurl }}css/transcriptions.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ site.baseurl }}js/basic-events.js" type="text/javascript" ></script>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	<a class="navbar-brand js-scroll-trigger" href="/">
+		<img src="thumbnail.png" id="thumbnail">
+		<div id="navTitle">Measuring Polyphony</div>
+		<div id="navDescription">Digital encodings of late medieval music</div>
+		<div class="clearfix"></div>
+	</a>
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		Menu
+		<i class="fa fa-bars"></i>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a id="browse" class="nav-link" href="#">Browse</a>
+			</li>
+			<li class="nav-item">
+				<a id="about" class="nav-link" href="/index.html">About</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+{{ content }}
+
+</body>
 </html>
+
+

@@ -1,0 +1,70 @@
+<script>
+//
+// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
+// Creation Date: Sun Sep 13 09:53:55 PDT 2020
+// Last Modified: Sun Sep 13 10:15:00 PDT 2020
+// Filename:      .../browse/listeners.html
+// URL:           https://github.com/MeasuringPolyphony/measuring_polyphony_jekyll/tree/master/browse/listeners.html
+// Syntax:        javascript 5
+// vim:           ts=3 noexpandtab nowrap syntax=javascript
+//
+// Description:   This file contains the initializing actions for the browse page.
+//                It prepares the master index from either sessionStorage or downloads
+//                the index as JSON data from Google sheets and then processes the 
+//                index to create the browse page.
+//
+// Google spreadsheet with master index used to populate the filter lists:
+//     https://docs.google.com/spreadsheets/d/1RGN8FoUtStsXvCJv3112nGuioRwIxrm29uZcn0xndO0/edit#gid=0
+// Formatted as JSON data:
+//     https://script.google.com/macros/s/AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ/exec
+//
+
+
+//////////////////////////////
+//
+// Global variables:
+//
+
+// SORTCOLUMN is used to keep track of what column needs to be sorted.  This is needed
+// for when the filters re-populate the table with a new list.  "1" means to sort by the
+// first column in the table.  "0" means do not sort the list and use the order as it
+// occurs in the master index.
+var SORTCOLUMN = 1;
+
+// Other global variables from _includes/scripts/scripts-global.html:
+//    INDEX == variable to store the master index object in.
+
+//
+//////////////////////////////
+
+
+//////////////////////////////
+//
+// DOMContentLoaded event listener -- What to do when the browse page has finished
+//     loading.  This function will prepare the INDEX variable, and then run
+//     the doAction function when it is ready.
+
+document.addEventListener("DOMContentLoaded", function () {
+	PrepareMasterIndex(doAction);
+});
+
+
+
+//////////////////////////////
+//
+// doAction -- What to do after master index has been prepared.  In this case,
+//    build the source and composer filter menus and then fill in the transcription
+//    table.
+//
+
+function doAction(index) {
+	buildSourceSelect(index);
+	buildComposerSelect(index);
+	populateBrowseTable(index);
+	if (SORTCOLUMN > 0) {
+		sortByText(SORTCOLUMN);
+	}
+}
+
+
+</script>

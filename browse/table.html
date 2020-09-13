@@ -1,0 +1,49 @@
+<!--
+	vim: ts=3:nowrap
+-->
+
+<!-- Intro Header -->
+<header class="transhead" >
+	<div class="intro-body" style="padding-top:90px; height: 100vh;">
+		<div class="layer" style="width:100%;">
+			<div id="transcriptionHeader">
+
+<h1 id="title">Browse Transcriptions
+
+<select id="source-select" onchange="filterListBySource()">
+<option value="all">Source</option>
+</select>
+
+<select id="composer-select" onchange="filterListByComposer()">
+<option value="">Composer</option>
+</select>
+
+</h1>
+
+			</div>
+			<div class="row" >
+				<div class="container-fluid">
+					<p class="container-fluid" id="transcriptions_container">
+
+						<table id="output" class="table table-striped header-fixed">
+						<thead>
+							<tr>
+								<th><u><input title="click to sort by triplum" class="sortButton" type="button" value="Triplum" onclick="sortByText(1)"></u></th>
+								<th><input title="click to sort by motetus" class="sortButton" type="button" value="Motetus" onclick="sortByText(2)"></th>
+								<th><input title="click to sort by tenor" class="sortButton" type="button" value="Tenor/[Contratenor]" onclick="sortByText(3)"></th>
+								<th><input title="click to sort by composer" class="sortButton" type="button" value="Composer" onclick="sortByText(4)"></th>
+							</tr>
+						</thead>
+						<tbody id="browse-body">
+						</tbody>
+						</table>
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+

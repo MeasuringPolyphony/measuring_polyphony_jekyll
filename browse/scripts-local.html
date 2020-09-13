@@ -1,0 +1,158 @@
+<script>
+//
+// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
+// Creation Date: Sun Sep 13 10:22:54 PDT 2020
+// Last Modified: Sun Sep 13 12:02:43 PDT 2020
+// Filename:      .../browse/listeners.html
+// URL:           https://github.com/MeasuringPolyphony/measuring_polyphony_jekyll/tree/master/browse/listeners.html
+// Syntax:        javascript 5
+// vim:           ts=3 noexpandtab nowrap syntax=javascript
+//
+// Description:   This file contains functions for manipulating the transcription table.
+//
+
+
+//////////////////////////////
+//
+// populateBrowseTable -- Convert the possibly filtered index data into
+//     the browse table contents.  The browse table's contents goes
+//     into #browse-body.
+
+function populateBrowseTable(index) {
+	if (!index) {
+		index = INDEX;
+	}
+	var element = document.querySelector("tbody#browse-body");
+	if (!element) {
+		console.log("ERROR: cannot find table body");
+		return;
+	}
+
+	var i;
+	var output = "";
+	for (i=0; i<index.length; i++) {
+		output += generateBrowseRow(index[i]);
+	}
+	element.innerHTML = output;
+	fixCellHeights();
+}
+
+
+
+//////////////////////////////
+//
+// fixCellHeights -- There is difficulty in creating a constant
+//     height for cells on each row, which in turn causes the
+//     background color to be inconsistent througout the row.  The
+//     fixCellHeights() is a moderately good solution to the problem,
+//     which otherwise seems difficult to fix.  If the page is
+//     not resized, the fix is perfect, and as the page is resized,
+//     there can be problems since the height of the cells are now
+//     fixed.  Reloading the page at the new browser size will fix
+//     the problem.
+//
+
+function fixCellHeights() {
+	var rows = document.querySelectorAll("#browse-body tr");
+	var i;
+	var j;
+	for (i=0; i<rows.length; i++) {
+		var cells = rows[i].querySelectorAll("td");
+		var maximum = 0;
+		var maximumIndex = -1;
+		for (j=0; j<cells.length; j++) {
+			if (cells[j].offsetHeight > maximum) {
+				maximum = cells[j].offsetHeight;
+				maximumIndex = j;
+			}
+		}
+		for (j=0; j<cells.length; j++) {
+			cells[j].style.height = maximum + "px";
+		}
+	}
+}
+
+
+
+//////////////////////////////
+//
+// generateBrowseRow -- Create the HTML content for a work entry in the browse table.
+//
+
+function generateBrowseRow(item) {
+	var file     = item[MEI_MENS_FILE].replace(/.*\//, "");
+	var triplum  = item[TRIPLUM];
+	var tenor    = item[TENOR];
+	var motetus  = item[MOTETUS];
+	var composer = item[COMPOSER];
+
+	var output = "";
+	output += '<tr style="background:#9d2322; border: 1px white;">';
+	output += generateBrowseCell(triplum, file);
+	output += generateBrowseCell(motetus, file);
+	output += generateBrowseCell(tenor, file);
+	output += generateBrowseCell(composer, file);
+	output += '\n</tr>';
+	return output + "\n";
+}
+
+
+
+//////////////////////////////
+//
+// generateBrowseCell --  Create an HTML table cell for a particular
+//    metadata field for a work entry in the browse table.
+//
+
+function generateBrowseCell(contents, file) {
+	var output = '';
+	output += '\n   <td>';
+	output += '<a target="_blank" href="display.html?/assets/mensural/';
+	output += file;
+	output += '">';
+	output += contents;
+	output += '</a>';
+	output += '</td>';
+	return output;
+}
+
+
+
+//////////////////////////////
+//
+// sortByText -- This function will sort the browse table rows by
+//    the given column number (indexed from 1).  This sorting column 
+//    will be remembered in SORTCOLUMN if the table is rebuilt
+//    (due to filtering).  Text starting with a square bracket
+//    will ignore the bracket when sorting.
+//
+
+function sortByText(column) {
+	column = column > 0 ? column - 1 : 0;
+	SORTCOLUMN = column + 1;
+	var body = document.querySelector("#browse-body");
+	if (!body) {
+		console.log("ERROR: cannot find #browse-body");
+		return;
+	}
+	var rows = body.querySelectorAll("tr");
+	var rowsArray = Array.prototype.slice.call(rows, 0);
+	rowsArray.sort(function(a,b) {
+		var acells = a.querySelectorAll("td");
+		var bcells = b.querySelectorAll("td");
+		var atext = acells[column].textContent.replace(/[[]/g, "");
+		var btext = bcells[column].textContent.replace(/[[]/g, "");
+		return atext.localeCompare(btext);
+	});
+	body.innerHTML = "";
+	var i;
+	for (i=0; i<rowsArray.length; i++) {
+		body.appendChild(rowsArray[i]);
+	}
+	for (i=0; i<rowsArray.length; i++) {
+		var cells = rowsArray[i].querySelectorAll("td");
+	}
+}
+
+
+</script>

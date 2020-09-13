@@ -1,0 +1,89 @@
+<script>
+//
+// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
+// Creation Date: Sun Sep 13 10:05:18 PDT 2020
+// Last Modified: Sun Sep 13 10:14:06 PDT 2020
+// Filename:      .../_includes/scripts/scripts-global.html
+// URL:           https://github.com/MeasuringPolyphony/measuring_polyphony_jekyll/tree/master/_includes/scripts/scripts-global.html
+// Syntax:        javascript 5
+// vim:           ts=3 noexpandtab nowrap syntax=javascript
+//
+// Description:   This file contains javascript code which is useful to share across
+//                several web pages.  Mostly these functions deal with the master index.
+//                To add these functions to a webpage, use the liquid command (inside of raw):
+//                   {% raw %}
+//                   {% include scripts/scripts-global.html %}
+//                   {% endraw %}
+//
+
+//////////////////////////////
+//
+// global variables:
+//
+
+// INDEX: The index file downloaded from Google Spreadsheet JSON data:
+// https://script.google.com/macros/s/AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ/exec
+// This data is downloaded once, and stored in sessionStorage.INDEX.
+// To clear the index (if you update the Google spreadsheet, close all browser tabs
+// that are currently open for the website.  This will clear sessionStorage and
+// force downloading of the master index again).
+var INDEX = [];
+
+//
+// Master index parameter mappings.  These are mappings to the column headindgs in the master index:
+//     https://docs.google.com/spreadsheets/d/1RGN8FoUtStsXvCJv3112nGuioRwIxrm29uZcn0xndO0/edit#gid=0
+//
+// If the header fields in the master index change, update the new names in this list:
+//
+
+var MANUSCRIPT_SOURCE = "Manuscript source";
+var COMPOSER          = "Composer";
+var MEI_MENS_FILE     = "MEI MENS file";
+var TRIPLUM           = "Triplum";
+var TENOR             = "Tenor";
+var MOTETUS           = "Motetus";
+
+//
+//
+//////////////////////////////
+
+
+
+//////////////////////////////
+//
+// PrepareMasterIndex -- Either download the master index, or extract it from sessionStorage.
+//    When the index is ready, run the input callback function if provided.
+//
+
+function PrepareMasterIndex(callbackFunction) {
+	if (sessionStorage.INDEX) {
+		try {
+			INDEX = JSON.parse(sessionStorage.INDEX);
+			if (callbackFunction) {
+				callbackFunction(INDEX);
+			}
+		} catch (err) {
+			console.log("ERROR:", err.message);
+		}
+	} else {
+		var id = "AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ";
+		var url = "https://script.google.com/macros/s/" + id + "/exec";
+		var request = new XMLHttpRequest;
+		request.open("GET", url);
+		request.send();
+		request.addEventListener("load", function () {
+			try {
+				INDEX = JSON.parse(request.responseText);
+				sessionStorage.INDEX = request.responseText;
+				if (callbackFunction) {
+					callbackFunction(INDEX);
+				}
+			} catch (err) {
+				console.log("ERROR:", err.message);
+			}
+		});
+	}
+}
+
+
+</script>

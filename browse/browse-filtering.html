@@ -1,0 +1,213 @@
+<script>
+//
+// Programmer:    Craig Stuart Sapp <craig@ccrma.stanford.edu>
+// Creation Date: Sun Sep 13 09:32:52 PDT 2020
+// Last Modified: Sun Sep 13 09:44:18 PDT 2020
+// Filename:      .../browse/browse-filtering.cpp
+// URL:           https://github.com/MeasuringPolyphony/measuring_polyphony_jekyll/tree/master/browse/browse-filtering.html
+// Syntax:        javascript 5
+// vim:           ts=3 noexpandtab nowrap syntax=javascript
+//
+// Description:   These functions are related to building the source and composer
+//                filters for the browse page.  They take as input a Javascript
+//                object of the master index for MP, and collate all of the possible
+//                values for each of those metadata fields.  In addition, the 
+//                filling-in process counts how many possibilities for each option
+//                and displays that number in the selection list.
+//
+// Google spreadsheet with master index used to populate the filter lists:
+//     https://docs.google.com/spreadsheets/d/1RGN8FoUtStsXvCJv3112nGuioRwIxrm29uZcn0xndO0/edit#gid=0
+// Formatted as JSON data:
+//     https://script.google.com/macros/s/AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ/exec
+//
+
+//////////////////////////////
+//
+// buildSourceSelect -- Create the selection list for the source filter.  The list
+//    is built by collating all the possible values for the manuscript source in the
+//    index.  Currently the source and composer selections are independent (logical or),
+//    but in the future they could interact (logical and).  In such cases the input
+//    parameter could be provided with the index entries of the other selection so that
+//    the selection is not a list of the entire index, but only of those entryes which
+//    match the other filter's requirements.
+//
+
+function buildSourceSelect(index) {
+	if (!index) {
+		index = INDEX;
+	}
+	var element = document.querySelector("#source-select");
+	if (!element) {
+		return;
+	}
+	var value;
+	var states = {};
+	var i;
+	for (i=0; i<index.length; i++) {
+		value = index[i][MANUSCRIPT_SOURCE];
+		value = value.replace(/^\s+/, "").replace(/\s+$/, "");
+		if (!states[value]) {
+			states[value] = 1;
+		} else {
+			states[value]++;
+		}
+	}
+	var plist = [];
+	for (property in states) {
+		plist.push({abbr: property, count: states[property]});
+	}
+	plist.sort(function(a, b) {
+		return a.abbr.localeCompare(b.abbr);
+	});
+
+	var output = "<option value=''>Source</option>\n";
+	for (i=0; i<plist.length; i++) {
+		output += "<option value='";
+		output += plist[i].abbr;
+		output += "'>";
+		output += plist[i].abbr;
+		output += " (";
+		output += plist[i].count;
+		output += ")</option>\n";
+	}
+
+	element.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// buildComposerSelect -- Create the selection list for the composer filter.  Current
+//    composers can have "(attrib.)" after them.  This function removes such qualifiers
+//    when building the selection list.
+//
+
+function buildComposerSelect(index) {
+	if (!index) {
+		index = INDEX;
+	}
+	var element = document.querySelector("#composer-select");
+	if (!element) {
+		return;
+	}
+	var states = {};
+	var i;
+	for (i=0; i<index.length; i++) {
+		var value = index[i][COMPOSER];
+		value = value.replace(/\s*\(.*?\)\s*/g, "").replace(/^\s+/, "").replace(/\s+$/, "");
+		if (!states[value]) {
+			states[value] = 1;
+		} else {
+			states[value]++;
+		}
+	}
+	console.log("STATES", states);
+	var plist = [];
+	for (property in states) {
+		plist.push({name: property, count: states[property]});
+	}
+	plist.sort(function(a, b) {
+		return a.name.localeCompare(b.name);
+	});
+
+	var output = "<option value=''>Composer</option>\n";
+	for (i=0; i<plist.length; i++) {
+		output += "<option value='";
+		output += plist[i].name;
+		output += "'>";
+		output += plist[i].name;
+		output += " (";
+		output += plist[i].count;
+		output += ")</option>\n";
+	}
+
+	element.innerHTML = output;
+}
+
+
+
+//////////////////////////////
+//
+// filterListBySource -- This is the callback function for the source filter.
+//     It will clear any composer selection and then search through the master
+//     index for works from a particular source. 
+//
+
+function filterListBySource(index) {
+	if (!index) {
+		index = INDEX;
+	}
+	var selement = document.querySelector("#source-select");
+	if (!selement) {
+		return;
+	}
+	var celement = document.querySelector("#composer-select");
+	if (celement) {
+		celement.value = "";
+	}
+	var value = selement.value;
+	if (value === "") {
+		outindex = index;
+	} else {
+		var i;
+		var outindex = [];
+		for (i=0; i<index.length; i++) {
+			var source = index[i][MANUSCRIPT_SOURCE];
+			if (source === value) {
+				outindex.push(index[i]);
+			}
+		}
+	}
+	populateBrowseTable(outindex);
+	if (SORTCOLUMN > 0) {
+		sortByText(SORTCOLUMN);
+	}
+}
+
+
+
+//////////////////////////////
+//
+// filterListByComposer -- This is the callback function for the composer filter.
+//     It will clear any source selection and then search through the master
+//     index for works from a particular composer. 
+//
+
+function filterListByComposer(index) {
+	if (!index) {
+		index = INDEX;
+	}
+	var celement = document.querySelector("#composer-select");
+	if (!celement) {
+		return;
+	}
+	var selement = document.querySelector("#source-select");
+	if (selement) {
+		selement.value = "";
+	}
+	var value = celement.value;
+	if (value === "") {
+		outindex = index;
+	} else {
+		var i;
+		var outindex = [];
+		for (i=0; i<index.length; i++) {
+			var composer = index[i][COMPOSER];
+			if (composer.length < 2) {
+				if (composer === value) {
+					outindex.push(index[i]);
+				}
+			} else if (composer.match(value)) {
+				outindex.push(index[i]);
+			}
+		}
+	}
+	populateBrowseTable(outindex);
+	if (SORTCOLUMN > 0) {
+		sortByText(SORTCOLUMN);
+	}
+}
+
+
+</script>
