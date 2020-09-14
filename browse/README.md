@@ -13,7 +13,7 @@ Here is a list of the files in this directory and their function:
 
 
 | Filename | Description |
-| ======== | =========== |
+| -------- | ----------- |
 | browse-filtering.html  | Functions used for filtering the work list by source or composer. |
 | index.md               | The Markdown file that will be converted into `/transcriptions.html`. |
 | listeners.html         | The starting point for preparing the browse table and filter menus. |
