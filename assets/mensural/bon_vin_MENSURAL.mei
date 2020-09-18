@@ -49,7 +49,7 @@
 							<annot label="commentary">[Any additional comments on the transcription can be added here]</annot>
 						</notesStmt>
 						<itemList>
-							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="46r"></item>
+							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="45r"></item>
 							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88/"></item>
 						</itemList>
 					</source>
