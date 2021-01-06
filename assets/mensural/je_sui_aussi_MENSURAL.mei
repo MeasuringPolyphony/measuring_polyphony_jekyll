@@ -70,16 +70,20 @@
                 <identifier type="catalogue_number">[Enter any catalogue number or other work identifier here]</identifier>
                 </identifier>
 
-                <title>Je sui aussi</title>
-                <composer>Guillaume de Machaut</composer>
-<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
-                <incip>
-                  <incipText label="cantus" corresp="#cantus">
-                      <lg><l>Je sui aussi</l></lg>
-                  </incipText>
-                  <incipText label="tenor" corresp="#tenor">
-                  </incipText>
-                </incip>
+                <title>Bon vin</title>
+					<composer>Anonymous</composer>
+	<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
+	<incip>
+		<incipText label="triplum" corresp="#triplum">
+			<lg><l>Quant je le voi</l></lg>
+	</incipText>
+	<incipText label="motetus" corresp="#motetus">
+		<lg><l>Bon vin doit</l></lg>
+</incipText>
+<incipText label="tenor" corresp="#tenor">
+	<lg><l>Cis chans veult</l></lg>
+</incipText>
+</incip>
 
                 <classification>
                     <termList>
