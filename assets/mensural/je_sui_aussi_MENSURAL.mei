@@ -109,7 +109,7 @@
 
 <!-- The Measuring Polyphony site will need the codedval attribute and its value so that it can pull up the correct page in the diva viewer. In Measuring Polyphony we were taking this information from the label value in the IIIF manifest, though I can see below that's what being stored in the graphic element is the canvas @id -->
                 <itemList>
-                    <item target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" targettype="IIIF" codedval="949"/>
+                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" targettype="IIIF" codedval="CDLXIVr"/>
 <!-- I also wanted to include a link that would need to be hardcoded in by the encoder or me of the DIAMM record because this has a lot of extra metadata about the manuscript source-->
                     <item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/89"></item>
                 </itemList>
