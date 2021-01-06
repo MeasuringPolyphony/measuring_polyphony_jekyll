@@ -683,7 +683,7 @@
                                 <barLine form="dashed"/>
                                 <note xml:id="m-fe244480-3150-43db-9dbf-f0cf86ec615b" dur="longa" oct="3" pname="f" dur.quality="imperfecta" num="3" numbase="2" sb_value="6">
                                     <verse xml:id="m-cb2ee538-85b1-41c2-b2f1-345fb79e7649" color="black" n="1">
-                                        <syl xml:id="m-64d60a33-fed3-44f2-84cb-acc47cae66aa">re!JJJJJJJJJllLJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ</syl>
+                                        <syl xml:id="m-64d60a33-fed3-44f2-84cb-acc47cae66aa">re!</syl>
                                     </verse>
                                 </note>
                                 <rest xml:id="m-2bbc6d88-30c8-4f35-92a9-24b0d254ef1c" dur="brevis" sb_value="3"/>
