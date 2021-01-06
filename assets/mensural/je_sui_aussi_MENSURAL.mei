@@ -19,8 +19,8 @@
 <!-- the first persName can be hard coded in in when the MEI file is generated but the following persName elements should be generated from the Enter Metadata screen Add Contributor boxes-->
       				 <respStmt>
       					<persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
-      					<persName role="encoder" isodate="2015-6-11" xml:id="SM">Sadie Menicanin</persName>
-      					<persName role="proofreader" isodate="2018-5-1" xml:id="EH">Emily Hopkins</persName>
+      					<persName role="encoder" isodate="2015-6-11" xml:id="SM">Geneviève Gates-Panneton</persName>
+      					<persName role="proofreader" isodate="2018-5-1" xml:id="EH">Karen Desmond</persName>
       				</respStmt>
             </titleStmt>
 
@@ -56,7 +56,7 @@
 </appInfo>
 <editorialDecl>
   <p>
-    These encodings were made using the Measuring Polyphony Editor, where users view IIIF manuscript images and transcribe the music notation from these images one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts.</p>
+    This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
   </editorialDecl>
   <projectDesc>
     <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
@@ -70,17 +70,16 @@
                 <identifier type="catalogue_number">[Enter any catalogue number or other work identifier here]</identifier>
                 </identifier>
 
-                <title>Bon vin</title>
-					<composer>Anonymous</composer>
-	<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
-		<incip>
-			<incipText label="triplum" corresp="#triplum">
-				<lg><l>Je suir aussi</l></lg>
-			</incipText>
-			<incipText label="tenor" corresp="#tenor">
-				<lg><l>[TENOR]</l></lg>
-			</incipText>
-		</incip>
+                <title>Je sui aussi</title>
+                <composer>Guillaume de Machaut</composer>
+<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
+                <incip>
+                  <incipText label="cantus" corresp="#cantus">
+                      <lg><l>Je sui aussi</l></lg>
+                  </incipText>
+                  <incipText label="tenor" corresp="#tenor">
+                  </incipText>
+                </incip>
 
                 <classification>
                     <termList>
@@ -109,12 +108,11 @@
                     </notesStmt>
 
 <!-- The Measuring Polyphony site will need the codedval attribute and its value so that it can pull up the correct page in the diva viewer. In Measuring Polyphony we were taking this information from the label value in the IIIF manifest, though I can see below that's what being stored in the graphic element is the canvas @id -->
-					<itemList>
-							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="45r"></item>
+                <itemList>
+                    <item target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" targettype="IIIF" codedval="949"/>
 <!-- I also wanted to include a link that would need to be hardcoded in by the encoder or me of the DIAMM record because this has a lot of extra metadata about the manuscript source-->
-							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/89"></item>
-					</itemList>
-
+                    <item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/89"></item>
+                </itemList>
             </manifestation>
             <manifestation>
               <titleStmt>
