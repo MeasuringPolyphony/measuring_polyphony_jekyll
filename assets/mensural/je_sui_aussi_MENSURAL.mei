@@ -64,31 +64,7 @@
 			  </projectDesc>
 			</encodingDesc>
 
-			<workDesc>
-				<work>
-					<identifier>
-						<identifier type="catalogue_number">p.mus.130</identifier>
-					</identifier>
-					<title>Je sui aussi</title>
-					<composer>Anonymous</composer>
-					<incip>
-						<incipText label="triplum" corresp="#triplum">
-							<lg><l>Quant je le voi</l></lg>
-					</incipText>
-					
-				<incipText label="tenor" corresp="#tenor">
-					<lg><l>TENOR</l></lg>
-			</incipText>
-		</incip>
-
-			<classification>
-				<termList>
-					<term>Song</term>
-				</termList>
-			</classification>
-		</work>
-	</workDesc>
-
+			
 	<workList>
 			<work>
 	<!-- I would still like to include this identifier element to indicate where could hardcode a catalogue number for example by hand -->
