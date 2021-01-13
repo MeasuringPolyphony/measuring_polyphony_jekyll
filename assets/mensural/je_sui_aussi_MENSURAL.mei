@@ -60,7 +60,7 @@
                 <title>Je sui aussi</title>
                 <composer>Guillaume de Machaut</composer>
                 <incip>
-                    <incipText label="triplum" corresp="#cantus">
+                    <incipText label="triplum" corresp="#triplum">
                         <lg>
                             <l>Je sui aussi</l>
                         </lg>
