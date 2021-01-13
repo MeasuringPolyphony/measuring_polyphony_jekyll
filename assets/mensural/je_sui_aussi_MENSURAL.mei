@@ -59,9 +59,9 @@
                 <title>Je sui aussi</title>
                 <composer>Guillaume de Machaut</composer>
                 <incip>
-                    <incipText label="cantus" corresp="#cantus">
+                    <incipText label="triplum" corresp="#cantus">
                         <lg>
-                            <l>[CANTUS]</l>
+                            <l>Je sui aussi</l>
                         </lg>
                     </incipText>
                     <incipText label="tenor" corresp="#tenor">
@@ -85,7 +85,7 @@
                     </title>
                 </titleStmt>
                 <itemList>
-                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedVal="CDLXIVr"/>
+                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIVr"/>
                 </itemList>
             </manifestation>
         </manifestationList>
