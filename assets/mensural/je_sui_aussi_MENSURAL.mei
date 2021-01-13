@@ -56,7 +56,9 @@
 			</encodingDesc>
         <workList>
             <work>
-                <identifier type="catalogue_number">B20</identifier>
+                <identifier>
+		    <identifier type="catalogue_number">B20</identifier>
+		</identifier>
                 <title>Je sui aussi</title>
                 <composer>Guillaume de Machaut</composer>
                 <incip>
