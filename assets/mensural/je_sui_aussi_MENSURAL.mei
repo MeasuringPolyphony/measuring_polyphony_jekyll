@@ -6,9 +6,9 @@
 			    <meiHead>
 			        <fileDesc>
 			            <titleStmt>
-			                <title>Bon vin: A Digital Edition</title>
+			                <title>Je sui aussi: A Digital Edition</title>
 			<!-- Martha recommends also including composer info here: it will come from the Composer field of the Enter Metadata screen-->
-			                <composer>Anonymous</composer>
+			                <composer>Guillaume de Machaut</composer>
 			<!-- these two funder elements should be hardcoded here in when the MEI file is generated-->
 			                <funder>
 			        					<corpName>Brandeis University</corpName>
@@ -19,7 +19,7 @@
 			<!-- the first persName can be hard coded in in when the MEI file is generated but the following persName elements should be generated from the Enter Metadata screen Add Contributor boxes-->
 			      				 <respStmt>
 			      					<persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
-			      					<persName role="encoder" isodate="2015-6-11" xml:id="KD">Karen Desmond</persName>
+			      					<persName role="encoder" isodate="2015-6-11" xml:id="GG">Genevieve Gates-Panneton</persName>
 			      					<persName role="proofreader" isodate="2018-5-1" xml:id="KD">Karen Desmond</persName>
 			      				</respStmt>
 			            </titleStmt>
@@ -69,23 +69,21 @@
 					<identifier>
 						<identifier type="catalogue_number">p.mus.130</identifier>
 					</identifier>
-					<title>Bon vin</title>
+					<title>Je sui aussi</title>
 					<composer>Anonymous</composer>
 					<incip>
 						<incipText label="triplum" corresp="#triplum">
 							<lg><l>Quant je le voi</l></lg>
 					</incipText>
-					<incipText label="motetus" corresp="#motetus">
-						<lg><l>Bon vin doit</l></lg>
-				</incipText>
+					
 				<incipText label="tenor" corresp="#tenor">
-					<lg><l>Cis chans veult</l></lg>
+					<lg><l>TENOR</l></lg>
 			</incipText>
 		</incip>
 
 			<classification>
 				<termList>
-					<term>Motet</term>
+					<term>Song</term>
 				</termList>
 			</classification>
 		</work>
@@ -95,27 +93,25 @@
 			<work>
 	<!-- I would still like to include this identifier element to indicate where could hardcode a catalogue number for example by hand -->
 					<identifier>
-					<identifier type="catalogue_number">p.mus.130</identifier>
+					<identifier type="catalogue_number">B20</identifier>
 					</identifier>
 
-					<title>Bon vin</title>
-					<composer>Anonymous</composer>
+					<title>Je sui aussi</title>
+					<composer>Guillaume de Machaut</composer>
 	<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
 	<incip>
 		<incipText label="triplum" corresp="#triplum">
-			<lg><l>Quant je le voi</l></lg>
+			<lg><l>Je sui aussi</l></lg>
 	</incipText>
-	<incipText label="motetus" corresp="#motetus">
-		<lg><l>Bon vin doit</l></lg>
-</incipText>
+	
 <incipText label="tenor" corresp="#tenor">
-	<lg><l>Cis chans veult</l></lg>
+	<lg><l>TENOR</l></lg>
 </incipText>
 </incip>
 
 					<classification>
 							<termList>
-									<term>Motet</term>
+									<term>Song</term>
 							</termList>
 					</classification>
 			</work>
@@ -126,7 +122,7 @@
 					<titleStmt>
 							<title>
 <!-- this comes from the siglum field of the ENTER METADATA page -->
-									<identifier>Fauv</identifier>
+									<identifier>MachA</identifier>
 							</title>
 					</titleStmt>
 
@@ -135,7 +131,7 @@
 <!-- This first annot element should be hard coded in when the MEI file is generated -->
 								<annot>Primary manuscript source for this encoding.</annot>
 <!-- These next two elements can be left empty for the user to hand code any comments on their transcription -->
-								<annot label="original_clefs">Original clefs for this source: c3 c3 c5</annot>
+								<annot label="original_clefs">Original clefs for this source: c3 c4</annot>
 								<annot label="commentary">[Any additional comments on the transcription can be added here]</annot>
 							</notesStmt>
 
@@ -143,7 +139,7 @@
 					<itemList>
 							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="45r"></item>
 <!-- I also wanted to include a link that would need to be hardcoded in by the encoder or me of the DIAMM record because this has a lot of extra metadata about the manuscript source-->
-							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88"></item>
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/89"></item>
 					</itemList>
 			</manifestation>
 			<manifestation>
