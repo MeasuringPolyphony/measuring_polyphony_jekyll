@@ -1,95 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<mei
-    xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
-    <meiHead>
-        <fileDesc>
-            <titleStmt>
-                <title>Je sui aussi</title>
-                <composer>Guillaume de Machaut</composer>
-                <funder>
-                    <corpName>Brandeis University</corpName>
-                </funder>
-                <funder>
-                    <corpName>National Endowment for the Humanities (NEH)</corpName>
-                </funder>
-                <respStmt>
-                    <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
-                    <persName role="encoder">Geneviève Gates-Panneton</persName>
-                    <persName role="proofreader">Karen Desmond</persName>
-                </respStmt>
-            </titleStmt>
-            <pubStmt>
-              <publisher>
-                 <persName>Karen Desmond</persName>
-                <corpName>Brandeis University</corpName>
-              </publisher>
-              <date>2018</date>
-              <availability>
-                <useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
-              </availability>
-            </pubStmt>
-            <seriesStmt>
-              <title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
-              <editor>
-                <persName>Karen Desmond</persName>
-              </editor>
-              <identifier>
-                <ref targettype="home_page" target="http://www.measuringpolyphony.org"/>
-              </identifier>
-            </seriesStmt>
-        </fileDesc>
-        <encodingDesc>
-          <appInfo>
-              <application xml:id="MPEditor" isodate="2020-12-31">
-                <name>Measuring Polyphony Editor</name>
-              </application>
-          </appInfo>
-          <editorialDecl>
-            <p>This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
-          </editorialDecl>
-          <projectDesc>
-            <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
-          </projectDesc>
-        </encodingDesc>
-        <workList>
-            <work>
-                <identifier type="catalogue_number">B20</identifier>
-                <title>Je sui aussi</title>
-                <composer>Guillaume de Machaut</composer>
-                <incip>
-                    <incipText label="triplum" corresp="#triplum">
-                        <lg>
-                            <l>Je sui aussi</l>
-                        </lg>
-                    </incipText>
-                    <incipText label="tenor" corresp="#tenor">
-                        <lg>
-                            <l>[TENOR]</l>
-                        </lg>
-                    </incipText>
-                </incip>
-                <classification>
-                    <termList>
-                        <term>Song</term>
-                    </termList>
-                </classification>
-            </work>
-        </workList>
-        <manifestationList>
-            <manifestation>
-                <titleStmt>
-                    <title>
-                        <identifier>MachA</identifier>
-                    </title>
-                </titleStmt>
-                <itemList>
-                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIVr"/>
-                </itemList>
-            </manifestation>
-        </manifestationList>
-    </meiHead>
+			<mei
+			    xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
+			    <meiHead>
+			        <fileDesc>
+			            <titleStmt>
+			                <title>Bon vin: A Digital Edition</title>
+			<!-- Martha recommends also including composer info here: it will come from the Composer field of the Enter Metadata screen-->
+			                <composer>Anonymous</composer>
+			<!-- these two funder elements should be hardcoded here in when the MEI file is generated-->
+			                <funder>
+			        					<corpName>Brandeis University</corpName>
+			        				</funder>
+			        				 <funder>
+			        					<corpName>National Endowment for Humanities (NEH)</corpName>
+			        				</funder>
+			<!-- the first persName can be hard coded in in when the MEI file is generated but the following persName elements should be generated from the Enter Metadata screen Add Contributor boxes-->
+			      				 <respStmt>
+			      					<persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
+			      					<persName role="encoder" isodate="2015-6-11" xml:id="KD">Karen Desmond</persName>
+			      					<persName role="proofreader" isodate="2018-5-1" xml:id="KD">Karen Desmond</persName>
+			      				</respStmt>
+			            </titleStmt>
+
+
+				<!-- this pubStmt and seriesStmt info can be hardcoded in here in when the MEI file is generated -->
+				            <pubStmt>
+				              <publisher>
+				                 <persName>Karen Desmond</persName>
+				                <corpName>Brandeis University</corpName>
+				               </publisher>
+				              <date>2018</date>
+				              <availability>
+				                <useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
+				              </availability>
+				            </pubStmt>
+				            <seriesStmt>
+				              <title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
+				              <editor>
+				                <persName>Karen Desmond</persName>
+				              </editor>
+				              <identifier>
+				                <ref targettype="home_page" target="http://www.measuringpolyphony.org"/>
+				                </identifier>
+				              </seriesStmt>
+									<!-- Question: do we include any sourceDesc elements here? -->
+			</fileDesc>
+
+			<!-- encodingDesc info can be hardcoded in when the MEI file is generated, except for the isodate which should come from the date the encoding was saved, if possible. Question: what's the best way to encode the MP Editor app here - as we did for the CMM translator previously? -->
+			<encodingDesc>
+			  <appInfo>
+			      <application xml:id="MPEditor" isodate="2020-12-31">
+			        <name>Measuring Polyphony Editor</name>
+			  </application>
+			</appInfo>
+			<editorialDecl>
+			  <p>
+			    This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
+			  </editorialDecl>
+			  <projectDesc>
+			    <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
+			  </projectDesc>
+			</encodingDesc>
+
+			<workDesc>
+				<work>
+					<identifier>
+						<identifier type="catalogue_number">p.mus.130</identifier>
+					</identifier>
+					<title>Bon vin</title>
+					<composer>Anonymous</composer>
+					<incip>
+						<incipText label="triplum" corresp="#triplum">
+							<lg><l>Quant je le voi</l></lg>
+					</incipText>
+					<incipText label="motetus" corresp="#motetus">
+						<lg><l>Bon vin doit</l></lg>
+				</incipText>
+				<incipText label="tenor" corresp="#tenor">
+					<lg><l>Cis chans veult</l></lg>
+			</incipText>
+		</incip>
+
+			<classification>
+				<termList>
+					<term>Motet</term>
+				</termList>
+			</classification>
+		</work>
+	</workDesc>
+
+	<workList>
+			<work>
+	<!-- I would still like to include this identifier element to indicate where could hardcode a catalogue number for example by hand -->
+					<identifier>
+					<identifier type="catalogue_number">p.mus.130</identifier>
+					</identifier>
+
+					<title>Bon vin</title>
+					<composer>Anonymous</composer>
+	<!-- the incipits are fairly important because it's how Measuring Polyphony displays the full title of the piece at the top of the page. Hopefully these could be generated from the first few words of voice part. If not, it is something we could ask people to add by hand to their files after they are generated -->
+	<incip>
+		<incipText label="triplum" corresp="#triplum">
+			<lg><l>Quant je le voi</l></lg>
+	</incipText>
+	<incipText label="motetus" corresp="#motetus">
+		<lg><l>Bon vin doit</l></lg>
+</incipText>
+<incipText label="tenor" corresp="#tenor">
+	<lg><l>Cis chans veult</l></lg>
+</incipText>
+</incip>
+
+					<classification>
+							<termList>
+									<term>Motet</term>
+							</termList>
+					</classification>
+			</work>
+	</workList>
+
+	<manifestationList>
+			<manifestation>
+					<titleStmt>
+							<title>
+<!-- this comes from the siglum field of the ENTER METADATA page -->
+									<identifier>Fauv</identifier>
+							</title>
+					</titleStmt>
+
+<!-- I had used these annotation elements to capture information about the clefs and variants or errors in the source, or editorial changes made -->
+							<notesStmt>
+<!-- This first annot element should be hard coded in when the MEI file is generated -->
+								<annot>Primary manuscript source for this encoding.</annot>
+<!-- These next two elements can be left empty for the user to hand code any comments on their transcription -->
+								<annot label="original_clefs">Original clefs for this source: c3 c3 c5</annot>
+								<annot label="commentary">[Any additional comments on the transcription can be added here]</annot>
+							</notesStmt>
+
+<!-- The Measuring Polyphony site will need the codedval attribute and its value so that it can pull up the correct page in the diva viewer. In Measuring Polyphony we were taking this information from the label value in the IIIF manifest, though I can see below that's what being stored in the graphic element is the canvas @id -->
+					<itemList>
+							<item targettype="IIIF" target="http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="45r"></item>
+<!-- I also wanted to include a link that would need to be hardcoded in by the encoder or me of the DIAMM record because this has a lot of extra metadata about the manuscript source-->
+							<item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/88"></item>
+					</itemList>
+			</manifestation>
+			<manifestation>
+				<titleStmt>
+<!-- Sigla or shelf numbers for other concordant sources can be handcoded in here, separated by commas-->
+					<title>[Other concordant sources]</title>
+				</titleStmt>
+				<notesStmt>
+					<annot></annot>
+				</notesStmt>
+			</manifestation>
+	</manifestationList>
+
+<!-- here we would add the xmlid of the most recent isodate and persName from respStmt. Any further changes would be handcoded in here -->
+	<revisionDesc>
+		<change resp="#KD" isodate="2018-05-31">
+			<changeDesc>
+				<p></p>
+			</changeDesc>
+		</change>
+	</revisionDesc>	</meiHead>
     <music>
         <facsimile>
             <surface xml:id="m-133832dc-a8b1-4488-9145-1f27310a32ff">
