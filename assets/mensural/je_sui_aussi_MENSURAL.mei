@@ -15,7 +15,7 @@
                     <corpName>National Endowment for the Humanities (NEH)</corpName>
                 </funder>
                 <respStmt>
-                    <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codeval="316001213">Karen Desmond</persName>
+                    <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
                     <persName role="encoder">Genevieve Gates-Panneton</persName>
                     <persName role="proofreader">Karen Desmond</persName>
                 </respStmt>
@@ -56,12 +56,12 @@
 			</encodingDesc>
         <workList>
             <work>
-                <identifier><identifier type="catalogue_number">B20</identifier></identifier>
+                <identifier type="catalogue_number">B20</identifier>
                 <title>Je sui aussi</title>
                 <composer>Guillaume de Machaut</composer>
 <!-- Use the incip element to add the incipits for each voice by typing over the placeholder text inserted here -->
                 <incip>
-                    <incipText label="triplum" corresp="#cantus">
+                    <incipText label="cantus" corresp="#cantus">
                         <lg>
                             <l>Je sui aussi</l>
                         </lg>
@@ -93,14 +93,14 @@
   								<annot label="commentary">Because there is currently no way to encode first and second time endings in mensural MEI these endings have simply been transcribed consecutively one after the other. In addition, the text for the second statement of the first section has not been transcribed.</annot>
   							</notesStmt>
                 <itemList>
-                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIVr"/>
+                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIVr"></item>
 <!-- Type in the correct DIAMM source URL here -->
                     <item targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/89"></item>
                 </itemList>
             </manifestation>
             <manifestation>
               <titleStmt>
-<!-- Sigla or shelf numbers for other concordant sources can be handcoded in here, separated by commas-->
+<!-- Sigla or shelf numbers for other concordant sources can be typed in here, separated by commas-->
                 <title>[Other concordant sources]</title>
               </titleStmt>
               <notesStmt>
