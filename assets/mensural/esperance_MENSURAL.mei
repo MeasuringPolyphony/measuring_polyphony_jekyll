@@ -39,6 +39,15 @@
                     <ref targettype="home_page" target="http://www.measuringpolyphony.org/"/>
                 </identifier>
             </seriesStmt>
+            <notesStmt>
+                <annot label="original_clefs"/>
+                <annot label="commentary">Ficta accidentals have not yet been added</annot>
+            </notesStmt>
+            <sourceDesc>
+                <source targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json">
+                    <locus>CDLXIr</locus>
+                </source>
+            </sourceDesc>
         </fileDesc>
         <encodingDesc>
             <appInfo>
@@ -81,13 +90,11 @@
             <manifestation>
                 <titleStmt>
                     <title>
-                        <identifier>MachA</identifier>
+                        <identifier label="siglum">MachA</identifier>
                     </title>
                 </titleStmt>
                 <notesStmt>
                     <annot>Primary manuscript source for this encoding.</annot>
-                    <annot label="original_clefs"/>
-                    <annot label="commentary">Ficta accidentals have not yet been added</annot>
                 </notesStmt>
                 <itemList>
                     <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIr"/>
