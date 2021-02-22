@@ -267,12 +267,12 @@
         $("#title").html($triplum + $cantus + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         if ($iiif != null){
-        $("#primarysource").html($primesource + ", fol(s)." + $iiif.attributes[2].textContent);
+        $("#primarysource").html($primesource + ", fol(s). " + $iiif.attributes[2].textContent);
       } else if ($otherimages != null){
-          $("#primarysource").html($primesource + ", fol(s)." + $otherimages.attributes[3].textContent);
+          $("#primarysource").html($primesource + ", fol(s). " + $otherimages.attributes[3].textContent);
       }
         if ($dcomp != null){
-        $("#diammlink").html("<a href=\"" + $dcomp.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
+        $("#diammlink").html("<a href=\"" + $diammsource.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
       }
       if ($dcomp==null && $otherimages==null && $iiif==null){
           document.getElementById("source").outerHTML="";
@@ -318,7 +318,7 @@ $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" downl
         $("#concsources").html("<b>Concordant source(s)</b><br>" + $concsources[3].innerHTML);
       }
         if ($concsources[2].innerHTML != ("-")) {
-   $("#variants").html("<br>" + $concsources[2].innerHTML);
+   $("#variants").html("<br><b>Editorial remarks</b><br>" + $concsources[2].innerHTML);
  }
 //http://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json
 
