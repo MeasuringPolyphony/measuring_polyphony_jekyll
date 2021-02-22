@@ -45,8 +45,6 @@
             </notesStmt>
             <sourceDesc>
                 <source targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIr">
-                    <bibl targettype="DIAMM_source_record" target="https://www.diamm.ac.uk/sources/888/"></bibl>
-                    <bibl targettype="DIAMM_composition_record" target="https://www.diamm.ac.uk/compositions/3538/"></bibl>
                     <locus>CDLXIr</locus>
                 </source>
             </sourceDesc>
