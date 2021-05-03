@@ -191,6 +191,23 @@
         $dcomp = null;
         $diammsource = null;
         $otherimages = null;
+        //for new updated file, check <source> tag for iiif.
+        if($link.length==0)
+        {
+          $link = $xml.find("source");
+          $iiif=$link[0];
+          $link= $xml.find("bibl");
+          for(var i=0; i<$link.length;i++)
+          {
+            if ($link[i].attributes[0].textContent=="DIAMM_source_record"){
+                $diammsource = $link[i];
+            } else if ($link[i].attributes[0].textContent=="DIAMM_composition_record"){
+                $dcomp = $link[i];
+            } 
+          }
+        }
+        else{
+          
           for (var i = 0; i< $link.length; i++) {
             if($link[i].attributes[0].textContent=="IIIF"){
                 $iiif = $link[i];
@@ -202,6 +219,7 @@
                 $otherimages=$link[i];
             }
           }
+        }
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
         $notes = $xml.find("p")[0].innerHTML;
