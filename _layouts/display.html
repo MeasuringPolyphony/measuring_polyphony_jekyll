@@ -191,6 +191,22 @@
         $dcomp = null;
         $diammsource = null;
         $otherimages = null;
+        //for new updated file, check <source> tag for iiif.
+        if($link.length==0)
+        {
+          $link = $xml.find("source");
+          $iiif=$link[0];
+          $link= $xml.find("bibl");
+          for(var i=0; i<$link.length;i++)
+          {
+            if ($link[i].attributes[0].textContent=="DIAMM_source_record"){
+                $diammsource = $link[i];
+            } else if ($link[i].attributes[0].textContent=="DIAMM_composition_record"){
+                $dcomp = $link[i];
+            } 
+          }
+        }
+        else{
           for (var i = 0; i< $link.length; i++) {
             if($link[i].attributes[0].textContent=="IIIF"){
                 $iiif = $link[i];
@@ -202,6 +218,7 @@
                 $otherimages=$link[i];
             }
           }
+        }
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
         $notes = $xml.find("p")[0].innerHTML;
@@ -221,9 +238,11 @@
           }
         }
         $needle = null;
-        if ($iiif !=null){
+        
+        /*if ($iiif !=null){
         $needle = $iiif.attributes[2].textContent.split(",")[0];
-      }
+      }*/
+      
         $quadruplum = "";
         $cantus = "";
         $contratenor = "";
@@ -244,8 +263,8 @@
         } else {
         pagenum = $pagelink.split("/canvas/f")[1];
       }
-
         pagenum=pagenum-1;
+        
         if ($parts != null) {
 
           for (i = 0; i < $parts.length; i++) {
@@ -264,6 +283,7 @@
             }
           }
         }
+        
         $("#title").html($triplum + $cantus + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         if ($iiif != null){
