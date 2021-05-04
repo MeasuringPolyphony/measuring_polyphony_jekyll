@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<mei
+    xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
+    <meiHead>
+        <fileDesc>
+            <titleStmt>
+                <title>In mari miserie</title>
+                <composer>Anonymous</composer>
+                <funder>
+                    <corpName>Brandeis University</corpName>
+                </funder>
+                <funder>
+                    <corpName>National Endowment for the Humanities (NEH)</corpName>
+                </funder>
+                <respStmt>
+                    <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
+                    <persName role="encoder">Karen Desmond</persName>
+                </respStmt>
+            </titleStmt>
+            <pubStmt>
+                <publisher>
+                    <persName>Karen Desmond</persName>
+                    <corpName>Brandeis University</corpName>
+                </publisher>
+                <date>2021</date>
+                <availability>
+                    <useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
+                </availability>
+            </pubStmt>
+            <seriesStmt>
+                <title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
+                <editor>
+                    <persName>Karen Desmond</persName>
+                </editor>
+                <identifier>
+                    <ref targettype="home_page" target="http://www.measuringpolyphony.org/"/>
+                </identifier>
+            </seriesStmt>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application xml:id="MPEditor">
+                    <name>Measuring Polyphony Editor</name>
+                </application>
+            </appInfo>
+            <editorialDecl>
+                <p>This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
+            </editorialDecl>
+            <projectDesc>
+                <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
+            </projectDesc>
+        </encodingDesc>
+        <workList>
+            <work>
+                <identifier type="catalogue_number"/>
+                <title>In mari miserie</title>
+                <composer>Anonymous</composer>
+                <incip>
+                    <incipText label="triplum" corresp="#triplum">
+                        <lg>
+                            <l>[TRIPLUM]</l>
+                        </lg>
+                    </incipText>
+                    <incipText label="motetus" corresp="#motetus">
+                        <lg>
+                            <l>[MOTETUS]</l>
+                        </lg>
+                    </incipText>
+                    <incipText label="tenor" corresp="#tenor">
+                        <lg>
+                            <l>[TENOR]</l>
+                        </lg>
+                    </incipText>
+                </incip>
+                <classification>
+                    <termList>
+                        <term>Motet</term>
+                    </termList>
+                </classification>
+            </work>
+        </workList>
+        <manifestationList>
+            <manifestation>
+                <titleStmt>
+                    <title>
+                        <identifier>Fauv</identifier>
+                    </title>
+                </titleStmt>
+                <notesStmt>
+                    <annot>Primary manuscript source for this encoding.</annot>
+                    <annot label="original_clefs"/>
+                    <annot label="commentary"/>
+                </notesStmt>
+                <itemList>
+                    <item targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/manifest.json" codedval="undefined"/>
+                </itemList>
+            </manifestation>
+        </manifestationList>
+    </meiHead>
+    <music>
+        <facsimile>
+            <surface xml:id="m-d36d36e0-9224-483c-83a6-717c0ea03d28">
+                <graphic xml:id="m-96c3e9ab-7a03-43c7-968e-cb99a991d16f" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b8454675g/canvas/f16">
+                    <zone xml:id="m8a7fca06-1992-4014-b9f1-be1ede6aa9f2" ulx="2400" uly="842" lrx="3655" lry="1252"/>
+                    <zone xml:id="m3f62d994-d590-43ba-a77c-6525d82bdc0a" ulx="2402" uly="2782" lrx="3729" lry="3200"/>
+                </graphic>
+            </surface>
+        </facsimile>
+        <body>
+            <mdiv>
+                <parts>
+                    <part>
+                        <scoreDef>
+                            <staffGrp>
+                                <staffDef n="1" lines="5" notationtype="mensural.black" notationsubtype="Ars_antiqua" label="motetus" xml:id="motetus">
+                                    <mensur/>
+                                </staffDef>
+                            </staffGrp>
+                        </scoreDef>
+                        <section>
+                            <staff n="1">
+                                <layer n="1">
+                                    <pb facs="#m-d36d36e0-9224-483c-83a6-717c0ea03d28" xml:id="m-ec17c68e-15e0-421f-913d-b869070253a4"/>
+                                    <sb facs="#m8a7fca06-1992-4014-b9f1-be1ede6aa9f2" xml:id="m-79ab9169-9575-4022-b9db-ecd1d0bf53a1"/>
+                                    <clef xml:id="m-72465b4a-56c4-4958-b4d9-3abbc05d6c58" shape="C" line="3"/>
+                                    <note xml:id="m-ba10b83a-0db6-409c-8c92-3cdd732be338" dur="longa" oct="4" pname="f">
+                                        <verse xml:id="m-aeb51cf5-7d91-49c7-b6c0-d745ac64b84e" color="black" n="1">
+                                            <syl xml:id="m-10c43918-73e8-49a6-8ab8-fa47e6c973b7">In</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-bafab0b7-1eeb-4ac1-a8dc-235af2d8bb66" dur="brevis" oct="4" pname="e">
+                                        <verse xml:id="m-95d3f60c-0c83-40cc-8ef0-e93479279f88" color="black" n="1">
+                                            <syl xml:id="m-787bb59f-7e7c-42ba-bd69-9fe4369f513e" con="d" wordpos="i">ma</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-1ac5ab05-4c18-43de-8744-f21ffd553f5f" dur="longa" oct="4" pname="d">
+                                        <verse xml:id="m-b3d59647-a47e-43e6-ad77-bbe58d9a0a9f" color="black" n="1">
+                                            <syl xml:id="m-1280de89-f272-43d9-b167-c935276c4c0e" wordpos="t">ri</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-ca6ff02d-fb83-4034-9b1f-38d00e20aea2" dur="brevis" oct="4" pname="d">
+                                        <verse xml:id="m-fef3d118-6ac3-4619-bf5a-bed7d8999ecd" color="black" n="1">
+                                            <syl xml:id="m-e2f85897-ddba-4cfa-a138-735d431b2c16" con="d" wordpos="i">mi</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-3b0d8ef0-283c-4637-9140-c3667845f3de" dur="longa" oct="4" pname="c">
+                                        <verse xml:id="m-b76a8e6c-9c0f-4518-8554-3eeacb76abb4" color="black" n="1">
+                                            <syl xml:id="m-34c2617f-21fb-4597-b487-5711d7317a40" con="d" wordpos="m">se</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-c2f8dbce-0aee-40c5-9328-bce45e70dec1" dur="brevis" oct="4" pname="c">
+                                        <verse xml:id="m-28a54a90-d291-44eb-b322-46f1d683ac06" color="black" n="1">
+                                            <syl xml:id="m-c0cf0f69-27e3-40c0-ae7c-a92d01fb611a" con="d" wordpos="m">ri</syl>
+                                        </verse>
+                                        <plica xml:id="m-2921876a-a7c7-4caa-b24c-6602870a4b45" dir="down"/>
+                                    </note>
+                                    <ligature xml:id="m-52ab7312-7328-4422-becb-76a185d91fc7">
+                                        <note xml:id="m-4260e4d6-51ff-4fd6-a312-46976af211a1" dur="brevis" oct="3" pname="a">
+                                            <verse xml:id="m-44a9941d-53bd-40b1-b5b2-151ca9c035ea" color="black" n="1">
+                                                <syl xml:id="m-69defda9-09fb-436a-9b0b-c6cdc8c870de" wordpos="t"> e</syl>
+                                            </verse>
+                                        </note>
+                                        <note xml:id="m-4ae7b859-c6bd-4f10-8183-ae89a8349687" dur="brevis" oct="3" pname="g"/>
+                                    </ligature>
+                                    <note xml:id="m-951cf852-d688-4a42-b887-c92aaf6334d0" dur="brevis" oct="3" pname="a">
+                                        <verse xml:id="m-a8270ce3-9166-4b65-9480-6795bd3a7fc3" color="black" n="1">
+                                            <syl xml:id="m-188808a2-d5e3-47b4-8bf5-826e2ff8ab4f" con="d" wordpos="i">ma</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-806f0179-4791-48db-9cde-8aecbe1fd934" dur="longa" oct="4" pname="c">
+                                        <verse xml:id="m-1eedc715-c1f6-46c4-930d-2b35351d75a6" color="black" n="1">
+                                            <syl xml:id="m-d1245477-aaa6-4884-828f-6f76e9ad3f94" wordpos="t">ris</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-84aad85a-b051-466b-966b-c70dcd6e3aa5" dur="brevis" oct="4" pname="c">
+                                        <verse xml:id="m-6b056033-afb9-4f87-94dd-b104b047046f" color="black" n="1">
+                                            <syl xml:id="m-8e4d683c-ca54-40a1-b4a7-d0076372ae20" con="d" wordpos="i">stel</syl>
+                                        </verse>
+                                    </note>
+                                    <note xml:id="m-4b049835-3b6d-4c68-936d-7bba9e911783" dur="longa" oct="4" pname="d">
+                                        <verse xml:id="m-a5f9d480-4988-41ca-ab01-bcd1213193e2" color="black" n="1">
+                                            <syl xml:id="m-0794cc54-d610-4724-939b-300d00c5324a" wordpos="t">la</syl>
+                                        </verse>
+                                    </note>
+                                    <rest xml:id="m-0ae54e5c-3295-4a36-9e2a-dc113fa92fae" dur="brevis"/>
+                                </layer>
+                            </staff>
+                        </section>
+                    </part>
+                    <part>
+                        <scoreDef>
+                            <staffGrp>
+                                <staffDef n="1" lines="5" notationtype="mensural.black" notationsubtype="Ars_antiqua" label="tenor" xml:id="tenor">
+                                    <mensur modusminor="3" tempus="3"/>
+                                </staffDef>
+                            </staffGrp>
+                        </scoreDef>
+                        <section>
+                            <staff n="1">
+                                <layer n="1">
+                                    <pb facs="#m-d36d36e0-9224-483c-83a6-717c0ea03d28" xml:id="m-ec17c68e-15e0-421f-913d-b869070253a4"/>
+                                    <sb facs="#m3f62d994-d590-43ba-a77c-6525d82bdc0a" xml:id="m-14fad994-5488-474f-909d-2bfa14b96e03"/>
+                                    <clef xml:id="m-89905833-1d8c-43ab-bcb9-7b1071d1d0ad" shape="C" line="5"/>
+                                    <note xml:id="m-ed419314-728b-4942-bd11-423d9e8fa981" dur="longa" oct="3" pname="f"/>
+                                    <ligature xml:id="m-d97bb6be-ffba-4482-ba8c-39630a08778b">
+                                        <note xml:id="m-e8ac30e1-c9cc-4a81-b32a-3c69a918daa5" dur="brevis" oct="3" pname="f"/>
+                                        <note xml:id="m-94f11a62-93ca-4af8-a6f6-7e011bada961" dur="longa" oct="3" pname="g"/>
+                                    </ligature>
+                                    <note xml:id="m-853f586a-1b57-4369-a5db-145a9b438824" dur="brevis" oct="3" pname="f"/>
+                                    <note xml:id="m-b40a7953-b9df-48dc-bb39-6d09f36ae2c7" dur="longa" oct="3" pname="f"/>
+                                    <rest xml:id="m-3600bc94-c81a-41eb-a715-2d5dc7ac1cef" dur="brevis"/>
+                                    <note xml:id="m-11bc2549-b3e4-42a9-bfa8-0d77e8f0e495" dur="longa" oct="3" pname="c"/>
+                                    <note xml:id="m-65f3a609-243a-4b37-9175-c96fc84fb6bf" dur="longa" oct="3" pname="f"/>
+                                    <note xml:id="m-ae5efee3-5c62-4fd2-8312-ed35b9848e91" dur="longa" oct="3" pname="g"/>
+                                    <note xml:id="m-1b487980-5ca0-4903-a2b4-27c3a5f73e12" dur="longa" oct="3" pname="f"/>
+                                </layer>
+                            </staff>
+                        </section>
+                    </part>
+                </parts>
+            </mdiv>
+        </body>
+    </music>
+</mei>
