@@ -185,6 +185,7 @@
         $title = $xml.find("title").first();
         $composer = $xml.find("composer").first();
         $primesource = $xml.find("identifier")[1].innerHTML;
+        
         $concsources = $xml.find("annot");
         $link = $xml.find("item");
         $iiif = null;
@@ -299,10 +300,11 @@
       } else if ($otherimages != null){
           $("#primarysource").html($primesource + ", fol(s). " + $otherimages.attributes[3].textContent);
       }
-        if ($dcomp != null){
+      
+        if ($diammsource != null){
         $("#diammlink").html("<a href=\"" + $diammsource.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
       }
-      if ($dcomp==null && $otherimages==null && $iiif==null){
+      if ($dcomp==null && $otherimages==null && $iiif==null && $diammsource==null){
           document.getElementById("source").outerHTML="";
       }
         if (!qs.includes("_MENSURAL.")){
