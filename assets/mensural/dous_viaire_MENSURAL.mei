@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<mei xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
+<mei
+    xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
     <meiHead>
         <fileDesc>
             <titleStmt>
@@ -116,7 +117,7 @@
         <body>
             <mdiv>
                 <score>
-                    <scoreDef midi.bpm="450">
+                    <scoreDef midi.bpm="600">
                         <staffGrp symbol="bracket">
                             <staffDef n="1" lines="5" notationtype="mensural.black" notationsubtype="Ars_nova" xml:id="cantus" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below">
                                 <mensur modusminor="2" tempus="3" prolatio="2"/>
@@ -187,9 +188,8 @@
                                     <accid xml:id="m-cecfdf13-6bfe-41aa-a907-0fc51c96a25d" accid="s"/>
                                 </note>
                                 <note xml:id="m-fd0cf1ff-3ef8-4bf5-aed9-4bfadcebeafe" dur="minima" oct="4" pname="e"/>
-                                <note xml:id="m-35f5e924-8541-46e3-87dc-54cefede5f31" dur="semibrevis" oct="4" pname="f">
+                                <note xml:id="m-35f5e924-8541-46e3-87dc-54cefede5f31" dur="semibrevis" oct="4" pname="f"/>
                                   <accid accid="s" func="edit" />
-                                </note>
                                 <barLine form="dashed"/>
                                 <rest xml:id="m-a02f5d1a-5778-4d08-9942-df8611d888cb" dur="semibrevis"/>
                                 <note xml:id="m-c4222418-9720-429d-946f-00fbc1de5701" dur="semibrevis" oct="3" pname="g">
@@ -222,9 +222,8 @@
                                 </note>
                                 <note xml:id="m-790df9f4-ddcd-4225-aedd-f1c8f1166238" dur="minima" oct="4" pname="d"/>
                                 <note xml:id="m-6f0477ea-1c8a-4e18-b159-ab58a1da4644" dur="minima" oct="4" pname="c"/>
-                                <note xml:id="m-9ab4f9fd-4e7d-43c7-bd65-492febe0460e" dur="minima" oct="3" pname="b">
+                                <note xml:id="m-9ab4f9fd-4e7d-43c7-bd65-492febe0460e" dur="minima" oct="3" pname="b"/>
                                   <accid accid="f" func="edit" />
-                                </note>
                                 <note xml:id="m-db90c39e-e142-42eb-9518-eb62910bdb66" dur="minima" oct="4" pname="c"/>
                                 <barLine form="dashed"/>
                                 <note xml:id="m-fc6eabd9-ec1f-4e1f-93a1-8e219da5fcae" dur="semibrevis" oct="4" pname="d"/>
@@ -268,9 +267,8 @@
                                 <note xml:id="m-5d735c4e-714c-4c08-ab49-ee64949509dc" dur="semibrevis" oct="3" pname="f" dur.quality="altera" num="1" numbase="2"/>
                                 <barLine form="dashed"/>
                                 <note xml:id="m-a19bd8cc-afa9-45c4-890c-070bcddbd3a8" dur="brevis" oct="3" pname="g" dur.quality="imperfecta" num="3" numbase="2"/>
-                                <note xml:id="m-e039e2f8-afce-457b-8a79-27f9261096c9" dur="semibrevis" oct="3" pname="f">
+                                <note xml:id="m-e039e2f8-afce-457b-8a79-27f9261096c9" dur="semibrevis" oct="3" pname="f"/>
                                   <accid accid="s" func="edit" />
-                                </note>
                                 <barLine form="dashed"/>
                                 <note xml:id="m-6760b7c9-a3e8-4217-b778-56178b54c744" dur="brevis" oct="3" pname="g"/>
                                 <barLine form="dashed"/>
@@ -285,9 +283,8 @@
                                     <accid xml:id="m-a8715e44-c7bf-4827-a3f8-49a850a0aa02" accid="s"/>
                                 </note>
                                 <note xml:id="m-79eddc25-3878-4f81-bfb5-1f88b1ce2ae7" dur="minima" oct="4" pname="e"/>
-                                <note xml:id="m-73aa2a59-87a8-4589-84a7-2393f90feea1" dur="semibrevis" oct="4" pname="f">
+                                <note xml:id="m-73aa2a59-87a8-4589-84a7-2393f90feea1" dur="semibrevis" oct="4" pname="f"/>
                                   <accid accid="s" func="edit" />
-                                </note>
                                 <barLine form="dashed"/>
                                 <note xml:id="m-3f32b852-092b-46c6-b875-8e947fa2b3df" dur="semibrevis" oct="4" pname="d"/>
                                 <note xml:id="m-43d4cd84-9949-4c54-8f59-5ec23c1ba27e" dur="brevis" oct="4" pname="c" dur.quality="imperfecta" num="3" numbase="2"/>
@@ -303,15 +300,13 @@
                                 <rest xml:id="m-82b3b8c3-3710-4a22-bc49-a89b400e6d74" dur="minima"/>
                                 <note xml:id="m-952b6b7a-0d10-4485-9c51-6549d60f5bde" dur="minima" oct="3" pname="a"/>
                                 <barLine form="dashed"/>
-                                <note xml:id="m-f6290c74-9073-46f4-b496-1685a68298a8" dur="semibrevis" oct="3" pname="b">
+                                <note xml:id="m-f6290c74-9073-46f4-b496-1685a68298a8" dur="semibrevis" oct="3" pname="b"/>
                                   <accid accid="f" func="edit" />
-                                </note>
                                 <note xml:id="m-34114f0f-41c4-46fe-9ac9-26f8ab67a2a0" dur="semibrevis" oct="4" pname="d"/>
                                 <note xml:id="m-3ed8a620-7cbd-4627-9f2b-1217d723dfa4" dur="semibrevis" oct="4" pname="c"/>
                                 <barLine form="dashed"/>
-                                <note xml:id="m-caa430eb-0a1f-4d2b-8b2c-8ee73d200871" dur="longa" oct="3" pname="b">
+                                <note xml:id="m-caa430eb-0a1f-4d2b-8b2c-8ee73d200871" dur="longa" oct="3" pname="b"/>
                                   <accid accid="f" func="edit" />
-                                </note>
                                 <barLine form="dashed"/>
                                 <rest xml:id="m-de57a40b-6b77-4ea0-b05c-ab70188bf0b3" dur="longa"/>
                                 <barLine form="dashed"/>

@@ -121,7 +121,7 @@
         <body>
             <mdiv>
                 <score>
-                    <scoreDef midi.bpm="450">
+                    <scoreDef midi.bpm="500">
                         <staffGrp symbol="bracket">
                             <staffDef n="1" lines="5" notationtype="mensural.black" notationsubtype="Ars_nova" xml:id="cantus" clef.shape="G" clef.line="2" clef.dis="8" clef.dis.place="below">
                                 <label>cantus</label>
