@@ -192,6 +192,7 @@
         $diammsource = null;
         $otherimages = null;
         $codedval = null;
+        $needle = null;
         //for new updated file, check <source> tag for iiif.
         if($link.length==0)
         {
@@ -206,7 +207,11 @@
                 $dcomp = $link[i];
             } 
           }
-          $codedval=$xml.find("locus")[0];
+          if($xml.find("locus").length!=0)
+          {
+            $codedval=$xml.find("locus")[0];
+            $needle = $codedval.textContent.split(",")[0];
+          }
         }
         else{
           for (var i = 0; i< $link.length; i++) {
@@ -220,7 +225,12 @@
                 $otherimages=$link[i];
             }
           }
-          $codedval=$xml.find("locus")[0];
+          if($iiif!=null)
+          {
+            $codedval=$iiif.attributes[2];
+            $needle = $iiif.attributes[2].textContent.split(",")[0];
+          }
+          
         }
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
@@ -240,12 +250,7 @@
             }
           }
         }
-        $needle = null;
         
-        if ($iiif !=null){
-        $needle = $iiif.attributes[2].textContent.split(",")[0];
-      }
-      
         $quadruplum = "";
         $cantus = "";
         $contratenor = "";
