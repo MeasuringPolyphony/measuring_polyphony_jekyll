@@ -191,7 +191,6 @@
         $dcomp = null;
         $diammsource = null;
         $otherimages = null;
-        $codedval=null;  //used to record the codedval
         //for new updated file, check <source> tag for iiif.
         if($link.length==0)
         {
@@ -206,7 +205,6 @@
                 $dcomp = $link[i];
             } 
           }
-          $codedval=$xml.find("locus")[0];
         }
         else{
           for (var i = 0; i< $link.length; i++) {
@@ -220,9 +218,7 @@
                 $otherimages=$link[i];
             }
           }
-          $codedval=$iiif.attributes[2];
         }
-        
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
         $notes = $xml.find("p")[0].innerHTML;
@@ -242,9 +238,10 @@
           }
         }
         $needle = null;
-        if ($codedval !=null){
-        $needle = $codedval.textContent.split(",")[0];
-      }
+        
+        /*if ($iiif !=null){
+        $needle = $iiif.attributes[2].textContent.split(",")[0];
+      }*/
       
         $quadruplum = "";
         $cantus = "";
@@ -290,7 +287,7 @@
         $("#title").html($triplum + $cantus + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         if ($iiif != null){
-        $("#primarysource").html($primesource + ", fol(s). " + $codedval.textContent);
+        $("#primarysource").html($primesource + ", fol(s). " + $iiif.attributes[2].textContent);
       } else if ($otherimages != null){
           $("#primarysource").html($primesource + ", fol(s). " + $otherimages.attributes[3].textContent);
       }
