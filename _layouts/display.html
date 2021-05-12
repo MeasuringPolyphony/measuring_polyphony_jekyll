@@ -144,15 +144,15 @@
             <a href="/#encodingProcess">More Information on the Encoding Process</a>
           </div>
 
-          <div class="col-lg-3 text-left" id="download-column">
+          <div class="col-lg-4 text-left" id="download-column">
             <b>Downloads</b><br>
-            <div id="MEI_file"style="display: inline-block;">
+            <div id="MEI_file" style="display: inline-block;">
               <b>MEI files:</b>
               <b id="mei"></b> 
               <b>| </b>
               <b id="mens"></b>
             </div>
-            <div id="PDF_file"style="display: inline-block;">
+            <div id="PDF_file" style="display: inline-block;">
               <b>PDF files:</b>
               <b id="pdf"></b>
             </div>
@@ -322,10 +322,10 @@
         if ( http.status==404){
           document.getElementById("flipDisplay").value = "";
         } else {
-          $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+          $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENS SCORE</a>");
         }
 } else {
-$("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+$("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENS SCORE</a>");
 }
         
         var meilink=qs;
@@ -335,11 +335,11 @@ $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" downl
          http.open('HEAD', meilink, false);
          http.send();
         if ( http.status==404){
-          $("#mei").html("<a href=\"" + $mei + "\" download>CMN</a>");
+          $("#mei").html("<a href=\"" + $mei + "\" download>CMN SCORE</a>");
         } else {
           $mei=$mei.replace("/mei/","/parts/");
           $mei=$mei.replace(".mei","_PARTS.mei");
-          $("#mei").html("<a href=\"" + $mei + "\" download>MENSURAL Parts</a>");
+          $("#mei").html("<a href=\"" + $mei + "\" download>MENS PARTS</a>");
         }
         
         $("#pdf").html("<input id=\"pdfButton\" class=\"pdf\" type=\"button\" value=\"PDF SCORE\" onclick=\"generate_pdf();\" />");
