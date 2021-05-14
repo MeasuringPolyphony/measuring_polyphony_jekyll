@@ -144,13 +144,18 @@
             <a href="/#encodingProcess">More Information on the Encoding Process</a>
           </div>
 
-          <div class="col-lg-2 text-left" id="download-column">
-            <b>Downloads</b>
-
-              <div id="mei"></div>
-              <div id="mens"></div>
-              <div id="pdf"></div>
-
+          <div class="col-lg-3 text-left" id="download-column">
+            <b>Downloads</b><br>
+            <div id="MEI_file" style="display: inline-block;">
+              <b>MEI files:</b>
+              <b id="mei"></b> 
+              <b>| </b>
+              <b id="mens"></b>
+            </div>
+            <div id="PDF_file" style="display: inline-block;">
+              <b>PDF files:</b>
+              <b id="pdf"></b>
+            </div>
             <!-- Button trigger modal -->
 
           </div>
@@ -185,12 +190,15 @@
         $title = $xml.find("title").first();
         $composer = $xml.find("composer").first();
         $primesource = $xml.find("identifier")[1].innerHTML;
+        
         $concsources = $xml.find("annot");
         $link = $xml.find("item");
         $iiif = null;
         $dcomp = null;
         $diammsource = null;
         $otherimages = null;
+        $codedval = null;
+        $needle = null;
         //for new updated file, check <source> tag for iiif.
         if($link.length==0)
         {
@@ -205,6 +213,11 @@
                 $dcomp = $link[i];
             } 
           }
+          if($xml.find("locus").length!=0)
+          {
+            $codedval=$xml.find("locus")[0];
+            $needle = $codedval.textContent.split(",")[0];
+          }
         }
         else{
           for (var i = 0; i< $link.length; i++) {
@@ -218,6 +231,12 @@
                 $otherimages=$link[i];
             }
           }
+          if($iiif!=null)
+          {
+            $codedval=$iiif.attributes[2];
+            $needle = $iiif.attributes[2].textContent.split(",")[0];
+          }
+          
         }
         $parts = $xml.find("incipText");
         $people = $xml.find("persName");
@@ -237,12 +256,7 @@
             }
           }
         }
-        $needle = null;
         
-        /*if ($iiif !=null){
-        $needle = $iiif.attributes[2].textContent.split(",")[0];
-      }*/
-      
         $quadruplum = "";
         $cantus = "";
         $contratenor = "";
@@ -287,14 +301,15 @@
         $("#title").html($triplum + $cantus + $motetus + $tenor + $contratenor);
         $("#composer").html($composer.text());
         if ($iiif != null){
-        $("#primarysource").html($primesource + ", fol(s). " + $iiif.attributes[2].textContent);
+        $("#primarysource").html($primesource + ", fol(s). " + $codedval.textContent);
       } else if ($otherimages != null){
           $("#primarysource").html($primesource + ", fol(s). " + $otherimages.attributes[3].textContent);
       }
-        if ($dcomp != null){
+      
+        if ($diammsource != null){
         $("#diammlink").html("<a href=\"" + $diammsource.attributes[1].textContent + "\n\">Click this link for more information on this MS (DIAMM)</a>");
       }
-      if ($dcomp==null && $otherimages==null && $iiif==null){
+      if ($dcomp==null && $otherimages==null && $iiif==null && $diammsource==null){
           document.getElementById("source").outerHTML="";
       }
         if (!qs.includes("_MENSURAL.")){
@@ -307,12 +322,26 @@
         if ( http.status==404){
           document.getElementById("flipDisplay").value = "";
         } else {
-          $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL</a>");
+          $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENS SCORE</a>");
         }
 } else {
-$("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENSURAL MEI SCORE</a>");
+$("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" download>MENS SCORE</a>");
 }
-        $("#mei").html("<a href=\"" + $mei + "\" download>CMN MEI</a>");
+        
+        var meilink=qs;
+        meilink=meilink.replace("/mensural/","/parts/");
+        meilink=meilink.replace("_MENSURAL.","_PARTS.");
+        var http = new XMLHttpRequest();
+         http.open('HEAD', meilink, false);
+         http.send();
+        if ( http.status==404){
+          $("#mei").html("<a href=\"" + $mei + "\" download>CMN SCORE</a>");
+        } else {
+          $mei=$mei.replace("/mei/","/parts/");
+          $mei=$mei.replace(".mei","_PARTS.mei");
+          $("#mei").html("<a href=\"" + $mei + "\" download>MENS PARTS</a>");
+        }
+        
         $("#pdf").html("<input id=\"pdfButton\" class=\"pdf\" type=\"button\" value=\"PDF SCORE\" onclick=\"generate_pdf();\" />");
         $("#commentary").html($notes);
 
