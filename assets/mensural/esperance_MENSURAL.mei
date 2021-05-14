@@ -2,109 +2,109 @@
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://music-encoding.org/schema/dev/mei-Mensural.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <mei xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.music-encoding.org/ns/mei" meiversion="5.0.0-dev">
-    <meiHead>
-        <fileDesc>
-            <titleStmt>
-                <title>Esperance</title>
-                <composer>Guillaume de Machaut</composer>
-                <funder>
-                    <corpName>Brandeis University</corpName>
-                </funder>
-                <funder>
-                    <corpName>National Endowment for the Humanities (NEH)</corpName>
-                </funder>
-                <respStmt>
-                    <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
-                    <persName role="encoder">Geneviève Gates-Panneton</persName>
-                    <persName role="proofreader">Karen Desmond</persName>
-                </respStmt>
-            </titleStmt>
-            <pubStmt>
-                <publisher>
-                    <persName>Karen Desmond</persName>
-                    <corpName>Brandeis University</corpName>
-                </publisher>
-                <date>2021</date>
-                <availability>
-                    <useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
-                </availability>
-            </pubStmt>
-            <seriesStmt>
-                <title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
-                <editor>
-                    <persName>Karen Desmond</persName>
-                </editor>
-                <identifier>
-                    <ref targettype="home_page" target="http://www.measuringpolyphony.org/"/>
-                </identifier>
-            </seriesStmt>
-            <notesStmt>
-                <annot label="original_clefs"/>
-                <annot label="commentary">Ficta accidentals have not yet been added to this transcription.</annot>
-            </notesStmt>
-            <sourceDesc>
-                <source targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json" codedval="CDLXIr">
-                    <locus>CDLXIr</locus>
-                </source>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <appInfo>
-                <application xml:id="MPEditor">
-                    <name>Measuring Polyphony Editor</name>
-                </application>
-            </appInfo>
-            <editorialDecl>
-                <p>This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
-            </editorialDecl>
-            <projectDesc>
-                <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
-            </projectDesc>
-        </encodingDesc>
-        <workList>
-            <work>
-                <identifier type="catalogue_number">B13</identifier>
-                <title>Esperance</title>
-                <composer>Guillaume de Machaut</composer>
-                <incip>
-                    <incipText label="cantus" corresp="#cantus">
-                        <lg>
-                            <l>Esperance qui m'asseure</l>
-                        </lg>
-                    </incipText>
-                    <incipText label="tenor" corresp="#tenor">
-                        <lg>
-                            <l>Tenor</l>
-                        </lg>
-                    </incipText>
-                </incip>
-                <classification>
-                    <termList>
-                        <term>Song</term>
-                    </termList>
-                </classification>
-            </work>
-        </workList>
-        <manifestationList>
-            <manifestation singleton="true">
+  <meiHead>
+      <fileDesc>
+          <titleStmt>
+              <title>Esperance</title>
+              <composer>Guillaume de Machaut</composer>
+              <funder>
+                  <corpName>Brandeis University</corpName>
+              </funder>
+              <funder>
+                  <corpName>National Endowment for the Humanities (NEH)</corpName>
+              </funder>
+              <respStmt>
+                  <persName role="project director" auth="VIAF" auth.uri="http://viaf.org/viaf/" codedval="316001213">Karen Desmond</persName>
+                  <persName role="encoder">Geneviève Gates-Panneton</persName>
+                  <persName role="proofreader">Karen Desmond</persName>
+              </respStmt>
+          </titleStmt>
+          <pubStmt>
+              <publisher>
+                  <persName>Karen Desmond</persName>
+                  <corpName>Brandeis University</corpName>
+              </publisher>
+              <date>2021</date>
+              <availability>
+                  <useRestrict>Available for purposes of academic research and teaching only.</useRestrict>
+              </availability>
+          </pubStmt>
+          <seriesStmt>
+              <title>Measuring Polyphony: Digital Encodings of Late Medieval Music</title>
+              <editor>
+                  <persName>Karen Desmond</persName>
+              </editor>
+              <identifier>
+                  <ref targettype="home_page" target="http://www.measuringpolyphony.org/"/>
+              </identifier>
+          </seriesStmt>
+          <notesStmt>
+              <annot label="original_clefs"/>
+              <annot label="commentary"/>
+          </notesStmt>
+          <sourceDesc>
+              <source targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json">
+                  <locus>CDLXIr</locus>
+              </source>
+          </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+          <appInfo>
+              <application xml:id="MPEditor">
+                  <name>Measuring Polyphony Editor</name>
+              </application>
+          </appInfo>
+          <editorialDecl>
+              <p>This MEI encoding in mensural notation was made using the Measuring Polyphony Editor, transcribed from IIIF images of the original manuscript source one staff at a time, entering the pitches and rhythms for each stave using a combination of number and letter keystrokes. The Measuring Polyphony Editor generates two MEI files from this user input: an MEI parts file that captures each voice part entered, and an MEI score file that scores up the voice parts, which is viewable here.</p>
+          </editorialDecl>
+          <projectDesc>
+              <p>The Measuring Polyphony Editor, funded by a 2019-2020 NEH Digital Humanities Grant, is a prototype tool that allows a variety of modern readers (students and experts, musicologists, music theorists, those interested in the history of music notation, counterpoint, medieval palaeography and/or manuscript studies) to access and contribute transcriptions of music directly linked to digital images of the medieval manuscripts, and to learn about the original notation. This tool will offer new possibilities for the analysis and interpretation of late medieval music. In a broader humanities context, the project investigates how modeling the meanings of notational signs can lead to new understandings of the interaction between the sign and the signified, and of the relationship between notational style and changes in musical style across time and place.</p>
+          </projectDesc>
+      </encodingDesc>
+      <workList>
+          <work>
+              <identifier type="catalogue_number"/>
+              <title>Esperance</title>
+              <composer>Guillaume de Machaut</composer>
+              <incip>
+                  <incipText label="cantus" corresp="#cantus">
+                      <lg>
+                          <l>Esperance qui m'asseure</l>
+                      </lg>
+                  </incipText>
+                  <incipText label="tenor" corresp="#tenor">
+                      <lg>
+                          <l>[TENOR]</l>
+                      </lg>
+                  </incipText>
+              </incip>
+              <classification>
+                  <termList>
+                      <term>Song</term>
+                  </termList>
+              </classification>
+          </work>
+      </workList>
+      <manifestationList>
+          <manifestation singleton="true">
               <titleStmt>
                   <title>
                       <identifier label="siglum">MachA</identifier>
                   </title>
               </titleStmt>
               <physLoc>
-                <repository>
-                  <corpName>Bibliothèque nationale de France</corpName>
-                  <identifier>fonds français, MS. 1586</identifier>
-                  <ptr targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json"/>
-                </repository>
+                  <repository>
+                      <corpName>Bibliothèque nationale de France</corpName>
+                      <identifier>français 1584</identifier>
+                      <ptr targettype="IIIF" target="https://gallica.bnf.fr/iiif/ark:/12148/btv1b84490444/manifest.json"/>
+                  </repository>
               </physLoc>
               <notesStmt>
                   <annot>Primary manuscript source for this encoding.</annot>
               </notesStmt>
-            </manifestation>
-        </manifestationList>
-    </meiHead>
+          </manifestation>
+      </manifestationList>
+  </meiHead>
     <music>
         <facsimile>
             <surface xml:id="m-c2de1461-7f10-43cb-be6c-a635f7361fa7">
