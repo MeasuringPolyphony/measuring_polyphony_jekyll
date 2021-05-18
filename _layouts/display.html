@@ -357,9 +357,16 @@ $("#mens").html("<a href=\"" + qs + "\" style=\"padding:0px; margin:0px;\" downl
         
         $("#pdf").html("<input id=\"pdfButton\" class=\"pdf\" type=\"button\" value=\"PDF SCORE\" onclick=\"generate_pdf();\" />");
         $("#commentary").html($notes);
-
-            $("#entertranscriptions").html("Encoded by " + $encoders);
-            $("#checktranscriptions").html("Checked by " + $checkers);
+        if($encoders.length!=0)
+        {
+          $("#entertranscriptions").html("Encoded by " + $encoders);
+         
+        }
+        if($checkers.length!=0)
+        {
+          $("#checktranscriptions").html("Checked by " + $checkers);
+        }
+           
         if ($iiif == null) {
           var diva = document.getElementById("diva-wrapper");
           diva.outerHTML = "";
