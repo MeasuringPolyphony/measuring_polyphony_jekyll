@@ -215,6 +215,7 @@
         //for new updated file, check <source> tag for iiif.
         if($link.length==0)
         {
+          $primesource = $xml.find("identifier")[2].innerHTML;
           $link = $xml.find("source");
           $iiif=$link[0];
           $link= $xml.find("bibl");
