@@ -79,6 +79,7 @@ function PrepareMasterIndex(callbackFunction) {
 		request.addEventListener("load", function () {
 			try {
 				INDEX = JSON.parse(request.responseText);
+				console.warn("INDEX", INDEX);
 				sessionStorage.INDEX = request.responseText;
 				if (callbackFunction) {
 					callbackFunction(INDEX);
