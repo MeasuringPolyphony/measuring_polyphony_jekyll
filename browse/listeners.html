@@ -58,9 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //
 
 function doAction(index) {
+console.warn(">>> buildSourceSelect");
 	buildSourceSelect(index);
+console.warn(">>> buildComposerSelect");
 	buildComposerSelect(index);
+console.warn(">>> populateBrowseTable");
 	populateBrowseTable(index);
+console.warn(">>> done");
 	if (SORTCOLUMN > 0) {
 		sortByText(SORTCOLUMN);
 	}
