@@ -66,8 +66,13 @@ function PrepareMasterIndex(callbackFunction) {
 			console.log("ERROR:", err.message);
 		}
 	} else {
-		var id = "AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ";
-		var url = "https://script.google.com/macros/s/" + id + "/exec";
+		// var mid = "AKfycbyNjVLL0QOx2tptAu75V8ANovvYZrVBi24j9SI3hUbVLZ3yM2RJ";
+
+		// Macro ID for spreadsheet https://docs.google.com/spreadsheets/d/1zJIYWijyhvNeBAXxm0lqHoMVP_YjQQzuDvWUJriRahY/edit#gid=0
+		// Craig's backup from 2020
+		var mid = "AKfycbwmAS8CsWoW8rsTRukYmIzAEmE6enLVsYSOpFeyGg7x9EzisbOKecU4HYpQ0U3soZyduw";
+
+		var url = "https://script.google.com/macros/s/" + mid + "/exec";
 		var request = new XMLHttpRequest;
 		request.open("GET", url);
 		request.send();
